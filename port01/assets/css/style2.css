@@ -990,13 +990,14 @@
     text-align: center;
 }
 
-.ani-text-wrapper p {
+.ani-text-wrapper .ani-text-desc {
     width: 26vw;
     margin-bottom: 24px;
     font-family: 'Iropke Batang', serif;
     font-size: 14px;
     line-height: 1.42;
     letter-spacing: -0.03em;
+    word-break: break-all;
     text-align: justify ;
 }
 
@@ -1253,13 +1254,14 @@
     text-align: center;
 }
 
-.script-text-wrapper p {
+.script-text-wrapper .script-text-desc {
     width: 26vw;
     margin-bottom: 24px;
     font-family: 'Iropke Batang', serif;
     font-size: 14px;
     line-height: 1.42;
     letter-spacing: -0.03em;
+    word-break: break-all;
     text-align: justify ;
 }
 
