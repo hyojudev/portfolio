@@ -1,0 +1,381 @@
+<?php
+    include '../connect/connect.php';
+    include '../connect/session.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="han hyo ju">
+    <meta name="description" content="프론트앤드 개발자 한효주 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 사이트만들기, 포트폴리오, 한효주, 프론트앤드 개발자">
+    <title>HYO JU DEV</title>
+
+    <!-- Webfonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style5.css">
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!-- <input type="checkbox" class="toggler" /> -->
+        <div class="hbtn">
+            <span></span>
+        </div>
+        <ul class="main-menu">
+            <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
+            <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
+            <li class="main-menu__link"><a href="../pages/projects.html">projects</a></li>
+            <li class="main-menu__link menu-active"><a href="../pages/script.html">script</a></li>
+            <li class="main-menu__link"><a href="../board/board.php">board</a></li>
+            <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
+        </ul>
+        <ul class="sign-menu">
+            <?php if ( isset($_SESSION['memberID']) ) { ?>
+            <li><a href="#">
+                    <?= $_SESSION['youNickName'] ?>님👻
+                </a></li>
+            <li><a href="../sign/logOut.php">LOGOUT</a></li>
+            <?php } else { ?>
+            <li><a href="../sign/logIn.php">LOGIN</a></li>
+            <li><a href="../sign/signUp.php">SIGNUP</a></li>
+            <?php } ?>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <!-- script__page -->
+    <section class="script__page">
+
+        <!-- script__main -->
+        <div class="script__main">
+            <div class="script__main-title">
+                <h1>
+                    Anima <br />
+                    -tion <br />
+                    Script <br />
+                </h1>
+                <div class="script__main-circle__wrap">
+                    <div class="script__circle script__circle__1"></div>
+                    <div class="script__circle script__circle__2"></div>
+                    <div class="script__circle script__circle__3">
+                        <div class="st__circle__orbit">
+                            <div class="st__circle__planet"></div>
+                        </div>
+                    </div>
+                    <div class="script__circle script__circle__4"></div>
+                </div>
+            </div>
+        </div>
+        <!-- //script__main -->
+
+        <!-- script__subTitle -->
+        <div class="main-subTitle color__main bg-color__sub">
+            <h4>
+                &#47; <br />
+                Joyful <br />
+                Animation <br />
+            </h4>
+            <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
+        </div>
+        <!-- //script__subTitle -->
+
+        <!-- script__animation -->
+        <div class="script__animation">
+            <div class="script__animation__title">
+                <img src="../assets/img/script__aniamtion__title.svg" alt="script aniamtion title">
+            </div>
+
+            <!-- script__animation__slider -->
+            <div class="script__animation__slider">
+                <div class="st__ani__slide__wrap">  
+                    <!-- st__ani__slide__wrap -->
+                    <div class="st__ani__slide">
+                        <ul>
+                            <li>
+                                <iframe src="../effect/animation-dot.html" title="Animation Dot"
+                                    scrolling="no" frameborder="0"></iframe>
+                            </li>
+                            <li>
+                                <iframe src="../effect/animation-tail.html" title="Animation Tail"
+                                    scrolling="no" frameborder="0"></iframe>
+                            </li>
+                            <li>
+                                <iframe src="../effect/animation-wave.html" title="Animation Wave"
+                                    scrolling="no" frameborder="0"></iframe>
+                            </li>
+                            <li>
+                                <iframe src="../effect/animation-cube.html" title="Animation Cube"
+                                    scrolling="no" frameborder="0"></iframe>
+                            </li>
+                            <li>
+                                <iframe src="../effect/animation-box-loading.html" title="Animation Loading"
+                                    scrolling="no" frameborder="0"></iframe>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="st__ani__slide__bottom">
+                    <div>
+                        <button class="animation__btn animation__btn__prev"></button>
+                        <div class="st__ani__indicator">
+                            <ul>
+                                <!-- <li>Animation Dot</li> -->
+                            </ul>
+                        </div>
+                        <button class="animation__btn animation__btn__next"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //script__animation__slider -->
+
+        <!-- script__subTitle -->
+        <div class="main-subTitle color__main bg-color__sub">
+            <h4>
+                &#47; <br />
+                Joyful <br />
+                Animation <br />
+            </h4>
+            <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
+        </div>
+        <!-- //script__subTitle -->
+
+        <!-- script__slider -->
+        <div class="script__slider">
+            <!-- script__01 -->
+            <div class="script__slide script__01">
+                <div class="st__content__wrap">
+                    <div class="st__bg st__bg-round"></div>
+                    <div class="st__bg st__bg-square"></div>
+                    <div class="st__content">
+                        <div class="st__text__wrap">
+                            <span class="st__numbering bg-color__sub">1&#47;4</span>
+                            <div class="st__text__title">
+                                <h4 class="st__link-text">
+                                    TO DO <br />
+                                    LIST
+                                </h4>
+                            </div>
+                            <p class="st__text-desc">
+                                Vanilla Javascript를 사용한 To do list입니다. <br />
+                                할 일 목록을 추가 및 제거할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="st__card__wrap">
+                            <div class="st__card">
+                                <div class="st__card__bar">
+                                    <div class="st__card__bar-bg">
+                                        <span class="st__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="st__card__content">
+                                    <iframe class="st__card__content-image bg-color__sub"
+                                        src="../effect/animation-dot.html" title="Animation Dot" scrolling="no"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <a class="codeView__btn bg-color__sub" target="_blank" href="#">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //script__01 -->
+            <!-- script__02 -->
+            <div class="script__slide script__02">
+                <div class="st__content__wrap">
+                    <div class="st__bg st__bg-round"></div>
+                    <div class="st__bg st__bg-square"></div>
+                    <div class="st__content">
+                        <div class="st__text__wrap">
+                            <span class="st__numbering bg-color__white">2&#47;4</span>
+                            <div class="st__text__title">
+                                <h4 class="st__link-text">
+                                    CANVAS <br />
+                                    EVENTS
+                                </h4>
+                            </div>
+                            <p class="st__text-desc">
+                                Vanilla Javascript를 사용한 To do list입니다. <br />
+                                할 일 목록을 추가 및 제거할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="st__card__wrap">
+                            <div class="st__card">
+                                <div class="st__card__bar">
+                                    <div class="st__card__bar-bg">
+                                        <span class="st__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="st__card__content">
+                                    <iframe class="st__card__content-image bg-color__white"
+                                        src="../effect/animation-dot.html" title="Animation Dot" scrolling="no"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <a class="codeView__btn bg-color__white" target="_blank" href="#">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //script__02 -->
+            <!-- script__03 -->
+            <div class="script__slide script__03">
+                <div class="st__content__wrap">
+                    <div class="st__bg st__bg-round"></div>
+                    <div class="st__bg st__bg-square"></div>
+                    <div class="st__content">
+                        <div class="st__text__wrap">
+                            <span class="st__numbering bg-color__yellow">3&#47;4</span>
+                            <div class="st__text__title">
+                                <h4 class="st__link-text">
+                                    SKETCH<br />
+                                    PAD
+                                </h4>
+                            </div>
+                            <p class="st__text-desc">
+                                Vanilla Javascript를 사용한 To do list입니다. <br />
+                                할 일 목록을 추가 및 제거할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="st__card__wrap">
+                            <div class="st__card">
+                                <div class="st__card__bar">
+                                    <div class="st__card__bar-bg">
+                                        <span class="st__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="st__card__content">
+                                    <iframe class="st__card__content-image bg-color__yellow"
+                                        src="../effect/animation-dot.html" title="Animation Dot" scrolling="no"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <a class="codeView__btn bg-color__yellow" target="_blank" href="#">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //script__03 -->
+            <!-- script__04 -->
+            <div class="script__slide script__04">
+                <div class="st__content__wrap">
+                    <div class="st__bg st__bg-round"></div>
+                    <div class="st__bg st__bg-square"></div>
+                    <div class="st__content">
+                        <div class="st__text__wrap">
+                            <span class="st__numbering bg-color__main">4&#47;4</span>
+                            <div class="st__text__title">
+                                <h4 class="st__link-text">
+                                    CARD <br />
+                                    GAME
+                                </h4>
+                            </div>
+                            <p class="st__text-desc">
+                                Vanilla Javascript를 사용한 To do list입니다. <br />
+                                할 일 목록을 추가 및 제거할 수 있습니다.
+                            </p>
+                        </div>
+                        <div class="st__card__wrap">
+                            <div class="st__card">
+                                <div class="st__card__bar">
+                                    <div class="st__card__bar-bg">
+                                        <span class="st__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="st__card__content">
+                                    <iframe class="st__card__content-image bg-color__main"
+                                        src="../effect/animation-dot.html" title="Animation Dot" scrolling="no"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <a class="codeView__btn bg-color__main" target="_blank" href="#">
+                                code view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //script__04 -->
+
+        </div>
+        <!-- //projects-slider -->
+
+    </section>
+    <!-- //script__page -->
+
+    <!-- footer -->
+    <footer class="footer bg-color__white">
+        <div class="footer__wrap">
+            <div class="footer__contact">
+                <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
+                <h1 class="footer__contact-title">
+                    If you like my <br />
+                    portfolio please <br />
+                    contact me! <br />
+                </h1>
+                <button type="submit" class="footer__contact-btn">
+                    hyojudev@gamil.com
+                </button>
+            </div>
+            <div class="footer__socials">
+                <ul class="footer__social">
+                    <li class="social__btn social__btn__1">
+                        <a href="#">github</a>
+                    </li>
+                    <li class="social__btn social__btn__2">
+                        <a href="#">gitbook</a>
+                    </li>
+                    <li class="social__btn social__btn__3">
+                        <a href="#">codepen</a>
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <li class="social__btn social__btn__4">
+                        <a href="#">instagram</a>
+                    </li>
+                    <li class="social__btn social__btn__5">
+                        <a href="#">gmail</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

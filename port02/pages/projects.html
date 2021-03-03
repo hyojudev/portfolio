@@ -1,0 +1,327 @@
+<?php
+    include '../connect/connect.php';
+    include '../connect/session.php';
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="han hyo ju">
+    <meta name="description" content="프론트앤드 개발자 한효주 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 사이트만들기, 포트폴리오, 한효주, 프론트앤드 개발자">
+    <title>HYO JU DEV</title>
+
+    <!-- Webfonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style5.css">
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!-- <input type="checkbox" class="toggler" /> -->
+        <div class="hbtn">
+            <span></span>
+        </div>
+        <ul class="main-menu">
+            <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
+            <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
+            <li class="main-menu__link menu-active"><a href="../pages/projects.html">projects</a></li>
+            <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
+            <li class="main-menu__link"><a href="../board/board.php">board</a></li>
+            <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
+        </ul>
+        <ul class="sign-menu">
+            <?php if ( isset($_SESSION['memberID']) ) { ?>
+            <li><a href="#">
+                    <?= $_SESSION['youNickName'] ?>님👻
+                </a></li>
+            <li><a href="../sign/logOut.php">LOGOUT</a></li>
+            <?php } else { ?>
+            <li><a href="../sign/logIn.php">LOGIN</a></li>
+            <li><a href="../sign/signUp.php">SIGNUP</a></li>
+            <?php } ?>
+        </ul>
+    </header>
+    <!-- //header -->
+
+    <!-- projects__page -->
+    <section class="projects__page">
+        <div class="projects__main">
+            <div class="projects__main-title">
+                <h1>
+                    I'll show <br />
+                    You some <br />
+                    Interesting <br />
+                    Works** <br />
+                </h1>
+                <div class="pt__main-circle__wrap">
+                    <div class="pt__main-circle pt__main-circle__1"></div>
+                    <div class="pt__main-circle pt__main-circle__2"></div>
+                    <div class="pt__main-circle pt__main-circle__3"></div>
+                    <div class="pt__main-circle pt__main-circle__4"></div>
+                </div>
+            </div>
+            <div class="main-subTitle color__main bg-color__sub">
+                <h4>
+                    &#47; <br />
+                    I can handle <br />
+                    languages ​​like <br />
+                    jQuery, Javascript, <br />
+                    React, vue. <br />
+                </h4>
+                <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
+            </div>
+        </div>
+
+        <!-- projects__slider -->
+        <div class="projects__slider">
+            <!-- project__01 -->
+            <div class="projects__slide project__01">
+                <div class="pt__content__wrap">
+                    <div class="pt__bg pt__bg-round"></div>
+                    <div class="pt__bg pt__bg-square"></div>
+                    <div class="pt__content">
+                        <div class="pt__card__wrap">
+                            <a href="#" class="pt__card">
+                                <div class="pt__card__bar">
+                                    <div class="pt__card__bar-bg">
+                                        <span class="pt__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="pt__card__content">
+                                    <div class="pt__card__content-image"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pt__text__wrap">
+                            <span class="pt__numbering">1&#47;5</span>
+                            <a href="#" class="pt__text__title">
+                                <h4 class="pt__link-text">AFF</h4>
+                            </a>
+                            <h5 class="pt__caption">All of the fruits</h5>
+                            <p class="pt__text-desc">
+                                과일을 위한 모든 아이템을
+                                <br />
+                                판매하는 쇼핑몰
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //project__01 -->
+            <!-- project__02 -->
+            <div class="projects__slide project__02">
+                <div class="pt__content__wrap">
+                    <div class="pt__bg pt__bg-round"></div>
+                    <div class="pt__bg pt__bg-square"></div>
+                    <div class="pt__content">
+                        <div class="pt__card__wrap">
+                            <a href="#" class="pt__card">
+                                <div class="pt__card__bar">
+                                    <div class="pt__card__bar-bg">
+                                        <span class="pt__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="pt__card__content">
+                                    <div class="pt__card__content-image"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pt__text__wrap">
+                            <span class="pt__numbering">2&#47;5</span>
+                            <a href="#" class="pt__text__title">
+                                <h4 class="pt__link-text">REISS</h4>
+                            </a>
+                            <h5 class="pt__caption">2018 REISS Collection</h5>
+                            <p class="pt__text-desc">
+                                여성 브랜드 REISS
+                                <br />
+                                2018 S/S 컬렉션 웹사이트
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //project__02 -->
+            <!-- project__03 -->
+            <div class="projects__slide project__03">
+                <div class="pt__content__wrap">
+                    <div class="pt__bg pt__bg-round"></div>
+                    <div class="pt__bg pt__bg-square"></div>
+                    <div class="pt__content">
+                        <div class="pt__card__wrap">
+                            <a href="#" class="pt__card">
+                                <div class="pt__card__bar">
+                                    <div class="pt__card__bar-bg">
+                                        <span class="pt__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="pt__card__content">
+                                    <div class="pt__card__content-image"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pt__text__wrap">
+                            <span class="pt__numbering">3&#47;5</span>
+                            <a href="#" class="pt__text__title">
+                                <h4 class="pt__link-text">
+                                    DOG
+                                    <br />
+                                    PARTY
+                                </h4>
+                            </a>
+                            <h5 class="pt__caption">2019 Day & Night</h5>
+                            <p class="pt__text-desc">
+                                강아지들과 애완인들이
+                                <br />
+                                함께하는 All day 행사 웹사이트
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //project__03 -->
+            <!-- project__04 -->
+            <div class="projects__slide project__04">
+                <div class="pt__content__wrap">
+                    <div class="pt__bg pt__bg-round"></div>
+                    <div class="pt__bg pt__bg-square"></div>
+                    <div class="pt__content">
+                        <div class="pt__card__wrap">
+                            <a href="#" class="pt__card">
+                                <div class="pt__card__bar">
+                                    <div class="pt__card__bar-bg">
+                                        <span class="pt__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="pt__card__content">
+                                    <div class="pt__card__content-image"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pt__text__wrap">
+                            <span class="pt__numbering">4&#47;5</span>
+                            <a href="#" class="pt__text__title">
+                                <h4 class="pt__link-text">
+                                    Responsive
+                                    <br />
+                                    web
+                                </h4>
+                            </a>
+                            <h5 class="pt__caption">Responsive web</h5>
+                            <p class="pt__text-desc">
+                                데스크탑/모바일
+                                <br />
+                                최적화 반응형 웹사이트
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //project__04 -->
+            <!-- project__05 -->
+            <div class="projects__slide project__05">
+                <div class="pt__content__wrap">
+                    <div class="pt__bg pt__bg-round"></div>
+                    <div class="pt__bg pt__bg-square"></div>
+                    <div class="pt__content">
+                        <div class="pt__card__wrap">
+                            <a href="#" class="pt__card">
+                                <div class="pt__card__bar">
+                                    <div class="pt__card__bar-bg">
+                                        <span class="pt__card__circle"></span>
+                                    </div>
+                                </div>
+
+                                <div class="pt__card__content">
+                                    <div class="pt__card__content-image"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pt__text__wrap">
+                            <span class="pt__numbering">5&#47;5</span>
+                            <a href="#" class="pt__text__title">
+                                <h4 class="pt__link-text">RESILIENCE</h4>
+                            </a>
+                            <h5 class="pt__caption">Daegu Arts University</h5>
+                            <p class="pt__text-desc">
+                                2020 대구예술대학교
+                                <br />
+                                졸업작품전 웹사이트
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //project__05 -->
+        </div>
+        <!-- //projects-slider -->
+
+    </section>
+    <!-- //projects__page -->
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__wrap">
+            <div class="footer__contact">
+                <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
+                <h1 class="footer__contact-title">
+                    If you like my <br />
+                    portfolio please <br />
+                    contact me! <br />
+                </h1>
+                <button type="submit" class="footer__contact-btn">
+                    hyojudev@gamil.com
+                </button>
+            </div>
+            <div class="footer__socials">
+                <ul class="footer__social">
+                    <li class="social__btn social__btn__1">
+                        <a href="#">github</a>
+                    </li>
+                    <li class="social__btn social__btn__2">
+                        <a href="#">gitbook</a>
+                    </li>
+                    <li class="social__btn social__btn__3">
+                        <a href="#">codepen</a>
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <li class="social__btn social__btn__4">
+                        <a href="#">instagram</a>
+                    </li>
+                    <li class="social__btn social__btn__5">
+                        <a href="#">gmail</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
