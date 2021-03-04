@@ -1,0 +1,19 @@
+#section1 {
+  z-index: -1;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  /* background: url('../img/bg-sample1.png') no-repeat center center fixed; */
+  background: url('../img/bg-sample1.png') no-repeat top center;
+  background-size: cover;
+}
+
+#section2 {
+  z-index: -1;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  top: 600px;
+  background-color: black;
+}

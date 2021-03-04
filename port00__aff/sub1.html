@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" href="animate/animate.min.css">
+<!--    <style>@import url('https://fonts.googleapis.com/css?family=Open+Sans');</style>-->
+    <style>@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');</style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+
+    html,body{margin: 0; padding: 0; font-size: 12px; font-family: 'Roboto Slab', serif;}
+    *{margin: 0; padding: 0;}
+    button{border: none; background: none;}
+    ol,ul,li{list-style: none;}
+    img{vertical-align: bottom;}
+    a{text-decoration: none; color: inherit;}
+    h1,h2,h3,h4,h5,h6{font-size: 100%;}
+    adderss,em{font-style: normal;}
+
+     
+        
+        
+#fix_top{
+/*    position: relative;*/
+    width: 1760px;
+    margin: 0 auto;
+        
+}
+
+.m_logo{
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+}
+.m_logo a{
+    
+}
+.m_logo img{
+  width: 100px;
+}
+
+.nav_bt{
+    position: fixed;
+    z-index: 990;
+    right: 80px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+.nav_bt span{
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+}
+.nav_bt span+span{
+    margin-top: 8px;
+}nav
+.nav_bt:hover .nbt1{transform:rotate(-90deg) translate(-10px,0) ;}
+.nav_bt:hover .nbt2{opacity: 0;}
+.nav_bt:hover .nbt3{transform: translate(0,-10px);}
+
+
+
+#nav{
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+}
+
+.nav_left{
+    position: relative;
+    top: 0;
+    left: 0%;
+    width: 55%;
+    height: 100%;
+    background: #b5d5ca;
+}
+.nav_left ul{
+    position: absolute;
+    top: 30%;
+    left: 80px;
+    width: 200px;
+    height: 350px;
+}
+.nav_left li{
+    padding-top: 20px;
+}
+.nav_left a{
+    display: block;
+    font-size: 3.8rem;
+    color: #fff;
+}
+.nav_left a:hover{
+    text-decoration: underline;
+    
+}
+.nav_left p{
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.nav_right{
+    position: relative;
+    top: -100%;
+    left: 55%;
+    height: 100%;
+    width: 45%;
+    background: #ffced7;
+}
+.nav_right img{
+    
+}
+.nav_xbt{
+    position: absolute;
+    right: 80px;
+    top: 47px;
+    width: 35px;
+    transition: 0.5s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.nav_xbt:hover{
+    transform: rotate(45deg);
+    opacity: 1;
+}
+.nav_img{    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -359.5px;
+    margin-left: -302.5px;
+    width: 550px;
+}
+
+        
+        
+        
+        .sub1_wrap{
+            background: #f8e098;
+            width: 100%;
+            height: 5500px;
+            overflow: hidden;
+        }
+        .sub1_wrap_pbg{
+            background: url(
+            img/sub1_zigzagbg.png) no-repeat;
+            background-size: 100%;
+            width: 100%;
+            height: 3000px;
+        }
+        .sub1_nav{
+            width: 100%;
+            height: 920px;
+        }
+        
+        
+        /*    snav_top   */
+        
+        .snav_top{
+            width: 100%;
+            height: 500px;
+            margin-top: 150px;
+        }
+        .snav_name_cover{
+            width: 300px;
+            height: 80px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .snav_name_cover li{
+            width: 250px;
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            margin-left: -125px;
+/*            bottom: -150%;*/
+            display: none;
+        }
+        .snav_name_cover img{
+            width: 100%;
+        }
+        .snav_photo{
+            width: 480px;
+            height: 350px;
+            background: #Fff;
+            border-radius: 100px;
+            border: 18px solid  #ffa6a9;
+            margin: 15px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .snav_photo_hidden{
+            width: 480px;
+            height: 350px;
+            border-radius: 85px;
+            overflow: hidden;
+            position: absolute;
+        }
+        .snav_photo img{
+            position: absolute;
+            width: 300px;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: 20px;
+/*            left: 500px;*/
+            display: none;
+        }
+        
+        
+        /*     .snav_bot    */
+        
+        .snav_bot_wrap{
+            width: 1353px;
+            height: 170px;
+            margin: 40px auto 0;
+            position: relative;
+        }
+        .snav_bot{
+/*
+            position: relative;
+            width: 1353px;
+            height: 170px;
+            margin: 40px auto 0;
+*/
+        }
+        .sanv_pinkbox{
+            width: 1353px;
+            height: 170px;
+            background: #ffa6a9;
+            border-radius: 100px;
+            margin: 0 auto;
+            position: absolute;
+        }
+        .sanv_box_hidden{
+            width: 1000px;
+            height: 170px;
+            margin: 0 auto;
+            position: absolute;
+            left: 50%;
+            margin-left: -500px;
+            overflow: hidden;
+        }
+        ul.sanv_box{
+            width: 1400px;
+            height: 170px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        ul.sanv_box li{
+/*            position: absolute;*/
+            float: left;
+            width: 120px;
+            margin: 20px 40px;
+        }
+        ul.sanv_box li a{
+            display: block;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+        }
+        ul.sanv_box li img{
+            width: 100px;
+        }
+        ul.sanv_box li span{
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .snav_bt{
+            position: relative;
+            top: 37%;
+            cursor: pointer;
+        }
+        .snav_bt img{
+            display: block;
+            width: 30px;
+        }
+        #snav_prev{
+            position: absolute;
+            width: 30px;
+            left: 6%;
+        }
+        #snav_next{
+            position: absolute;
+            width: 30px;
+            right: 6%;
+        }
+        
+        /*    sub1_bot   */
+        
+        .sub1_bot{
+            width: 100%;
+            height: 4560px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .sub1_bot_bg{
+            width: 100%;
+            height: 5200px;
+            position: relative;
+        }
+        .sub1_bot_bg img{
+            position: absolute;
+        }
+        .sub1_bot_bg .r1{
+            z-index: 15;
+            top: 7.5%;
+            left: 9%;
+        }
+        .sub1_bot_bg .r2{
+            z-index: 14;
+            top: 4.5%;
+            right: -6.3%;
+        }
+        .sub1_bot_bg .r3{
+            z-index: 13;
+            top: 11%;
+            right: 3.8%;
+        }
+        .sub1_bot_bg .r4{
+            z-index: 12;
+            top: 27%;
+            left: 53.2%;
+        }
+        .sub1_bot_bg .r5{
+            z-index: 11;
+            top: 24%;
+            left: 31%;
+        }
+        .sub1_bot_bg .r6{
+            z-index: 10;
+            top: 23.5%;
+            left: -22.5%;
+        }
+        .sub1_bot_bg .r7{
+            z-index: 9;
+            top: 20.5%;
+            left: 9%;
+        }
+        .sub1_bot_bg .r8{
+            z-index: 8;
+            top: 34%;
+            left: 10%;
+        }
+        .sub1_bot_bg .r9{
+            z-index: 7;
+            top: 7.9%;
+            right: 0;
+            width: 100%;
+        }
+        .sub1_bot_bg .r10{
+            z-index: 6;
+        }
+        .sub1_bot_bg .r11{
+            z-index: 5;
+            width: 80px;
+            top: 42%;
+            right: 11%;
+            transform: rotateY(180deg);
+        }
+        .sub1_bot_bg .r12{
+            z-index: 2;
+            width: 380px;
+            top: 52.8%;
+            right: 13%;
+        }
+        .sub1_bot_bg .r13{
+            z-index: 3;
+            top: 55%;
+            right: 5.7%;
+        }
+        .sub1_bot_bg .r14{
+            z-index: 4;
+            width: 630px;
+            top: 57%;
+            right: -8%;
+        }
+        .sub1_bot_bg .r15{
+            z-index: 1;
+            top: 46.5%;
+            left: 9%;
+        }
+        .sub1_bot_bg .r16{
+            z-index: 2;
+            width: 470px;
+            top: 70%;
+            left: 5%;
+/*            transform: rotateY(180deg);*/
+        }
+        .sub1_bot_bg .r17{
+            z-index: 1;
+            top: 74.5%;
+            left: 2%;
+        }
+        .sub1_bot_bg .r18{
+            z-index: 1;
+            width: 200px;
+            top: 78.5%;
+            right: 9%;
+        }
+        .sub1_bot_bg .r19{
+            z-index: 2;
+            top: 80%;
+            right: 5%;
+        }
+        .sub1_bot_bg .r20{
+            z-index: 3;
+            width: 90px;
+            top: 82.5%;
+            right: 5%;
+        }
+        .sub1_bot_bg .r21{
+            z-index: 3;
+            top: 82.8%;
+            right: 6.8%;
+        }
+        
+        .sb1_apple{
+            position: absolute;
+            z-index: 555;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+        ul.sb1_apple_menu{
+            width: 100%; width: 1353px; margin: 0 auto;
+        }
+        ul.sb1_apple_menu li{
+            position: relative;
+            width: 510px;
+            height: 510px;
+            background: #fff;
+            float: left;
+            text-align: center;
+            border-radius: 50px;
+            box-shadow: 20px 20px 5px rgba(253, 140, 91, 0.49);
+            cursor: pointer;
+            transform: scale(1);
+            transition: 0.5s;
+        }
+      
+        ul.sb1_apple_menu li:hover{transform: scale(1.04)}
+        ul.sb1_apple_menu li:nth-child(1){margin: 490px 320px 0 0;}
+        ul.sb1_apple_menu li:nth-child(2){margin: 490px 0 0 0;}
+        ul.sb1_apple_menu li:nth-child(3){margin: 300px 320px 0 0;}
+        ul.sb1_apple_menu li:nth-child(4){margin: 300px 0 0 0;}
+        ul.sb1_apple_menu li:nth-child(5){margin: 300px 320px 0 0;}       
+        ul.sb1_apple_menu li:nth-child(6){margin: 300px 0 0 0;}
+        ul.sb1_apple_menu li:nth-child(7){margin: 300px 320px 0 0;}       
+        ul.sb1_apple_menu li:nth-child(8){margin: 300px 0 0 0;}
+        ul.sb1_apple_menu li:nth-child(9){margin: 300px 320px 0 0;}
+        ul.sb1_apple_menu li:nth-child(10){margin: 300px 0 0 0;}
+        
+        ul.sb1_apple_menu h3{
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 30px 50px 0px;
+            text-align: left;
+            position: absolute;
+        }
+        ul.sb1_apple_menu img{
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+            width: 100%;
+        }
+        ul.sb1_apple_menu li:nth-child(1) img{width: 140px;}
+        ul.sb1_apple_menu li:nth-child(2) img{width: 250px;}
+        ul.sb1_apple_menu li:nth-child(3) img{width: 230px;}
+        ul.sb1_apple_menu li:nth-child(4) img{width: 230px; left: 45%;}
+        ul.sb1_apple_menu li:nth-child(5) img{width: 240px; }
+        ul.sb1_apple_menu li:nth-child(6) img{width: 150px; }
+        ul.sb1_apple_menu li:nth-child(7) img{width: 210px; }
+        ul.sb1_apple_menu li:nth-child(8) img{width: 260px; }
+        ul.sb1_apple_menu li:nth-child(9) img{width: 230px; }
+        ul.sb1_apple_menu li:nth-child(10) img{width: 240px; }
+        ul.sb1_apple_menu p{
+            position: absolute;
+            font-size: 1.5rem;
+            text-align: right;
+/*            margin: 0px 50px 30px;*/
+            bottom: 8%; right: 12%;
+        }
+        
+/*        .fixed{width: 100%; height: 100%; position: fixed; background-color: red; z-index: 999; opacity: 0.5; display: none;}*/
+        
+
+        .sub1_menu_product,.sub1_menu_product2,.sub1_menu_product3,.sub1_menu_product4,.sub1_menu_product5,.sub1_menu_product6,.sub1_menu_product7,.sub1_menu_product8,.sub1_menu_product9,.sub1_menu_product10{
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.46);
+            position: fixed;
+            z-index: 9999;
+            display: none;
+        }
+        .p_apple1,.p_apple2,.p_apple3,.p_apple4,.p_apple5,.p_apple6,.p_apple7,.p_apple8,.p_apple9,.p_apple10{
+             width: 1240px;
+            height: 500px;
+            background: #fff;
+            margin: 160px auto; 
+            padding: 60px;
+            position: relative;
+            z-index: 9992;
+        }
+/*        .p_cover{}*/
+        
+        .p_left{
+            float: left;
+            width: 50%-60px;
+            height: 100%;
+            border-right: 1px solid #d7d7d7;
+            padding-right: 60px;
+            position: relative;
+        }
+        .p_left h2{
+            font-size: 2.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .p_left p.left{
+            font-size: 1.4rem;
+            float: left;
+        }
+        .p_left p.right{
+            font-size: 1.7rem;
+            float: right;
+        }
+        
+        .pslide{
+            width: 310px;
+            height: 310px;
+/*            margin: 120px auto;*/
+            overflow: hidden;
+            position: relative;
+            left: 20%; top: 50%; transform: translate(-50%,-50%);
+        }
+        .pslide img{
+            width: 310px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .pbt{
+            position: absolute;
+            width: 100%;
+            top: 55%;
+            cursor: pointer;
+        }
+        .pbt img{
+            width: 20px;
+            position: absolute;
+        }
+        #ps_prev{
+            left: 0;
+        }
+        #ps_next{
+            right: 60px;
+        }
+        
+        .p_xbtn{
+            position: relative;
+            cursor: pointer;
+        }
+        .p_xbtn img{
+            width: 30px;
+            position: absolute;
+            right: 0;
+            transition: 0.5s;
+        }
+        .p_xbtn img:hover{
+            transform: rotate(45deg);
+        }
+        .p_right{
+            float: left;
+            width: 50%-1px;
+            height: 100%;
+            position: relative;
+            padding: 20px 0 0 60px;
+        }
+   
+        .p_right_up{
+            height: 80%;
+        }
+        .p_right_up h3{
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .p_right_up p{
+            font-size: 1.3rem;
+            margin-bottom: 3px;
+        }
+        .p_right_up span{
+            font-size: 1.2rem;
+            margin-top: 20px;
+            display: block;
+            line-height: 1.8rem;
+        }
+        
+        .p_right_down{
+            height: 20%;
+            position: relative;
+            width: 100%;
+        }
+        .p_right_down_l{
+            position: absolute;
+            bottom: 57%;
+            left: 0;
+        }
+        .p_right_down_l img{
+            width: 25px;
+            cursor: pointer;
+        }
+        .p_right_down_l img.like:hover{
+            background: url(img/icon_like2.png) no-repeat;
+            background-size: 25px;
+        }
+        .p_right_down_l img.cart:hover{
+            background: url(img/icon_cart2.png) no-repeat;
+            background-size: 25px;
+        }
+        .p_right_down_l img.heart:hover{
+            background: url(img/icon_heart2.png) no-repeat;
+            background-size: 25px;
+        }
+        .p_right_down_l img+img{
+            margin-left: 10px;
+        }
+        .p_right_down_r{
+            position: absolute;
+            width: 213px;
+            height: 48px;
+            right: 0;
+            top: 5%;
+        }
+        .p_right_down_r span{
+            position: absolute;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+        span.p_rbt1{
+            width: 93px;
+            height: 48px;
+            background: #000;
+            color: #fff;
+            font-size: 1.2rem;
+/*            font-weight: bold;*/
+            border-radius: 100px 0 0 100px;
+            line-height: 45px;
+/*            text-align: center;*/
+            padding-left: 35px;
+        }
+        span.p_rbt2{
+            width: 40px;
+            height: 34px;
+            background: #000;
+            left: 129px;
+            margin-right: 1px;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #fff;
+            padding-top: 14px;
+            
+        }
+        span.p_updown{
+            position: absolute;
+            width: 44px;
+            height: 48px;
+        }
+        span.p_upbt{
+            width: 44px;
+            height:23.5px;
+            background: #000;
+            right: 0;
+            left: 170px;
+            border-radius: 0 100px 0 0 ;
+        }
+        span.p_upbt img{
+            display: block;
+            width: 20px;
+            margin: 5px 0 0 8px;
+        }
+        span.p_downbt{
+            width: 44px;
+            height: 23.5px;
+            background: #000;
+            right: 0;
+            bottom: 0;
+            left: 170px;
+            border-radius: 0 0 100px 0 ;
+        }
+        span.p_downbt img{
+            display: block;
+            width: 20px;
+            margin: 5px 0 0 8px;
+        }
+        
+        
+    </style>
+    
+
+</head>
+<body>
+   
+      <div id="fix_top">
+       <div class="m_logo">
+           <a href="index.html">
+               <img src="img/aff_logo_m.png" alt="aff_logo_m">
+           </a>
+       </div>
+       <div class="nav_bt">
+           <span class="nbt1"></span>
+           <span class="nbt2"></span>
+           <span class="nbt3"></span>
+       </div>
+   </div>
+   <div id="nav">
+       <div class="nav_left">
+           <ul>
+               <li>
+                   <a href="index.html">home</a>
+               </li>
+               <li>
+                   <a href="sub1.html">menu</a>
+               </li>
+                <li>
+                   <a href="sub2.html">about</a>
+               </li>
+               <li>
+                   <a href="sub3.html">contact</a>
+               </li>
+               
+           </ul>
+           <p>ALL OF THE FRUITS</p>
+       </div>
+       <div class="nav_right">
+           <img class="nav_xbt" src="img/nav_xbtn.png" alt="nav_xbtn">
+           <img class="nav_img" src="img/nav_img_sub1.png" alt="nav_img_sub1">
+       </div>
+       
+   </div>
+   
+   <div class="sub1_menu_product">
+      
+     <div class="p_apple1" >
+<!--         <div class="p_cover">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE PHONE CASE</p>
+                 <p class="right">$80.71</p>
+                 <div class="pslide Pslide01">
+                     <img class="ppss" src="menuimg/apple01.png" alt="" style="width: 100px">
+                     <img class="ppss" src="menuimg/apple01P.jpg" alt="">
+                 </div>
+                 <div class="pbt">
+                    
+                     <!--<img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus(-1)">-->
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> a-step</p>
+                     <p><b>Size</b> L613 x W6.5 x H1.3cm</p>
+                     <p><b>Materia</b> pc</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+<!--         </div>-->
+
+   
+                
+     </div>
+      
+   </div>
+   
+    <div class="sub1_menu_product2">
+
+     
+     <div class="p_apple2">
+<!--          <div class="p_cover">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE RAINCOAT</p>
+                 <p class="right">$18.24</p>
+                 <div class="pslide pslide02">
+                     <img class="ppss2" src="menuimg/apple02.png" alt="">
+                     <img class="ppss2" src="menuimg/apple02P.jpg" alt="">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> ZZIXQIN</p>
+                     <p><b>Size</b> S / M / L / XL / XXL</p>
+                     <p><b>Materia</b> 190T Nylon Fabric</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+     
+ <div class="sub1_menu_product3">
+
+     
+     <div class="p_apple3">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28</p>
+                 <div class="pslide pslide03">
+                     <img class="ppss2" src="menuimg/apple03.png" alt="" style="left: 40%">
+                     <img class="ppss2" src="menuimg/apple03.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+     
+<div class="sub1_menu_product4">
+
+     
+     <div class="p_apple4">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28</p>
+                 <div class="pslide pslide04">
+                     <img class="ppss2" src="menuimg/apple04.png" alt="" style="left: 40%; width: 220px;">
+                     <img class="ppss2" src="menuimg/apple04.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+<div class="sub1_menu_product5">
+
+     
+     <div class="p_apple5">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28.15</p>
+                 <div class="pslide pslide05">
+                     <img class="ppss2" src="menuimg/apple05.png" alt="" style="left: 40%; width: 250px;">
+                     <img class="ppss2" src="menuimg/apple05.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+<div class="sub1_menu_product6">
+
+     
+     <div class="p_apple6">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$15.15</p>
+                 <div class="pslide pslide06">
+                     <img class="ppss2" src="menuimg/apple06.png" alt="" style="left: 40%; width: 150px;">
+                     <img class="ppss2" src="menuimg/apple06.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+<div class="sub1_menu_product7">
+
+     
+     <div class="p_apple7">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28</p>
+                 <div class="pslide pslide07">
+                     <img class="ppss2" src="menuimg/apple07.png" alt="" style="left: 40%; width: 220px;">
+                     <img class="ppss2" src="menuimg/apple07.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+<div class="sub1_menu_product8">
+
+     
+     <div class="p_apple8">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28</p>
+                 <div class="pslide pslide08">
+                     <img class="ppss2" src="menuimg/apple08.png" alt="" style="left: 40%; width: 270px;">
+                     <img class="ppss2" src="menuimg/apple08.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+<div class="sub1_menu_product9">
+
+     
+     <div class="p_apple9">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28</p>
+                 <div class="pslide pslide04">
+                     <img class="ppss2" src="menuimg/apple09.png" alt="" style="left: 40%; width: 220px;">
+                     <img class="ppss2" src="menuimg/apple09.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+<div class="sub1_menu_product10">
+
+     
+     <div class="p_apple10">
+<!--          <div class="p_covers">-->
+             <div class="p_left">
+                 <h2>Apple</h2>
+                 <p class="left">APPLE MATTE BLACKT</p>
+                 <p class="right">$28</p>
+                 <div class="pslide pslide10">
+                     <img class="ppss2" src="menuimg/apple10.png" alt="" style="left: 40%; width: 220px;">
+                     <img class="ppss2" src="menuimg/apple10.jpg" alt="" style="left: 40%">
+                 </div>
+                 <div class="pbt">
+                     <img src="img/arrow_icon_left_g.png" alt="" id="ps_prev" onclick="plus2(-1)">
+                     <img src="img/arrow_icon_right_g.png" alt="" id="ps_next" onclick="plus2(1)">
+                 </div>
+             </div>
+             <div class="p_xbtn">
+                    <img src="img/p_xbtn.png" alt="p_xbtn">
+                </div>
+             <div class="p_right">
+                
+                 <div class="p_right_up">
+                     <h3>Product Information</h3>
+                     <p><b>Designer</b> Pottery Pots</p>
+                     <p><b>Size</b> W 15 x H 17cm</p>
+                     <p><b>Materia</b> Fiberstone</p>
+                     <span>
+                         Meeting at the Collective Cafe Michelle Started in 1986 in Amsterdam,<br>
+                        Based on a stylish sense of space, we bring innovative designs to the home.<br>
+                        Outstanding patterns, designs beyond common sense, and impressive designs <br>
+                        love Paul Stern. The element that can make a simple design innovative is to <br>
+                        express the originality and personality of the brand.Deeper.<br>
+                     </span>
+                 </div>
+                 <div class="p_right_down">
+                     <div class="p_right_down_l">
+                         <img class="heart" src="img/icon_heart.png" alt="icon_heart">
+                         <img class="like" src="img/icon_like.png" alt="icon_like">
+                         <img class="cart" src="img/icon_cart.png" alt="icon_cart">
+                     </div>
+                     <div class="p_right_down_r">
+                         <span class="p_rbt1">Buy Now</span>
+                         <span class="p_rbt2">1</span>
+                         <span class="p_updown">
+                             <span class="p_upbt">
+                                 <img src="img/arrow_icon_up_w.png" alt="arrow_icon_up_w" id="p_up">
+                             </span>
+                             <span class=p_downbt>
+                                 <img src="img/arrow_icon_down_w.png" alt="arrow_icon_down_w" id="p_down">
+                             </span>
+                         </span>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+<!--     </div>-->
+
+      
+   </div>
+   
+   
+   
+   <div class="sub1_wrap">
+       <div class="sub1_wrap_pbg">
+           <div class="sub1_nav">
+               <div class="snav_top">
+                  <ul class="snav_name_cover">
+                       <li class="snav_name1">
+                           <img  src="img/sub1_menu_text_apple.png" alt="apple">
+                       </li>
+                       <li class="snav_name2">
+                           <img src="img/sub1_menu_text_banana.png" alt="banana">
+                       </li>
+                       <li class="snav_name3">
+                           <img src="img/sub1_menu_text_watermelon.png" alt="watermelon">
+                       </li>
+                       <li class="snav_name4">
+                           <img src="img/sub1_menu_text_pineapple.png" alt="pineapple">
+                       </li>
+                       <li class="snav_name5">
+                           <img src="img/sub1_menu_text_grape.png" alt="grape">
+                       </li>
+                       <li class="snav_name6">
+                           <img src="img/sub1_menu_text_lemon.png" alt="lemon">
+                       </li>
+                       <li class="snav_name7">
+                           <img src="img/sub1_menu_text_cherry.png" alt="cherry">
+                       </li>
+                   </ul>
+                   <div class="snav_photo">
+                       <div class="snav_photo_hidden"></div>
+                           <img class="snav_pho1" src="img/fruits_album_icon_apple.png" alt="apple">
+                           <img class="snav_pho2" src="img/fruits_album_icon_banana.png" alt="banana">
+                           <img class="snav_pho3" src="img/fruits_album_icon_watermelon.png" alt="watermelon">
+                           <img class="snav_pho4" src="img/fruits_album_icon_pineapple.png" alt="pineapple">
+                           <img class="snav_pho5" src="img/fruits_album_icon_grape.png" alt="grape">
+                           <img class="snav_pho6" src="img/fruits_album_icon_lemon.png" alt="lemon">
+                           <img class="snav_pho7" src="img/fruits_album_icon_cherry.png" alt="cherry">
+                   </div>
+               </div>
+               
+               <div class="snav_bot_wrap">
+                   <div class="snav_bot">
+                       <div class="sanv_pinkbox"></div>
+                       <div class="sanv_box_hidden">
+                           <ul class="sanv_box">
+                               <li onmouseenter="btnhover(1)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_apple.png" alt="apple">
+                                       <span>Apple</span>
+                                   </a>
+                               </li>
+                               <li onmouseenter="btnhover(2)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_banana.png" alt="banana">
+                                       <span>Banana</span>
+                                   </a>
+                               </li>
+                               <li onmouseenter="btnhover(3)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_watermelon.png" alt="watermelon">
+                                       <span>Watermelon</span>
+                                   </a>
+                               </li>
+                               <li onmouseenter="btnhover(4)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_pineapple.png" alt="pineapple">
+                                       <span>Pineapple</span>
+                                   </a>
+                               </li>
+                               <li onmouseenter="btnhover(5)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_grape.png" alt="grape">
+                                       <span>Grape</span>
+                                   </a>
+                               </li>
+                               <li onmouseenter="btnhover(6)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_lemon.png" alt="lemon">
+                                       <span>Lemon</span>
+                                   </a>
+                               </li>
+                               <li onmouseenter="btnhover(7)">
+                                   <a href="#">
+                                       <img src="img/fruits_icon_cherry.png" alt="cherry">
+                                       <span>Cherry</span>
+                                   </a>
+                               </li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="snav_bt">
+                       <img src="img/arrow_icon_left_w.png" alt="arrow_icon_left_w" id="snav_prev">
+                       <img src="img/arrow_icon_right_w.png" alt="arrow_icon_right_w" id="snav_next">
+                   </div>
+               </div>
+           </div>
+           <div class="sub1_bot">
+               <div class="sub1_bot_bg">
+                   <img class="r1" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+                   <img class="r2" src="img/sub1_pinkblue_banana.png" alt="sub1_pinkblue_banana">
+                   <img class="r3" src="img/sub1_rectangle_r.png" alt="sub1_rectangle_r">
+                   <img class="r4" src="img/sub1_rectangle_left3.png" alt="sub1_rectangle_left3">
+                   <img class="r5" src="img/sub1_rectangle_left2.png" alt="sub1_rectangle_left2">
+                   <img class="r6" src="img/sub1_banana_left.png" alt="sub1_banana_left">
+                   <img class="r7" src="img/sub1_rectangle_left1.png" alt="sub1_rectangle_left1">
+                   <img class="r8" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+                   <img class="r9" src="img/sub1_pinkbg.png" alt="sub1_pinkbg">
+<!--                   <img class="r10" src="img/sub1_rectangle_left5.png" alt="sub1_rectangle_left5">-->
+                   <img class="r11" src="img/sub1_rectangle_left4.png" alt="sub1_rectangle_left4">
+                   <img class="r12" src="img/sub1_rectangle_r2.png" alt="sub1_rectangle_r2">
+                   <img class="r13" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+                   <img class="r14" src="img/sub1_banana_right.png" alt="sub1_banana_right">
+                   <img class="r15" src="img/sub1_rectangle_left5.png" alt="sub1_rectangle_left5">
+                   <img class="r16" src="img/sub1_pinkblue_banana.png" alt="sub1_pinkblue_banana">
+                   <img class="r17" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+                   <img class="r18" src="img/sub1_rectangle_left5.png" alt="sub1_rectangle_left5">
+                   <img class="r19" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+                   <img class="r20" src="img/sub1_rectangle_left6.png" alt="sub1_rectangle_left6">
+                   <img class="r21" src="img/sub1_rectangle_left7.png" alt="sub1_rectangle_left7">
+               </div>
+               <div class="sb1_apple">
+                   <ul class="sb1_apple_menu">
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple01S.png" alt="">
+                           <p>APPLE PHONE CASE</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple02S.png" alt="">
+                           <p>APPLE RAINCOAT</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple03S.png" alt="">
+                           <p>APPLE MATTE BLACK</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple04S.png" alt="">
+                           <p>CONNECTION CUP</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple05S.png" alt="">
+                           <p>PLATE FRUIT SMILE</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple06S.png" alt="">
+                           <p>APPLE JELLY</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple07S.png" alt="">
+                           <p>GOLD APPLE</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple08S.png" alt="">
+                           <p>BLACK APPLE POSTER</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple09S.png" alt="">
+                           <p>LEAF APPLE-INDY PINK</p>
+                       </li>
+                       <li>
+                           <h3>Apple</h3>
+                           <img src="menuimg/apple10S.png" alt="">
+                           <p>LIFE &amp; DEATH MAGNET</p>
+                       </li>
+                   </ul>
+               </div>
+               <div class="sb1_banana"></div>
+               
+               
+           </div>
+       </div>
+   </div>
+   
+    <script src="script/wheel.js"></script>
+    <script src="script/script.js"></script>
+        <script>
+            
+            function btnhover(seq){
+
+                var change = $('.snav_name'+seq)
+                var change2 = $('.snav_pho'+seq)
+
+                $(change).addClass('animated bounceInUp')
+                        .fadeIn()
+                $(change).siblings().fadeOut()
+                
+                $(change2).addClass('animated bounceInUp')
+                        .fadeIn()
+                $(change2).siblings().fadeOut()
+
+            }
+            
+            
+//            $('ul.sanv_box li:nth-child(1)').hover(function(){
+//                $('.snav_name li:nth-child(1) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(1) img').stop().animate({bottom:'-150px'})
+//            });
+//            $('ul.sanv_box li:nth-child(2)').hover(function(){
+//                $('.snav_name li:nth-child(2) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(2) img').stop().animate({bottom:'-150px'})
+//            });
+//            $('ul.sanv_box li:nth-child(3)').hover(function(){
+//                $('.snav_name li:nth-child(3) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(3) img').stop().animate({bottom:'-150px'})
+//            });
+//            $('ul.sanv_box li:nth-child(4)').hover(function(){
+//                $('.snav_name li:nth-child(4) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(4) img').stop().animate({bottom:'-150px'})
+//            });
+//            $('ul.sanv_box li:nth-child(5)').hover(function(){
+//                $('.snav_name li:nth-child(5) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(5) img').stop().animate({bottom:'-150px'})
+//            });
+//            $('ul.sanv_box li:nth-child(6)').hover(function(){
+//                $('.snav_name li:nth-child(6) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(6) img').stop().animate({bottom:'-150px'})
+//            });
+//            $('ul.sanv_box li:nth-child(7)').hover(function(){
+//                $('.snav_name li:nth-child(7) img').stop().animate({bottom:'0px'})
+//            },function(){
+//                $('.snav_name li:nth-child(7) img').stop().animate({bottom:'-150px'})
+//            });
+            
+            
+
+            
+            
+            
+    
+        
+            
+            
+            
+        
+ 
+        // sub1_nav_bt
+        
+//     $(document).ready(function(){
+//         
+//     var count=0;
+//       $('#snav_prev').click(function(){   
+//            
+//            if(count<2){
+//                count+=1;               
+//               $('ul.sanv_box').stop().animate({left:'+=-200px'},500)       
+//                }
+//            
+//        });
+//       
+//      $('#snav_next').click(function(){
+//            if(count>0){ 
+//                count-=1;
+//               $('ul.sanv_box').stop().animate({left:'+=200px'},500)
+//               }
+//        });
+//               
+//        });
+        
+        // sub1_bot_cloud
+        
+         $(document).ready(function(){
+             
+         function s1cloud1(){
+        $('.r1').animate({top:'6.5%'},2000).animate({top:'7.5%'},2000,s1cloud1)
+        };
+        s1cloud1();
+             
+         function s1cloud2(){
+        $('.r8').animate({top:'33.5%'},2000).animate({top:'34%'},2000,s1cloud2)
+        };
+        s1cloud2();
+             
+         function s1cloud3(){
+        $('.r13').animate({top:'54.5%'},2000).animate({top:'55%'},2000,s1cloud3)
+        };
+        s1cloud3();
+        
+        function s1cloud4(){
+        $('.r17').animate({top:'73.5%'},2000).animate({top:'74.5%'},2000,s1cloud4)
+        };
+        s1cloud4();
+             
+        function s1cloud5(){
+        $('.r19').animate({top:'79.5%'},2000).animate({top:'80%'},2000,s1cloud5)
+        };
+        s1cloud5();
+             
+        function s1cloud6(){
+        $('.r20').animate({top:'82%'},2000).animate({top:'82.5%'},2000,s1cloud6)
+        };
+        s1cloud6();
+             
+        function s1cloud7(){
+        $('.r21').animate({top:'82.3%'},2000).animate({top:'82.8%'},2000,s1cloud7)
+        };
+        s1cloud7();
+        
+        
+        });
+        
+        
+        // sub1_product_slide
+        
+        $(document).ready(function(){
+            
+        
+      // first pop up
+            
+        sub1_start();    
+        var sub1_imgs = 1;
+        var sub1_now = 0;
+        
+        function sub1_start(){
+            $(".Pslide01 > img").eq(0).siblings().fadeOut();
+            setInterval(sub1_slider , 2800);
+           
+        }
+        
+            
+        function sub1_slider(){
+            sub1_now = (sub1_now == sub1_imgs)? 0 : sub1_now + 1;
+            $(".Pslide01 > img").eq(sub1_now - 1).fadeOut();
+            $(".Pslide01 > img").eq(sub1_now).fadeIn();
+        }
+        
+        
+        var slideIndex =1;
+        //show(slideIndex);
+        
+        function plus(n){
+            show(slideIndex += n )            
+           
+        }
+        
+        function show(n){
+            var slides = document.getElementsByClassName("ppss");
+            if(n>slides.length){
+                slideIndex = 1
+            }
+            if(n<1){
+            slideIndex = slides.length
+            }
+            
+            for(i=0; i<slides.length; i++){
+             slides[i].style.display = "none";
+                
+            }
+			
+          slides[slideIndex-1].style.display="block"
+            
+        } 
+           
+            //second pop up
+            
+        sub1_start2();   
+        var sub1_imgs2 = 1;
+        var sub1_now2 = 0;
+        
+        function sub1_start2(){
+            $(".pslide02 > img").eq(0).siblings().fadeOut();
+            setInterval(sub1_slider2 , 2800);
+           
+        }
+        
+            
+        function sub1_slider2(){
+            sub1_now2 = (sub1_now2 == sub1_imgs2)? 0 : sub1_now2 + 1;
+            $(".pslide02 > img").eq(sub1_now2 - 1).fadeOut();
+            $(".pslide02 > img").eq(sub1_now2).fadeIn();
+        }
+        
+        
+        var slideIndex2 =1;
+        //show(slideIndex);
+        
+        function plus2(n){
+            show2(slideIndex2 += n )            
+           
+        }
+        
+        function show2(n){
+            var slides2 = document.getElementsByClassName("ppss2");
+            if(n>slides2.length){
+                slideIndex2 = 1
+            }
+            if(n<1){
+            slideIndex2 = slides2.length
+            }
+            
+            for(i=0; i<slides2.length; i++){
+             slides2[i].style.display = "none";
+                
+            }
+			
+          slides2[slideIndex2-1].style.display="block"
+            
+        }
+            
+            
+       
+            $('.p_xbtn').click(function(){
+                $('.sub1_menu_product').fadeOut('slow')
+               $('.sub1_menu_product2').fadeOut('slow')
+               $('.sub1_menu_product3').fadeOut('slow')
+               $('.sub1_menu_product4').fadeOut('slow')
+               $('.sub1_menu_product5').fadeOut('slow')
+               $('.sub1_menu_product6').fadeOut('slow')
+               $('.sub1_menu_product7').fadeOut('slow')
+               $('.sub1_menu_product8').fadeOut('slow')
+               $('.sub1_menu_product9').fadeOut('slow')
+               $('.sub1_menu_product10').fadeOut('slow')
+            });
+            
+            
+            $('ul.sb1_apple_menu li:nth-child(1)').click(function(){
+                $('.sub1_menu_product').fadeIn(800);
+                sub1_start() 
+            });
+            $('ul.sb1_apple_menu li:nth-child(2)').click(function(){
+                $('.sub1_menu_product2').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(3)').click(function(){
+                $('.sub1_menu_product3').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(4)').click(function(){
+                $('.sub1_menu_product4').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(5)').click(function(){
+                $('.sub1_menu_product5').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(6)').click(function(){
+                $('.sub1_menu_product6').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(7)').click(function(){
+                $('.sub1_menu_product7').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(8)').click(function(){
+                $('.sub1_menu_product8').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(9)').click(function(){
+                $('.sub1_menu_product9').fadeIn(800);    
+            });
+            $('ul.sb1_apple_menu li:nth-child(10)').click(function(){
+                $('.sub1_menu_product10').fadeIn(800);    
+            });
+       
+            
+         
+        });
+        
+    </script>
+    
+       <div class="topbt">
+       <a href="#"><img src="img/sub1_cloud_left.png" alt=""></a>
+   </div>
+   
+   
+</body>
+</html>

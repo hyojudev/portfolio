@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Luckiest+Guy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/jquery.easing.1.3.js"></script>
+    <script src="script/jquery.nicescroll.min.js"></script>
+    <script src="script/TweenMax.min.js"></script>       
+<!--
+    <style>
+    
+        .container{}
+        #log{position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+            line-height: 50px;
+        z-index: 9999;}
+        .box{position: fixed; z-index: 99999; background-color: #fff; left: 0; top:0; font-size: 20px;}
+    </style>
+-->
+</head>
+<body>
+<!--              <div class="box">dkdkdkdkdk</div>-->
+              
+<!--
+               <div id="container">
+                        <div id="log">0</div>
+                    </div>
+-->
+    <div class="scrollBox">
+   <!-- <div id="logo">
+           dkdkdkdkdkdksssssss
+           <button id="logob">클릭!!</button>
+       </div>-->
+      
+        <div id="wrap" class="wh">
+
+      <!--    nav     -->
+           <nav>
+               <ul>
+                   <li class="menu1">
+                       <a href="#scene01"></a>
+                       <span></span>
+                   </li>
+                   <li class="menu2">
+                       <a href="#scene02"></a>
+                       <span></span>
+                   </li>
+                   <li class="menu3">
+                       <a href="#scene04"></a>
+                       <span></span>
+                   </li>
+                   <li class="menu4">
+                       <a href="#scene05"></a>
+                       <span></span>
+                   </li>
+                  
+                   
+               </ul>
+           </nav>
+           
+       <!--    scene01     -->
+            <div id="scene01">
+               <div class="scene01_top">
+                    <div class="cloud_wrap01">
+                        <ul class="cloudA">
+                            <li class="cloudA01">
+                                <img src="img/cloud02.png" alt="cloud02">
+                            </li>
+                            <li class="cloudA02">
+                                <img src="img/cloud04.png" alt="cloud04">
+                            </li>
+                            <li class="cloudA03">
+                                <img src="img/cloud05.png" alt="cloud05">
+                            </li>
+                            <li class="cloudA04">
+                                <img src="img/cloud06.png" alt="cloud06">
+                            </li>
+                            <li class="cloudA05">
+                                <img src="img/cloud07.png" alt="cloud07">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_front01">
+                        <ul>
+                            <li class="bgF01_1">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF01_1_1">
+                                <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF01_2">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF01_3">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF01_4">
+                                <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF01_4_1">
+                                <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF01_5">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF01_6">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF01_7">
+                                <img src="img/tower01.png" alt="tower01">
+                            </li>
+                            <li class="bgF01_8">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF01_9">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+<!--
+                            <li class="bgF01_10">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+-->
+                            <li class="bgF01_11">
+                            <img src="img/mountain05.png" alt="mountain05">
+                            </li>
+                            <li class="bgF01_11_1">
+                            <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF01_11_2">
+                            <img src="img/mountain05.png" alt="mountain05">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_back01">
+                        <ul>
+                            <li class="bgB01_1"></li>
+                            <li class="bgB01_2"></li>
+                            <li class="bgB01_3"></li>
+                            <li class="bgB01_4"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+               <div class="scene01_bottom">
+                   <div class="grasscover1">
+                       <div class="grass_1"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_2"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_3"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_4"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_5"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_6"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_7"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_8"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_9"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_10"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_11"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_12"><img src="img/grass.png" alt="grass"></div>
+                   </div>
+                   <div class="textbox1" >
+                       <div class="textcover1">
+                            <div class="title1">
+                                <img src="img/text_About_title.png" alt="">
+                            </div>
+                            <div class="subtitle1">
+                                <img src="img/text_About_subtitle.png" alt="" class="day">
+                                <img src="img/text_About_subtitle2.png" alt="" class="night">
+                            </div>
+
+                            <ul class="CenTextCover1">
+                                <li class="text1">
+                                    <div class="text1_1">
+                                        <p>Walking with a dog, canny cross.<br>It is a time to unleash your instincts.</p>
+                                    </div>
+                                    <div class="text1_2">
+                                      <p>*Animals not registered until the day of competition can be registered only<br> at the site of competition.</p>
+                                    </div>
+                                </li>
+                                <li class="text2">
+                                    <div class="text2_1">
+                                        <p>This is a great opportunity to enjoy lots of activities<br> and spend time with dog companions.</p>
+                                    </div>
+                                    <div class="text2_2">
+                                        <p>Animal movies are shown twice and picnics can be enjoyed <br>with animals in the picnic zone..</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                        <div class="arrow">
+                            <img src="img/arrow.png" alt="" class="left" id="L">
+                            <img src="img/arrow.png" alt="" class="right" id="R">           
+                        </div>
+                        <div class="textboxBG">
+                            <img src="img/text_About_bg.png" alt="">
+                        </div>               
+                   </div>
+                   <div class="people1">
+                       <div class="poeple1_1">
+                           <img src="img/downBG_10.png" alt="downBG_10">
+                       </div>
+                       <div class="poeple1_2">
+                           <img src="img/people_12.png" alt="people_12">
+                       </div>
+                       <div class="poeple1_3">
+                           <img src="img/downBG_9.png" alt="downBG_9">
+                       </div>
+                       <div class="poeple1_4">
+                           <img src="img/downBG_9.png" alt="downBG_9">
+                       </div>
+                       <div class="poeple1_5">
+                           <img src="img/people_1.png" alt="people_1">
+                       </div>
+                       <div class="poeple1_6">
+                           <img src="img/people_13.png" alt="people_13">
+                       </div>
+                       <div class="poeple1_7">
+                           <img src="img/people_14.png" alt="people_14">
+                       </div>
+                       <div class="poeple1_8">
+                           <img src="img/people_15.png" alt="people_15">
+                       </div>
+                       <div class="poeple1_9">
+                           <img src="img/downBG_8.png" alt="downBG_8">
+                       </div>
+                       <div class="poeple1_10">
+                           <img src="img/people_2.png" alt="people_2">
+                       </div>
+                       <div class="poeple1_11"></div>
+                       <div class="poeple1_12">
+                           <img src="img/people_3.png" alt="people_3">
+                       </div>
+                       <div class="poeple1_13">
+                           <img src="img/people_11.png" alt="people_11">
+                       </div>
+                       <div class="poeple1_14">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple1_15">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple1_16">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple1_17">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple1_18">
+                           <img src="img/people_5_1.png" alt="people_5">
+                       </div>
+                       <div class="poeple1_18_1"></div>
+                       <div class="poeple1_19">
+                           <img src="img/people_6.png" alt="people_6">
+                       </div>
+                       <div class="poeple1_20">
+                           <img src="img/people_7_1.png" alt="people_7">
+                       </div>
+                       <div class="poeple1_20_1"></div>
+                       <div class="poeple1_21">
+                           <img src="img/people_8.png" alt="people_8">
+                       </div>
+                       <div class="poeple1_22">
+                           <img src="img/people_17_1_1.png" alt="people_17_1_1">
+                       </div>
+                       <div class="poeple1_23">
+                           <img src="img/people_17_4.png" alt="people_17_4">
+                       </div>
+                       <div class="poeple1_24">
+<!--                           <img src="img/people_17_3_move.png" alt="people_17_3">-->
+                       </div>
+                       <div class="poeple1_25">
+                           <img src="img/people_16.png" alt="people_16"> 
+                       </div>
+                       <div class="poeple1_26">
+                           <img src="img/people_9.png" alt="people_9">
+                       </div>
+                       <div class="poeple1_27">
+                           <img src="img/people_10_1.png" alt="people_10">
+                       </div>
+                       <div class="poeple1_27_1"></div>
+                   </div>
+                   <div class="downbgcover1">
+                       <div class="downbg1_1">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg1_2">
+                           <img src="img/downBG_2.png" alt="downBG_2">
+                       </div>
+                       <div class="downbg1_3">
+                           <img src="img/downBG_5.png" alt="downBG_5">
+                       </div>
+                       <div class="downbg1_4">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg1_5">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg1_6">
+                           <img src="img/downBG_3.png" alt="downBG_3">
+                       </div>
+                       <div class="downbg1_7">
+                           <img src="img/downBG_4.png" alt="downBG_4">
+                       </div>
+                       <div class="downbg1_8">
+                           <img src="img/downBG_6.png" alt="downBG_6">
+                       </div>
+                       <div class="downbg1_9">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg1_10">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg1_11">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg1_12">                           
+                       <img src="img/downBG_5.png" alt="downBG_5">
+                       </div>
+                       <div class="downbg1_13">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg1_14">
+                           <img src="img/downBG_2.png" alt="downBG_2">
+                       </div>
+                       <div class="downbg1_15">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg1_16">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg1_17">
+                           <img src="img/downBG_7.png" alt="downBG_1">
+                       </div>
+                   </div>
+               
+               </div>    
+               
+            </div>
+            
+            
+    <!--    scene02     -->
+            <div id="scene02">
+               <div class="scene02_top">
+                    <div class="cloud_wrap02">
+                        <ul class="cloudB">
+                            <li class="cloudB01">
+                                <img src="img/cloud02.png" alt="cloud02">
+                            </li>
+                            <li class="cloudB02">
+                                <img src="img/cloud04.png" alt="cloud04">
+                            </li>
+                            <li class="cloudB03">
+                                <img src="img/cloud05.png" alt="cloud05">
+                            </li>
+                            <li class="cloudB04">
+                                <img src="img/cloud06.png" alt="cloud06">
+                            </li>
+                            <li class="cloudB05">
+                                <img src="img/cloud07.png" alt="cloud07">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_front02">
+                        <ul>
+                            <li class="bgF02_1">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF02_2">
+                                <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF02_3">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF02_4">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF02_5">
+                                <img src="img/tower02.png" alt="tower02">
+                            </li>
+                            <li class="bgF02_6">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF02_7">
+                                <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF02_8">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF02_9">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF02_10">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF02_11">
+                            <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF02_12">
+                            <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF02_13">
+                            <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF02_14">
+                            <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF02_15">
+                            <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF02_16">
+                            <img src="img/tower02.png" alt="tower02">
+                            </li>
+                            <li class="bgF02_17">
+                            <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_back02">
+                        <ul>
+                            <li class="bgB02_1"></li>
+                            <li class="bgB02_2"></li>
+                            <li class="bgB02_3"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+               <div class="scene02_bottom">
+                   <div class="grasscover2">
+                       <div class="grass_1"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_2"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_3"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_4"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_5"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_6"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_7"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_8"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_9"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_10"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_11"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_12"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_13"><img src="img/grass.png" alt="grass"></div>
+                   </div>
+                   <div class="mainText_dogSports">
+                       <img src="img/dogsports.png" alt="dogsports">
+                   </div>
+                   <div class="mainCharacter">
+                        <div class="mainC01"></div>
+                        <div class="mainC02"></div>      
+                   </div>
+                   <div class="textbox2">
+                       <div class="textcover2">
+                            <div class="title2">
+                                <img src="img/text_Sports_title1.png" alt="" class="SS1">
+                                <img src="img/text_Sports_title2.png" alt="" class="SS2">
+                            </div>
+                            <div class="subtitle2">
+                                <img src="img/text_Sports_subtitle1.png" alt="" class="SST1">
+                                <img src="img/text_Sports_subtitle2.png" alt="" class="SST2">
+                            </div>
+
+                            <ul class="CenTextCover2">
+                                <li class="text3">
+                                    <div class="text3_1">
+                                        <b>Canicross</b> is a game in which a certain distance is set with the dog.<br>There are two types, <b>4.5k</b> and <b>2k</b>, and the athlete must always run <br>behind the player's dog.Athletes are prohibited <br>from wearing sports shoes with spikes. 
+                                    </div>
+                                    <div class="text3_bot">
+                                        <img src="img/text_Sports_botani1.png" alt="text_Sports_botani1">
+                                    </div>
+                                </li>
+                                <li class="text4">
+                                    <div class="text4_1">
+                                        <B>Cani-Walking</B> is a walking event with dogs. <br>Walking with your dog in a light heart You can drive comfortably. <br>Cani-Walking<b> should wear a jersey belt,</b><br>It is adviced that participants should keep the recommended <br>maximum speed. Cani-Walking measures the record and is ranked<br> by the record. Also, it should be completed within the time limit.
+                                    </div>
+                                    <div class="text4_bot">
+                                      <img src="img/text_Sports_botani2.png" alt="text_Sports_botani2">
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="arrow2">
+                            <img src="img/arrow.png" alt="" class="left2" id="L2">
+                            <img src="img/arrow.png" alt="" class="right2" id="R2">           
+                        </div>
+                        <div class="textboxBG2">
+                            <img src="img/text_Sports_bg1.png" alt="text_Sports_bg1">
+                        </div>               
+                   </div>
+                   <div class="people2">
+                       <div class="poeple2_1">
+                           <img src="img/downBG_9.png" alt="downBG_9">
+                       </div>
+                       <div class="poeple2_2">
+                           <img src="img/downBG_10.png" alt="downBG_10">
+                       </div>
+                       <div class="poeple2_3">
+                           <img src="img/people_3.png" alt="people_3">
+                       </div>
+                       <div class="poeple2_4">
+                           <img src="img/people_18.png" alt="people_18">
+                       </div>
+                       <div class="poeple2_5">
+                           <img src="img/track01.png" alt="track01">
+                       </div>
+                   </div>
+                   <div class="downbgcover2">
+                       <div class="downbg2_1">
+                           <img src="img/downBG_4.png" alt="downBG_4">
+                       </div>
+                       <div class="downbg2_2">
+                           <img src="img/downBG_6.png" alt="downBG_6">
+                       </div>
+                       <div class="downbg2_3">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg2_4">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg2_5">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg2_6">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg2_7">
+                           <img src="img/downBG_2.png" alt="downBG_2">
+                       </div>
+                       <div class="downbg2_8">
+                           <img src="img/downBG_5.png" alt="downBG_5">
+                       </div>
+                       <div class="downbg2_9">
+                           <img src="img/downBG_7.png" alt="downBG_7">
+                       </div>
+                       <div class="downbg2_10">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg2_11">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg2_12">                           
+                       <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg2_13">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                   </div>
+               
+               </div> 
+                
+            </div>
+            
+             
+        <!--   Scene03   -->
+           
+            <div id="scene03">
+                   <div class="scene03_top">
+                    <div class="cloud_wrap03">
+                        <ul class="cloudC">
+                            <li class="cloudC01">
+                                <img src="img/cloud02.png" alt="cloud02">
+                            </li>
+                            <li class="cloudC03">
+                                <img src="img/cloud05.png" alt="cloud05">
+                            </li>
+                            <li class="cloudC04">
+                                <img src="img/cloud06.png" alt="cloud06">
+                            </li>
+                            <li class="cloudC05">
+                                <img src="img/cloud07.png" alt="cloud07">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_front03">
+                        <ul>
+                            <li class="bgF03_1">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF03_2">
+                                <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF03_3">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF03_4">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF03_5">
+                                <img src="img/tower02.png" alt="tower02">
+                            </li>
+                            <li class="bgF03_6">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF03_7">
+                                <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF03_8">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF03_9">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF03_10">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF03_11">
+                            <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF03_12">
+                            <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF03_13">
+                            <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF03_14">
+                            <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF03_15">
+                            <img src="img/tree01.png" alt="tree01">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_back03">
+                        <ul>
+                            <li class="bgB03_1"></li>
+                            <li class="bgB03_2"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+               <div class="scene03_bottom">
+                   <div class="grasscover3">
+                       <div class="grass_1"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_2"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_3"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_4"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_5"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_6"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_7"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_8"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_9"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_10"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_11"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_12"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_13"><img src="img/grass.png" alt="grass"></div>
+                   </div>
+                   <div class="textbox3">
+                       <div class="textcover3">
+                            <div class="title3">
+                                <img src="img/text_agility_title.png" alt="" class="AG">
+                            </div>
+                            <div class="subtitle3">
+                                <img src="img/text_agility_subtitle.png" alt="" class="AAG">
+                            </div>
+
+                            <ul class="CenTextCover3">
+                                <li class="text5">
+                                    <div class="text5_1">
+                                        A game called a dog and <b>a handler are played using obstacles in pairs.</b><br> The handler instructs the dog to clear the obstacles<br> in the order they were determined.<br> There is no failure or rejection. <br>Of the pairs cleared within the time limit called standard time,<br> the pair with the shortest time is ranked first. 
+                                    </div>
+                                    <div class="text5_bot">
+                                        <img src="img/text_agility_botani.png" alt="text_agility_botani">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="textboxBG3">
+                            <img src="img/text_agility_bg.png" alt="text_agility_bg">
+                        </div>               
+                   </div>
+                   <div class="people3">
+                       <div class="poeple3_1">
+                           <img src="img/downBG_9.png" alt="downBG_9">
+                       </div>
+                       <div class="poeple3_2">
+                           <img src="img/downBG_10.png" alt="downBG_10">
+                       </div>
+                       <div class="poeple3_3">
+                           <img src="img/people_22.png" alt="people_22">
+                       </div>
+                       <div class="poeple3_4">
+                           <img src="img/people_23.png" alt="people_23">
+                       </div>
+                       <div class="poeple3_5">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_6">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_7"></div>
+                       <div class="poeple3_8">
+                           <img src="img/people_2.png" alt="people_2">
+                       </div>
+                       <div class="poeple3_9">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_10">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_11">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_12">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_13">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_14">
+                           <img src="img/downBG_8.png" alt="downBG_8">
+                       </div>
+                       <div class="poeple3_15">
+                           <img src="img/people_1.png" alt="people_1">
+                       </div>
+                       <div class="poeple3_16">
+                           <img src="img/people_13.png" alt="people_13">
+                       </div>
+                       <div class="poeple3_17">
+                           <img src="img/people_14.png" alt="people_14">
+                       </div>
+                       <div class="poeple3_18">
+                           <img src="img/people_15.png" alt="people_15">
+                       </div>
+                       <div class="poeple3_19"></div>
+                       <div class="poeple3_20">
+                           <img src="img/people_5_1.png" alt="people_5">
+                       </div>         
+                       <div class="poeple3_20_1"></div>          
+                       <div class="poeple3_21">
+                           <img src="img/people_6.png" alt="people_6">
+                       </div>
+                       <div class="poeple3_22">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_23">
+                           <img src="img/people_4.png" alt="people_4">
+                       </div>
+                       <div class="poeple3_24">
+                           <img src="img/people_3.png" alt="people_3">
+                       </div>
+                       <div class="poeple3_25">
+                           <img src="img/people_20.png" alt="people_20">
+                       </div>
+                       <div class="poeple3_26">
+                           <img src="img/people_19.png" alt="people_19">
+                       </div>
+                       <div class="poeple3_27">
+                           <img src="img/people_24.png" alt="people_24">
+                       </div>
+                   </div>
+                   
+                   <div class="downbgcover3">
+<!--
+                       <div class="downbg3_1">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+-->
+                       <div class="downbg3_2">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg3_3">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg3_4">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg3_5">
+                           <img src="img/downBG_2.png" alt="downBG_2">
+                       </div>
+                       <div class="downbg3_6">
+                           <img src="img/downBG_5.png" alt="downBG_5">
+                       </div>
+                       <div class="downbg3_7">
+                           <img src="img/downBG_7.png" alt="downBG_7">
+                       </div>
+                       <div class="downbg3_8">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg3_9">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg3_10">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg3_11">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg3_12">                           
+                       <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg3_13">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg3_14">
+                           <img src="img/downBG_3.png" alt="downBG_3">
+                       </div>
+                       <div class="downbg3_15">
+                           <img src="img/downBG_4.png" alt="downBG_4">
+                       </div>
+                       <div class="downbg3_16">
+                           <img src="img/downBG_6.png" alt="downBG_6">
+                       </div>
+                   </div>
+               
+               </div> 
+
+            </div>
+            
+    <!--    scene04     -->
+            <div id="scene04">
+               <div class="scene04_top">
+                    <div class="cloud_wrap04">
+                        <ul class="cloudD">
+<!--
+                            <li class="cloudD01">
+                                <img src="img/cloud02.png" alt="cloud02">
+                            </li>
+-->
+                            <li class="cloudD02">
+                                <img src="img/cloud04.png" alt="cloud04">
+                            </li>
+                            <li class="cloudD03">
+                                <img src="img/cloud05.png" alt="cloud05">
+                            </li>
+                            <li class="cloudD04">
+                                <img src="img/cloud06.png" alt="cloud06">
+                            </li>
+                            <li class="cloudD05">
+                                <img src="img/cloud07.png" alt="cloud07">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_front04">
+                        <ul>
+                            <li class="bgF04_1">
+                                <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF04_2">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF04_3">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF04_4">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF04_5">
+                                <img src="img/tower02.png" alt="tower02">
+                            </li>
+                            <li class="bgF04_6">
+                                <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF04_7">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF04_8">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF04_9">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF04_10">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF04_11">
+                            <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF04_12">
+                            <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF04_13">
+                            <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF04_14">
+                            <img src="img/tree02.png" alt="tree02">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_back04">
+                        <ul>
+                            <li class="bgB04_1"></li>
+                            <li class="bgB04_2"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+               <div class="scene04_bottom">
+                  <div class="scene04_bot_right"></div>
+                   <div class="grasscover4">
+                       <div class="grass_1"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_2"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_3"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_4"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_5"><img src="img/floor04.png" alt="floor04"></div>
+                       <div class="grass_6"><img src="img/floor05.png" alt="floor05"></div>
+                       <div class="grass_7"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_8"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_9"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_10"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_11"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_12"><img src="img/grass.png" alt="grass"></div>
+                       <div class="grass_13"><img src="img/grass.png" alt="grass"></div>
+                   </div>
+                   <div class="moviezone">
+                       <img src="img/moviezone.png" alt="moviezone">
+                   </div>
+                   <div class="textbox4">
+                       <div class="textcover4">
+                            <div class="title4">
+                                <img src="img/text_movie_title.png" alt="" class="MV">
+                            </div>
+                            <div class="subtitle4">
+                                <img src="img/text_movie_subtitle.png" alt="" class="MMV">
+                            </div>
+
+                            <ul class="CenTextCover4">
+                                <li class="text6">
+                                   <div class="text6_top">
+                                        <img src="img/text_movie_botani01.png" alt="text_movie_botani01">
+                                    </div>
+                                    <div class="text6_bot">
+                                        <div class="text6_1">
+                                            16:30 - 18:30
+                                        </div>
+                                        <div class="text6_2">
+                                            Documentary film showing <br>the structure and treatment of wild cats
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text7">
+                                   <div class="text7_top">
+                                        <img src="img/text_movie_botani02.png" alt="text_movie_botani02">
+                                    </div>
+                                    <div class="text7_bot">
+                                        <div class="text7_1">
+                                            19:00 - 20:30
+                                        </div>
+                                        <div class="text7_2">
+                                            Dad's parenting story <br>over a variety of species
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="textboxBG4">
+                            <img src="img/text_movie_bg.png" alt="text_movie_bg">
+                        </div>               
+                   </div>
+                   <div class="people4">
+                       <div class="poeple4_1">
+                           <img src="img/downBG_9.png" alt="downBG_9">
+                       </div>
+                       <div class="poeple4_2">
+                           <img src="img/people_25_1.png" alt="people_25_1">
+                       </div>
+<!--                       <div class="poeple4_2_black"></div>-->
+                       <div class="poeple4_3">
+                           <img src="img/people_25.png" alt="people_25">
+                       </div>
+                       <div class="poeple4_4">
+                           <img src="img/people_26.png" alt="people_26">
+                       </div>
+                       <div class="poeple4_5">
+                           <img src="img/people_27.png" alt="people_27">
+                       </div>
+                       <div class="poeple4_6">
+                           <img src="img/people_11.png" alt="people_11">
+                       </div>
+                       <div class="poeple4_7">
+                           <img src="img/people_28.png" alt="people_28">
+                       </div>
+                       <div class="poeple4_8">
+                           <img src="img/people_30.png" alt="people_30">
+                       </div>
+                       <div class="poeple4_9"></div>
+                       <div class="poeple4_10"></div>
+                       <div class="poeple4_11">
+                           <img src="img/people_29.png" alt="people_29">
+                       </div>
+                       <div class="poeple4_12">
+                           <img src="img/people_33.png" alt="people_33">
+                       </div>
+                       <div class="poeple4_14">
+                           <img src="img/people_34.png" alt="people_34">
+                       </div>
+                       <div class="poeple4_15"></div>
+                       <div class="poeple4_16">
+                           <img src="img/people_28.png" alt="people_28">
+                       </div>
+                       <div class="poeple4_17"></div>
+                       <div class="poeple4_18">
+                           <img src="img/people_7_1.png" alt="people_7">
+                       </div>
+                       <div class="poeple4_18_1"></div>
+                       <div class="poeple4_19">
+                           <img src="img/people_8.png" alt="people_8">
+                       </div>
+                       <div class="poeple4_20">
+                           <img src="img/people_29.png" alt="people_29">
+                       </div>
+                       <div class="poeple4_21">
+                           <img src="img/scene03BG.png" alt="scene03BG">
+                       </div>
+                  </div>
+                  
+                   <div class="downbgcover4">
+                       <div class="downbg4_1">
+                           <img src="img/downBG_7.png" alt="downBG_7">
+                       </div>
+                       <div class="downbg4_2">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg4_3">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg4_4">
+                           <img src="img/downBG_2.png" alt="downBG_2">
+                       </div>
+                       <div class="downbg4_5">
+                           <img src="img/downBG_5.png" alt="downBG_5">
+                       </div>
+                       <div class="downbg4_6">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg4_7">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg4_8">
+                           <img src="img/downBG_3.png" alt="downBG_3">
+                       </div>
+                       <div class="downbg4_9">
+                           <img src="img/downBG_4.png" alt="downBG_4">
+                       </div>
+                       <div class="downbg4_10">
+                           <img src="img/downBG_6.png" alt="downBG_6">
+                       </div>
+                       <div class="downbg4_11">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg4_12">                           
+                       <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg4_13">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                   </div>
+               </div> 
+            </div>
+            
+        <!--    scene05     -->            
+            <div id="scene05">
+              <div class="textbox5_black"></div>
+               <div class="scene05_top">
+                    <div class="cloud_wrap05">
+                        <ul class="cloudE">
+                            <li class="cloudE01">
+                                <img src="img/cloud02.png" alt="cloud02">
+                            </li>
+<!--
+                            <li class="cloudE02">
+                                <img src="img/cloud04.png" alt="cloud04">
+                            </li>
+-->
+                            <li class="cloudE03">
+                                <img src="img/cloud05.png" alt="cloud05">
+                            </li>
+                            <li class="cloudE04">
+                                <img src="img/cloud06.png" alt="cloud06">
+                            </li>
+                            <li class="cloudE05">
+                                <img src="img/cloud07.png" alt="cloud07">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_front05">
+                        <ul>
+                            <li class="bgF05_1">
+                                <img src="img/downBG_10.png" alt="downBG_10">
+                            </li>
+                            <li class="bgF05_2">
+                                <img src="img/downBG_9.png" alt="downBG_9">
+                            </li>
+                            <li class="bgF05_3">
+                                <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF05_4">
+                                <img src="img/tower02.png" alt="tower02">
+                            </li>
+                            <li class="bgF05_5">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF05_6">
+                                <img src="img/mountain02.png" alt="mountain02">
+                            </li>
+                            <li class="bgF05_7">
+                                <img src="img/tree01.png" alt="tree01">
+                            </li>
+                            <li class="bgF05_8">
+                                <img src="img/tree02.png" alt="tree02">
+                            </li>
+                            <li class="bgF05_9">
+                                <img src="img/tower01.png" alt="tower01">
+                            </li>
+                            <li class="bgF05_10">
+                                <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF05_11">
+                            <img src="img/mountain03.png" alt="mountain03">
+                            </li>
+                            <li class="bgF05_12">
+                            <img src="img/mountain01.png" alt="mountain01">
+                            </li>
+                            <li class="bgF05_13">
+                            <img src="img/mountain04.png" alt="mountain04">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg_back05">
+                        <ul>
+                            <li class="bgB05_1"></li>
+                            <li class="bgB05_2"></li>
+                        </ul>
+                    </div>
+                </div>
+                
+               <div class="scene05_bottom">
+                   <div class="grasscover5">
+                       <div class="grass_1"><img src="img/floor01.png" alt="floor01"></div>
+                       <div class="grass_2"><img src="img/floor02.png" alt="floor02"></div>
+                       <div class="grass_3"><img src="img/floor03.png" alt="floor03"></div>
+                       <div class="grass_4"><img src="img/floor02.png" alt="floor02"></div>
+                       <div class="grass_5"><img src="img/floor03.png" alt="floor03"></div>
+                       <div class="grass_6"><img src="img/floor01.png" alt="floor01"></div>
+                       <div class="grass_7"><img src="img/floor05.png" alt="floor05"></div>
+                       <div class="grass_8"><img src="img/floor04.png" alt="floor04"></div>
+                       <div class="grass_9"><img src="img/floor02.png" alt="floor02"></div>
+                       <div class="grass_10"><img src="img/floor02.png" alt="floor02"></div>
+                   </div>
+                   <div class="picniczone">
+                       <img src="img/picniczone.png" alt="picniczone">
+                   </div>
+                   <div class="textbox5">
+                       <div class="textboxCover5">
+                            <div class="title5">
+                                <img src="img/text_notice_title.png" alt="">
+                            </div>
+                            <div class="TextCover5">
+                                <ul class="TextCover5_top">
+                                    <li class="text8">
+                                            <img src="img/text_notice_botani01.png" alt="text_notice_botani01">
+                                    </li>
+                                    <li class="text9">
+                                            <img src="img/text_notice_botani02.png" alt="text_notice_botani02">
+                                    </li>
+                                    <li class="text10">
+                                            <img src="img/text_notice_botani03.png" alt="text_notice_botani03">
+                                    </li>
+                                </ul>
+                                <div class="TextCover5_bot">
+                                   <div class="text11">
+                                        <img src="img/text_notice_botani04.png" alt="text_notice_botani04">
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="textboxBG5">
+                            <img src="img/text_notice_bg.png" alt="text_notice_bg">
+                        </div> 
+                        <div class="textbox5_Xbtn" id="aaa">
+                            <img src="img/Xbtn.png" alt="Xbtn" >
+                        </div>              
+                   </div>
+                   <div class="people5">
+<!--
+                       <div class="poeple5_1">
+                           <img src="img/downBG_9.png" alt="downBG_9">
+                       </div>
+-->
+                       <div class="poeple5_2">
+                           <img src="img/people_12.png" alt="people_12">
+                       </div>
+                       <div class="poeple5_3"></div>
+                       <div class="poeple5_4">
+                           <img src="img/people_37.png" alt="people_37">
+                       </div>
+                       <div class="poeple5_5">
+                           <img src="img/people_37_1.png" alt="people_37_1">
+                       </div>
+                       <div class="poeple5_6">
+                           <img src="img/people_37_2.png" alt="people_37_2">
+                       </div>
+                       <div class="poeple5_7">
+                           <img src="img/people_39.png" alt="people_39">
+                       </div>
+                       <div class="poeple5_8">
+                           <img src="img/people_40.png" alt="people_40">
+                       </div>
+                       <div class="poeple5_9">
+                           <img src="img/people_41.png" alt="people_41">
+                       </div>
+                       <div class="poeple5_10">
+                           <img src="img/people_9.png" alt="people_9">
+                       </div>
+                       <div class="poeple5_11"></div>
+                       <div class="poeple5_12">
+                           <img src="img/people_42.png" alt="people_42">
+                       </div>
+                       <div class="poeple5_14">
+                           <img src="img/people_18.png" alt="people_18">
+                       </div>
+                       <div class="poeple5_15">
+                           <img src="img/people_19.png" alt="people_19">
+                       </div>
+                       <div class="poeple5_16">
+                           <img src="img/people_20.png" alt="people_20">
+                       </div>
+                       <div class="poeple5_17">
+                           <img src="img/people_45.png" alt="people_45">
+                       </div>
+                       <div class="poeple5_18">
+                           <img src="img/people_44.png" alt="people_44">
+                       </div>
+                       <div class="poeple5_19">
+                           <img src="img/people_48.png" alt="people_48">
+                       </div>
+                       <div class="poeple5_20">
+                           <img src="img/people_48.png" alt="people_48">
+                       </div>
+                       <div class="poeple5_21">
+                           <img src="img/people_48.png" alt="people_48">
+                       </div>
+                       <div class="poeple5_22">
+                           <img src="img/people_46.png" alt="people_46">
+                       </div>
+                       <div class="poeple5_23">
+                           <img src="img/people_47.png" alt="people_47"> 
+                       </div>
+                       <div class="poeple5_24">
+                           <img src="img/people_49.png" alt="people_49">
+                       </div>
+                  </div>
+                  
+                   <div class="downbgcover5">
+                       <div class="downbg5_1">
+                           <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg5_2">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg5_3">
+                           <img src="img/downBG_7.png" alt="downBG_7">
+                       </div>
+                       <div class="downbg5_4">
+                           <img src="img/downBG_4.png" alt="downBG_4">
+                       </div>
+                       <div class="downbg5_5">
+                           <img src="img/downBG_5.png" alt="downBG_5">
+                       </div>
+                       <div class="downbg5_6">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg5_7">
+                           <img src="img/downBG_2.png" alt="downBG_2">
+                       </div>
+                       <div class="downbg5_8">
+                           <img src="img/downBG_6.png" alt="downBG_6">
+                       </div>
+                       <div class="downbg5_9">
+                           <img src="img/downBG_7.png" alt="downBG_7">
+                       </div>
+                       <div class="downbg5_10">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg5_11">
+                           <img src="img/tree01.png" alt="tree01">
+                       </div>
+                       <div class="downbg5_12">                           
+                       <img src="img/tree02.png" alt="tree02">
+                       </div>
+                       <div class="downbg5_13">
+                           <img src="img/downBG_1.png" alt="downBG_1">
+                       </div>
+                       <div class="downbg5_14">
+                           <img src="img/brick.png" alt="brick">
+                       </div>
+                   </div>
+               </div> 
+            </div>
+
+
+        </div>
+
+    </div>
+    
+    
+    
+     <script>
+    
+//    
+//    var a = $(".scrollBox").on('scroll',function(){
+//        var left = $(this).scrollLeft();
+//        var top = $(this).scrollTop();
+//        $(".box").text("left"+left+"top"+top)
+//        
+//        
+//        
+//        
+//        if(left>600){            
+//            $(".mainText_dogSports").animate({
+//                "top":'12%',
+//                "opacity" : '1'
+//            },500)
+//        
+//        }
+//        
+//        
+//        if(left>1800){            
+//            $(".title2").animate({
+//                "top":'1%',
+//                "opacity" : '1'
+//            },500)
+//        
+//        }
+//        
+//        
+//        
+//    })
+    
+    /*$(".textbox5_Xbtn").click(function(){
+        
+        alert('dkdkdk')
+        $(".textbox5_black").animate({
+             "opacity" : '0'
+        })
+    })*/
+    
+        
+    
+    </script>
+</body>
+</html>

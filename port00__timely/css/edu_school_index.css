@@ -1,0 +1,1151 @@
+@charset "utf-8";
+
+
+
+/* #SECTION : Page #1 */
+
+#section1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/section1bg_school_l.jpg) no-repeat center;
+    overflow: hidden;
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+    top: 10%;
+    left: 16%;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    height: 45px;
+}
+
+#logo a {
+    display: block;
+}
+
+#logo a img {
+    width: 100%;
+}
+
+nav {
+    float: left;
+    margin-top: 5px;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    width: 60px;
+    /*    height: 42px;*/
+    font-size: 1.7rem;
+    background: transparent;
+    text-align: center;
+    padding: 7px 0;
+    transition: 0.6s;
+}
+
+nav ul li:nth-child(1) {
+    margin-left: 60px;
+    color: #fff;
+}
+
+nav ul li:nth-child(2) {
+    margin-left: 50px;
+    background: #000;
+    color: #fff;
+}
+
+nav ul li:hover {
+    background: #000;
+    color: #fff;
+}
+
+nav ul li a {
+    display: block;
+    font-family: 'NanumSR';
+}
+
+.content1 {
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    z-index: 5;
+    top: 30%;
+    left: 16%;
+}
+
+.mediah1 {
+    display: none;
+}
+
+.textbox1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: #fff;
+}
+
+.textbox1 h1 {
+    font-size: 5rem;
+}
+
+.textbox1 > p {
+    font-family: 'NanumSR';
+    font-size: 1.7rem;
+    margin: 20px 0 25px;
+}
+
+.button1 {
+    display: block;
+    width: 250px;
+    height: 52px;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    color: #fff;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'NanumSR';
+    font-size: 1.2rem;
+    border: 1px solid;
+}
+
+
+/*
+.button1 > p {
+    font-family: 'NanumSR';
+    font-size: 1.2rem;
+    float: left;
+    margin-left: 12px;
+}
+*/
+
+.button1 > img {
+    display: block;
+    width: 20px;
+    float: right;
+    margin: -3px 10px 0;
+}
+
+
+.mockupimg {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    right: -47%;
+    z-index: 1;
+}
+
+.mockupimg img {
+    display: block;
+    position: absolute;
+    width: 65%;
+}
+
+/*
+.mockupimg {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+    right: -48%;
+    z-index: 1;
+}
+
+.mockupimg img {
+    display: block;
+    position: absolute;
+    width: 55%;
+}
+*/
+
+
+
+
+/* button hover color change code*/
+/*
+
+.btnani,
+.btnani::after {
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.btnani {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    color: #000;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'NanumSR';
+    font-size: 1.2rem;
+}
+
+.btnani::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -12;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 1;
+    border: 1px solid #000;
+}
+
+.btnani::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: #000;
+    color: #fff002;
+}
+
+.button1{
+    width: 250px;
+    height: 52px;
+    transition: 0.1s;
+}
+.button1::after {
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.button1:hover:after {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff002;
+}
+.button1:hover{
+    color: #fff002;
+}
+.button1 > p {
+    font-family: 'NanumSR';
+    font-size: 1.2rem;
+    float: left;
+    margin-left: 12px;
+}
+
+.button1 > img {
+    display: block;
+    width: 8px;
+    float: right;
+    transform: scaleX(-1);
+    margin-right: 10px;
+}
+*/
+
+
+
+/* #SECTION : Page #1 - Media Query*/
+
+@media (max-width : 900px) {
+    .cssh1 {
+        display: none;
+    }
+
+    .mediah1 {
+        display: block;
+    }
+}
+
+@media (max-width : 768px) {
+
+    header {
+        width: 100%;
+        top: 10%;
+        left: 12%;
+    }
+
+    #logo a img {
+        width: 70%;
+        margin-top: 5px;
+    }
+
+    nav ul li:nth-child(1) {
+        margin-left: 20px;
+    }
+
+    .content1 {
+        top: 30%;
+        left: 12%;
+    }
+
+    .cssh1 {
+        display: none;
+    }
+
+    .mediah1 {
+        display: block;
+    }
+
+    .textbox1 h1 {
+        width: 250px;
+        font-size: 2.9rem;
+    }
+
+    .textbox1 > p {
+        display: none;
+    }
+
+    .button1 {
+        width: 230px;
+        margin-top: 10px;
+    }
+
+    .mockupimg {
+        top: 65%;
+        left: 30%;
+    }
+
+    .mockupimg img {
+        display: block;
+        position: absolute;
+        width: 120%;
+    }
+
+}
+
+
+
+/* #SECTION : Page #2 */
+
+#section2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+}
+
+.section2bg {
+    position: absolute;
+    width: 100%;
+/*    height: 41%;*/
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #121217;
+}
+
+.content2 {
+    width: 70%;
+    min-width: 1100px;
+    height: 550px;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+    margin: 0 auto;
+}
+
+.slidebox1 {
+    width: 50%;
+    height: 100%;
+    background: #fff002;
+    float: left;
+}
+
+.textstyle {
+    position: absolute;
+}
+
+.textstyle > span {
+    font-family: 'NanumSR';
+    display: block;
+    width: 65px;
+    font-size: 1.7rem;
+    padding: 4px 15px;
+    margin: 160px 0 10px 85px;
+    background: #121217;
+    color: #fff;
+}
+
+.textstyle > p {
+    color: #000;
+}
+
+p.text1 {
+    font-size: 3rem;
+    margin: 15px 0 10px 85px;
+}
+
+p.text2 {
+    font-size: 1.45rem;
+    margin: 15px 0 10px 85px;
+    font-weight: 300;
+    line-height: 1.8rem;
+}
+
+.slideimg1 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    float: right;
+}
+
+.slideimg1 > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img.simg1 {}
+
+img.simg2 {}
+
+img.simg3 {}
+
+.slidebtn1 {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.slidebtn1 button {
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slidebtn1 button:hover {
+    transform: scale(1.3);
+}
+
+#bt_next:hover {
+    transform: scale(1.3);
+}
+
+#bt_prev {
+    left: 11%;
+}
+
+.slidebtn1 img {
+    display: block;
+    width: 32px;
+}
+
+#bt_next {
+    right: 11%;
+}
+
+
+/* #SECTION : Page #2 - Media Query*/
+
+@media (max-width : 1100px) {
+    .content2 {
+        width: 100%;
+        min-width: 0px;
+        height: 100%;
+    }
+
+    .slideimg1 {
+        display: none;
+    }
+
+    .slideimg1 > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slidebox1 {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width : 768px) {
+    .slideimg1 {
+        width: 100%;
+        height: 45%;
+        top: 0%;
+        display: block;
+    }
+
+    .slideimg1 > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slidebox1 {
+        width: 100%;
+        height: 50%;
+    }
+
+    .textstyle > span {
+        font-size: 1.7rem;
+        margin: 70px 0 10px 45px;
+    }
+
+    p.text1 {
+        font-size: 2rem;
+        margin: 15px 0 10px 45px;
+    }
+
+    p.text2 {
+        font-size: 1.1rem;
+        margin: 15px 0 10px 45px;
+    }
+
+    #section2 {
+        background: #fff002;
+    }
+
+    .section2bg,
+    #bt_prev,
+    #bt_next {
+        display: none;
+    }
+
+}
+
+
+/* #SECTION : Page #3 */
+
+#section3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('../img/section3bg_school_l.jpg') no-repeat top center;
+    background-size: cover;
+}
+
+.section3text {
+    position: absolute;
+    z-index: 3;
+    top: 28%;
+    left: 16%;
+    color: #fff;
+}
+
+.mediah3,
+.mediap {
+    display: none;
+}
+
+.section3text h3 {
+    font-size: 5rem;
+}
+
+.section3text p {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.bgline {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.bgline span {
+    display: block;
+    width: 1px;
+    height: 1200px;
+    position: absolute;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.19);
+}
+
+.bgline span.bgline01 {
+    top: 0;
+    left: 25%;
+}
+
+.bgline span.bgline02 {
+    left: 50%;
+}
+
+.bgline span.bgline03 {
+    left: 75%;
+}
+
+
+/* #SECTION : Page #3 - Media Query*/
+
+@media (max-width : 1090px) {
+
+    .cssh3,
+    .cssp {
+        display: none;
+    }
+
+    .mediah3,
+    .mediap {
+        display: block;
+    }
+}
+
+@media (max-width : 768px) {
+
+    #section3 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section3text {
+        position: absolute;
+        z-index: 3;
+        top: 20%;
+        left: 12%;
+        color: #fff;
+    }
+
+    .cssh3,
+    .cssp {
+        display: none;
+    }
+
+    .mediah3,
+    .mediap {
+        display: block;
+    }
+
+    .section3text h3 {
+        font-size: 2.4rem;
+    }
+
+    .section3text p {
+        font-size: 1.4rem;
+        margin-top: 5px;
+    }
+
+    .bgline {
+        display: none;
+    }
+}
+
+
+
+/* #SECTION : Page #4 */
+
+#section4 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #fff002;
+}
+
+.slidenav {
+    position: relative;
+    top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slidenav ul {
+    overflow: hidden;
+    width: 390px;
+    margin: 0 auto;
+}
+
+.slidenav ul li {
+    float: left;
+}
+
+.slidenav ul li:nth-child(1) {
+    margin-right: 50px;
+}
+
+.slidenav ul li:nth-child(2) {
+    margin-right: 50px;
+}
+
+.slidenav ul li button {
+    font-family: 'NanumSR';
+    display: block;
+    padding: 10px 10px;
+    font-size: 1.7rem;
+    color: #000;
+    cursor: pointer;
+    transition: 0.8s;
+    overflow: hidden;
+    background: transparent;
+}
+
+.slidenav ul li button:focus {
+    background: transparent;
+    outline: 0;
+}
+
+.slidenav ul li button:hover {
+    color: #fff002;
+    background: #000;
+}
+
+.content4 {
+    width: 50%;
+    min-width: 768px;
+    height: 100%;
+    position: relative;
+    top: 25%;
+    margin: auto;
+}
+
+.ptextslide {
+    position: absolute;
+    top: 15%;
+    left: 500px;
+}
+
+.ptextsytle {
+    color: #000;
+}
+
+.ptextsytle h2 {
+    font-size: 5rem;
+}
+
+.ptextsytle p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+.phonetext1,
+.phonetext2 {
+    display: none;
+}
+
+.phoneslide {
+    z-index: 100;
+    width: 370px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 35px;
+    position: absolute;
+}
+
+.phoneframe {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.phoneframe img {
+    width: 370px;
+}
+
+.pslideimg {
+    width: 348px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+    overflow: hidden;
+}
+
+.pslideimg img {
+    width: 100%;
+}
+
+
+/* #SECTION : Page #4 - Media Query*/
+
+@media (max-width : 768px) {
+
+    .slidenav {
+        top: 5%;
+    }
+
+    .slidenav ul {
+        width: 280px;
+    }
+
+    .slidenav ul li:nth-child(1) {
+        margin-right: 20px;
+    }
+
+    .slidenav ul li:nth-child(2) {
+        margin-right: 20px;
+    }
+
+    .slidenav ul li button {
+        font-size: 1.3rem;
+    }
+
+    .slidenav ul li button:pressed {
+        color: #fff;
+        background: transparent;
+    }
+
+    .slidenav ul li button:hover {
+        color: #fff;
+        background: transparent;
+    }
+
+    .content4 {
+        width: 100%;
+        min-width: 0px;
+        top: 5%;
+    }
+
+    .ptextslide {
+        position: relative;
+        top: 5%;
+        left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ptextsytle h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .ptextsytle p {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 240px;
+        font-size: 1.2rem;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .phoneslide {
+        position: absolute;
+        width: 250px;
+        height: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 30%;
+        border-radius: 0px;
+    }
+
+    .phoneframe {
+        border-radius: 0px;
+    }
+
+    .phoneframe img {
+        width: 250px;
+    }
+
+    .pslideimg {
+        width: 235px;
+        top: 7px;
+        left: 7px;
+    }
+
+}
+
+
+
+/* #SECTION : Page #5 */
+
+#section5 {
+    position: relative;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+.f-top {
+    width: 68%;
+    border-bottom: 2px solid #fff;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 130px 0;
+    color: #fff;
+}
+
+.f-title {
+    width: 400px;
+    font-size: 2.5rem;
+    margin: 15px 0 0 100px;
+    float: left;
+}
+
+.f-button {
+    float: right;
+}
+
+.f-button div {
+    float: left;
+}
+
+#appstore {
+    margin-right: 20px;
+}
+
+#googleplay {}
+
+.f-button .box {
+    width: 240px;
+    height: 56px;
+    border: 1px solid #fff;
+}
+
+.f-button .box a {
+    display: block;
+}
+
+.f-button .box a img {
+    display: block;
+    width: 36px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+    float: left;
+}
+
+.f-button .text {
+    display: block;
+    float: right;
+    font-size: 1.5rem;
+}
+
+#appstore .text {
+    padding: 18px 51px;
+}
+
+#googleplay .text {
+    padding: 18px 45px;
+}
+
+.f-bottom {
+    width: 68%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 150px 0;
+    color: #ccc;
+}
+
+.f-bot-left {
+    width: 500px;
+    float: left;
+}
+
+.f-nav {
+    margin: 0 0 30px 100px;
+    width: 500px;
+}
+
+.f-nav ul {
+    overflow: hidden;
+}
+
+.f-nav ul li {
+    float: left;
+}
+
+.f-nav ul li:nth-child(1) {
+    padding-right: 20px;
+    height: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.f-nav ul li:nth-child(2) {
+    padding: 0 20px;
+    height: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.f-nav ul li:nth-child(3) {
+    padding-left: 20px;
+}
+
+.f-nav ul li a {
+    display: block;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.f-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+address {
+    width: 500px;
+    font-size: 1.3rem;
+    margin-left: 100px;
+    overflow: hidden;
+}
+
+.f-address {}
+
+.contact {
+    overflow: hidden;
+    margin: 10px 0 20px;
+}
+
+.contact div {
+    float: left;
+}
+
+.contact .call {
+    height: 15px;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.contact .mail {
+    padding-left: 20px;
+}
+
+.copyright {}
+
+.social {
+    float: right;
+    margin: 35px 100px 0 0;
+}
+
+.social a {
+    display: block;
+    float: left;
+}
+
+.social a img {
+    display: block;
+    width: 4rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+img.facebook {}
+
+img.email {
+    margin-left: 10px;
+}
+
+img.youtube {
+    margin-left: 16px;
+}
+
+.social a img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* #SECTION : Page #5 - Media Query*/
+
+@media (max-width : 768px) {
+    .f-top {
+        width: 80%;
+        border-bottom: 1px solid #fff;
+        padding: 100px 0 50px;
+    }
+
+    .f-title {
+        width: 230px;
+        font-size: 2.5rem;
+        margin: 0 auto;
+    }
+
+    .f-button {
+        margin-top: 20px;
+    }
+
+    .f-bottom {
+        width: 80%;
+        padding: 20px 0 10px;
+        overflow: hidden;
+    }
+
+    .social {
+        float: left;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .social a img {
+        width: 2.8rem;
+        opacity: 0.8;
+        cursor: none;
+    }
+
+    img.facebook {
+        margin-left: -10px;
+    }
+
+    .f-bot-left {}
+
+    .f-nav {
+        margin: 0 0 20px 0px;
+        width: 290px;
+    }
+
+    .f-nav ul li:nth-child(1) {
+        padding-right: 12px;
+        height: 12px;
+        border-right: 1px solid #ccc;
+    }
+
+    .f-nav ul li:nth-child(2) {
+        padding: 0 12px;
+        height: 12px;
+        border-right: 1px solid #ccc;
+    }
+
+    .f-nav ul li:nth-child(3) {
+        padding-left: 12px;
+    }
+
+    .f-nav ul li a {
+        font-size: 1rem;
+        cursor: none;
+    }
+
+    .f-nav ul li a:hover {
+        text-decoration: none;
+    }
+
+    address {
+        width: 290px;
+        font-size: 1rem;
+        margin-left: 0px;
+    }
+
+    .contact {
+        margin: 5px 0 15px;
+    }
+
+    .contact .call {
+        height: 12px;
+        padding-right: 10px;
+    }
+
+    .contact .mail {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width : 629px) {
+    #googleplay {
+        margin-top: 10px;
+    }
+}

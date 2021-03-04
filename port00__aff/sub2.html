@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+<!--    <style>@import url('https://fonts.googleapis.com/css?family=Open+Sans');</style>-->
+    <style>@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');</style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+
+    html,body{margin: 0; padding: 0; font-size: 12px; font-family: 'Roboto Slab', serif;}
+    *{margin: 0; padding: 0;}
+    button{border: none; background: none;}
+    ol,ul,li{list-style: none;}
+    img{vertical-align: bottom;}
+    a{text-decoration: none; color: inherit;}
+    h1,h2,h3,h4,h5,h6{font-size: 100%;}
+    adderss,em{font-style: normal;}
+
+     
+       
+        
+#fix_top{
+/*    position: relative;*/
+    width: 1760px;
+    margin: 0 auto;
+        
+}
+
+.m_logo{
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+}
+.m_logo a{
+    
+}
+.m_logo img{
+  width: 100px;
+}
+
+.nav_bt{
+    position: fixed;
+    z-index: 990;
+    right: 80px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+.nav_bt span{
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+}
+.nav_bt span+span{
+    margin-top: 8px;
+}nav
+.nav_bt:hover .nbt1{transform:rotate(-90deg) translate(-10px,0) ;}
+.nav_bt:hover .nbt2{opacity: 0;}
+.nav_bt:hover .nbt3{transform: translate(0,-10px);}
+
+
+
+#nav{
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+}
+
+.nav_left{
+    position: relative;
+    top: 0;
+    left: 0%;
+    width: 55%;
+    height: 100%;
+    background: #b5d5ca;
+}
+.nav_left ul{
+    position: absolute;
+    top: 30%;
+    left: 80px;
+    width: 200px;
+    height: 350px;
+}
+.nav_left li{
+    padding-top: 20px;
+}
+.nav_left a{
+    display: block;
+    font-size: 3.8rem;
+    color: #fff;
+}
+.nav_left a:hover{
+    text-decoration: underline;
+    
+}
+.nav_left p{
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.nav_right{
+    position: relative;
+    top: -100%;
+    left: 55%;
+    height: 100%;
+    width: 45%;
+    background: #ffced7;
+}
+.nav_right img{
+    
+}
+.nav_xbt{
+    position: absolute;
+    right: 80px;
+    top: 47px;
+    width: 35px;
+    transition: 0.5s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.nav_xbt:hover{
+    transform: rotate(45deg);
+    opacity: 1;
+}
+.nav_img{    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -359.5px;
+    margin-left: -302.5px;
+    width: 550px;
+}
+
+        
+        .sub2{
+            width: 100%;
+            height: 100%;
+            background: #60b0c7;
+            z-index: 1;
+        }
+        .sub2_pbg{
+            background: url(img/sub2_pointbg.png) no-repeat;
+            background-size: 100%;
+            width: 100%;
+            z-index: 2;
+        }
+        .s2bg{}
+        .sub2_intro1{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .pline{
+            width: 3000px;
+            height: 480px;
+            background: url(img/sub2_linebg.png);
+            background-size: 3000px;
+            transform: rotate(-15deg);
+            margin-left: -100px;
+            margin-top: 210px;
+        }
+        .sub2_pineapple{}
+        .sub2_pineapple img{
+            position: absolute;
+        }
+        .p1{
+            width: 180px;
+            left: 38%;
+            bottom: 15%;
+        }
+        .p2{
+            width: 130px;
+            left: 33.5%;
+            bottom: 24%;
+        }
+        .p3{
+            width: 320px;
+            left: 30%;
+            bottom: 8%;
+        }
+        .p4{
+            width: 60px;
+            left: 29.5%;
+            bottom: 18%;
+            transform: rotate(-15deg);
+        }
+        .p5{
+            width: 50px;
+            left: 30%;
+            bottom: 19.5%;
+            transform: rotate(-10deg);
+        }
+        .p6{
+            width: 170px;
+            top: 47%;
+            left: 35%;
+        }
+        .p7{
+            top: 40%;
+            left: 35%;
+        }
+        .p8{
+            top: 58%;
+            left: 23%;
+        }
+        .p9{
+            right: 35%;
+            top: 50%;
+        }
+        .p10{
+            width: 200px;
+            right: 38%;
+            top: 41%;
+        }
+        .p11{
+            right: 30%;
+            top: 50%;
+        }
+        .p12{
+            width: 300px;
+            right: 27%;
+            top: 33%;
+        }
+        .p13{
+            top: 58%;
+            right: 23%;
+        }
+        .p14{
+            left: 50%;
+            margin-left: -244.5px;
+            top: 50%;
+            margin-top: -348px;
+        }
+        .p15{
+            left: 50%;
+            margin-left: -194px;
+            top: 50%;
+            animation: sunglass 3s 1s infinite alternate;
+            }
+            @keyframes sunglass{
+                0%{
+                    transform: rotate(-5deg);
+                }
+                100%{
+                    transform: rotate(0deg);
+                }
+            }
+        .p16{
+            width: 150px; 
+            left: 50%;
+            margin-left: -75px;
+            margin-top: -12px;
+        }
+        
+        .sub2_intro2{}
+        
+        .s2_who{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .whobg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .whobg img{
+            position: absolute;
+        }
+        .w1{
+            z-index: 3;
+            top: 7%;
+            left: 14%;
+        }
+        .w2{
+            width: 180px;
+            z-index: 2;
+            bottom: 25%;
+            right: 28%;
+        }
+        .w3{
+            z-index: 1;
+            top: 12%;
+            left: 50%;
+            margin-left: -624px;
+        }
+        
+        .whotext{
+            position: absolute;
+            z-index: 4;
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            top: 33%;
+            left: 50%;
+            margin-left: -500px;
+            text-align: center;
+        }
+        .whotext_topbox{
+            position: relative;
+            width: 1000px;
+            height: 200px;
+            overflow: hidden;
+            top: 0;
+        }
+        .whotext_t{
+            position: absolute;
+            width: 1000px;
+            font-size: 10rem;
+            color: #fff;
+            top: 200px;
+            opacity: 0;
+        }
+        
+        .whotext_botbox{
+            position: relative;
+            width: 1000px;
+            height: 300px;
+            top: 70px;
+            overflow: hidden;
+        }
+        .whotext_b{
+            position: absolute;
+            width: 1000px;
+            font-size: 2.5rem;
+            color: #fff;
+            top: 300px;
+            opacity: 0;
+        }
+        
+        .sub2_intro3{}
+        
+        .s2_what{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .whatbg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .whatbg img{
+            position: absolute;
+        }
+        .wh1{
+            z-index: 3;
+            top: 7%;
+            left: 14%;
+        }
+        .wh2{
+            width: 180px;
+            z-index: 2;
+            bottom: 22%;
+            right: 30%;
+        }
+        .wh3{
+            z-index: 1;
+            top: 12%;
+            left: 50%;
+            margin-left: -624px;
+        }
+        
+        .whattext{
+            position: absolute;
+            z-index: 4;
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            top: 33%;
+            left: 50%;
+            margin-left: -500px;
+            text-align: center;
+        }
+        
+        .whattext_topbox{
+            position: relative;
+            width: 1000px;
+            height: 200px;
+            overflow: hidden;
+            top: 0;
+        }
+        .whattext_t{
+            position: absolute;
+            width: 1000px;
+            height: 200px;
+            font-size: 10rem;
+            color: #fff;
+            top: 200px;
+            opacity: 0;
+        }
+        .whattext_botbox{
+            position: relative;
+            width: 800px;
+            margin-left: 150px;
+            top: 80px;
+        }
+        .whattext_botbox1{
+            position: relative;
+            width: 800px;
+            height: 60px;
+            overflow: hidden;
+            text-align: left;
+        }
+        .whattext_b1{
+            position: absolute;
+            width: 350px;
+            height: 50px;
+            font-size: 3.5rem;
+            color: #f5c650;
+            font-weight: bold;
+            border-bottom: 3px solid #fff;
+            padding-bottom: 4px;
+            display: block;
+            top: 200px;
+            opacity: 0;
+            
+        }
+        .whattext_botbox2{
+            position: relative;
+            width: 800px;
+            height: 40px;
+            top: 20px;
+            overflow: hidden;
+        }
+        .whattext_b2{
+            position: absolute;
+            width: 800px;
+            height: 40px;
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: #fff;
+            text-align: left;
+            top: 100px;
+            opacity: 0;
+        }
+        .whattext_botbox3{
+            position: relative;
+            width: 800px;
+            height: 100px;
+            top: 21px;
+            overflow: hidden;
+        }
+        .whattext_b3{
+            position: absolute;
+            width: 800px;
+            height: 100px;
+            font-size: 1.3rem;
+            color: #fff;
+            text-align: left;
+            top: 200px;
+            opacity: 0;
+        }
+        
+        
+        .sub2_intro4{
+            background: #fff;
+            position: relative;
+            width: 100%;
+        }
+        
+        /*   PARTNER   */
+           
+        .s2_partner{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .partbg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .partbg img{
+            position: absolute;
+        }
+        .pa1{
+            z-index: 3;
+            width: 570px;
+            top: 3%;
+            left: 15%;
+            transform: rotate(-35deg);
+        }
+        .pa2{
+            width: 230px;
+            z-index: 2;
+            bottom: 25%;
+            right: 14%;
+            transform: rotate(-35deg);
+        }
+        .pa3{
+            z-index: 1;
+            top: 12%;
+            left: 50%;
+            margin-left: -624px;
+        }
+        
+        .parttext{
+            position: absolute;
+            z-index: 4;
+            margin: 0 auto;
+            width: 1000px;
+            height: 500px;
+            top: 33%;
+            left: 50%;
+            margin-left: -500px;
+            text-align: center;
+        }
+        
+        .parttext_topbox{
+            position: relative;
+            width: 1000px;
+            height: 150px;
+            overflow: hidden;
+            top: 0;
+        }
+        .parttext_t{
+            position: absolute;
+            width: 1000px;
+            height: 150px;
+            font-size: 10rem;
+            color: #60b0c7;
+            top: 200px;
+            opacity: 0;
+        }
+        .parttext_topbox2{
+            position: relative;
+            width: 1000px;
+            height: 30px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .parttext_t2{
+            position: absolute;
+            width: 1000px;
+            height: 100px;
+            font-size: 1.5rem;
+            color: #60b0c7;
+            top: 100px;
+            opacity: 0;
+        }
+        .parttext_botbox{
+            position: relative;
+            width: 1200px;
+            height: 250px;
+            top: 20%;
+            left: 50%;
+            margin-left: -600px;
+        }
+        .parttext_top{
+            position: relative;
+            width: 1200px;
+            height: 125px;
+            text-align: left;
+        }
+        .parttext_top img{}
+        .b1{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            left: 0;
+            overflow: hidden;
+        }
+        .b1 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b2{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 160px;
+            overflow: hidden;
+        }
+        .b2 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b3{
+            position: absolute;
+            top: 0;
+            width: 156px;
+            height: 80px;
+            left: 343px;
+            overflow: hidden;
+        }
+        .b3 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b4{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 548.8px;
+            overflow: hidden;
+        }
+        .b4 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b5{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 730px;
+            overflow: hidden;
+        }
+        .b5 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b6{
+            position: absolute;
+            width: 256px;
+            height: 80px;
+            top: 0;
+            left: 920px;   
+            overflow: hidden; 
+        }
+        .b6 img{
+            position: absolute;
+            width: 256px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .parttext_bot{
+            position: relative;
+            width: 1200px;
+            height: 125px;
+            text-align: left;
+        }
+        .parttext_bot img{}
+       
+        .b7{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        .b7 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b8{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 165px;
+            overflow: hidden;
+        }
+        .b8 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b9{
+            position: absolute;
+            top: 0;
+            width: 156px;
+            height: 80px;
+            left: 358px;
+            overflow: hidden;
+        }
+        .b9 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b10{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 548.8px;
+            overflow: hidden;
+        }
+        .b10 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b11{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 0;
+            left: 730px;
+            overflow: hidden;
+        }
+        .b11 img{
+            position: absolute;
+            width: 156px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+        .b12{
+            position: absolute;
+            width: 256px;
+            height: 80px;
+            top: 0;
+            left: 920px;
+            overflow: hidden;
+        }
+        .b12 img{
+            position: absolute;
+            width: 256px;
+            height: 80px;
+            top: 100px;
+            opacity: 0;
+        }
+     
+    </style>
+    
+
+</head>
+<body>
+   
+   <div id="fix_top">
+       <div class="m_logo">
+           <a href="index-2.html">
+               <img src="img/aff_logo_y.png" alt="aff_logo_y">
+           </a>
+       </div>
+       <div class="nav_bt">
+           <span class="nbt1"></span>
+           <span class="nbt2"></span>
+           <span class="nbt3"></span>
+       </div>
+   </div>
+   <div id="nav">
+       <div class="nav_left">
+           <ul>
+               <li>
+                   <a href="index.html">home</a>
+               </li>
+               <li>
+                   <a href="sub1.html">menu</a>
+               </li>
+                <li>
+                   <a href="sub2.html">about</a>
+               </li>
+               <li>
+                   <a href="sub3.html">contact</a>
+               </li>
+               
+           </ul>
+           <p>ALL OF THE FRUITS</p>
+       </div>
+       <div class="nav_right">
+           <img class="nav_xbt" src="img/nav_xbtn.png" alt="nav_xbtn">
+           <img class="nav_img" src="img/nav_img_sub1.png" alt="nav_img_sub1">
+       </div>
+       
+   </div>
+   
+   
+   <div class="sub2">
+      <div class="sub2_pbg">
+       <div class=" wh s2bg sub2_intro1">
+           <div class="pline"></div>
+           <div class="sub2_pineapple">
+               <img class="p1" src="img/sub1_rectangle_left1.png" alt="sub1_rectangle_left1">
+               <img class="p2" src="img/sub1_rectangle_left5.png" alt="sub1_rectangle_left5">
+               <img class="p3" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+               <img class="p4" src="img/rectangle_1.png" alt="rectangle_1">
+               <img class="p5" src="img/sub1_rectangle_left7.png" alt="sub1_rectangle_left7">
+               <img class="p6" src="img/sub1_cloud_left.png" alt="sub1_cloud_left">
+               <img class="p7" src="img/main_second_rectagle_left.png" alt="main_second_rectagle_left">
+               <img class="p8" src="img/AFF-LOGO.png" alt="AFF-LOGO">
+               <img class="p9" src="img/rectangle_2.png" alt="rectangle_2">
+               <img class="p10" src="img/sub1_rectangle_left1.png" alt="sub1_rectangle_left1">
+               <img class="p11" src="img/main_second_rectagle_right.png" alt="main_second_rectagle_right">
+               <img class="p12" src="img/main_second_cloud.png" alt="main_second_cloud">
+               <img class="p13" src="img/FFA-LOGO.png" alt="FFA-LOGO">
+               <img class="p14" src="img/sub2_pineapple.png" alt="sub2_pineapple">
+               <img class="p15" src="img/sub2_sunglass.png" alt="sub2_sunglass">
+               <img class="p16" src="img/sub2_bamouse2.png" alt="sub2_bamouse">
+           </div>
+       </div>
+       <div class=" wh s2bg sub2_intro2">
+            <div class="s2_who">
+                <div class="whobg">
+                    <img class="w1" src="img/fruits_album_icon_grape.png" alt="fruits_album_icon_grape">
+                    <img class="w2" src="img/fruits_album_icon_grape.png" alt="fruits_album_icon_grape">
+                    <img class="w3" src="img/paint1.png" alt="paint1">
+                </div>
+                <div class="whotext">
+                    <div class="whotext_topbox">
+                        <div class="whotext_t">WHO WE ARE</div>
+                    </div>
+                    <div class="whotext_botbox">
+                        <div class="whotext_b">
+                            We are a group of fruit experts<br>
+                            who collect and sell everything about fruits.<br>
+                            We love fruits and strive to make people <br>
+                            aware of the various benefits of fruits.<br>
+                            It is our hope that fruits will bring <br>
+                            lots of happiness to many people.
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div class=" wh s2bg sub2_intro3">
+           <div class="s2_what">
+                <div class="whatbg">
+                    <img class="wh1" src="img/fruits_album_icon_lemon.png" alt="fruits_album_icon_lemon">
+                    <img class="wh2" src="img/fruits_album_icon_lemon.png" alt="fruits_album_icon_lemon">
+                    <img class="wh3" src="img/paint2.png" alt="paint2">
+                </div>
+                <div class="whattext">
+                    <div class="whattext_topbox">
+                        <div class="whattext_t">WHAT WE DO</div>
+                    </div>
+                    <div class="whattext_botbox">
+                    <div class="whattext_botbox1">
+                        <div class="whattext_b1">
+                            COLLABORATION
+                        </div>
+                    </div>
+                    <div class="whattext_botbox2">
+                        <div class="whattext_b2">
+                            We collaborate with brands.
+                        </div>
+                    </div>
+                    <div class="whattext_botbox3">
+                        <div class="whattext_b3">
+                            We collaborate with various brands<br>
+                            such as food, stationery, ornaments and cosmetics.<br>
+                            There are brands of products with the best design and quality.
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+           </div>
+       </div> 
+       <div class=" wh sub2_intro4">
+            <div class="s2_partner">
+                <div class="partbg">
+                    <img class="pa1" src="img/fruits_album_icon_apple.png" alt="fruits_album_icon_apple">
+                    <img class="pa2" src="img/fruits_album_icon_apple.png" alt="fruits_album_icon_apple">
+                    <img class="pa3" src="img/paint3.png" alt="paint3">
+                </div>
+                <div class="parttext">
+                    <div class="parttext_topbox">
+                        <div class="parttext_t">PARTNER</div>
+                    </div>
+                    <div class="parttext_topbox2">
+                       <div class="parttext_t2">
+                        We are collaboration of the brand.
+                        </div>
+                    </div>
+                    <div class="parttext_botbox">
+                        <div class="parttext_top">
+                           <div class="b1">
+                                <img src="img/part_brand1.png" alt="part_brand1">
+                           </div>
+                           <div class="b2">
+                                <img src="img/part_brand2.png" alt="part_brand2">
+                           </div>
+                           <div class="b3">
+                                <img src="img/part_brand3.png" alt="part_brand3">
+                           </div>
+                           <div class="b4">
+                                <img src="img/part_brand4.png" alt="part_brand4">
+                            </div>
+                            <div class="b5">
+                                <img src="img/part_brand5.png" alt="part_brand5">
+                            </div>
+                            <div class="b6">
+                                <img src="img/part_brand6.png" alt="part_brand6">
+                            </div>
+                        </div>
+                        <div class="parttext_bot">
+                           <div class="b7">
+                                <img src="img/part_brand7.png" alt="part_brand7">
+                            </div>
+                            <div class="b8">
+                                <img src="img/part_brand8.png" alt="part_brand8">
+                            </div>
+                            <div class="b9">
+                                <img src="img/part_brand9.png" alt="part_brand9">
+                            </div>
+                            <div class="b10">
+                                <img src="img/part_brand10.png" alt="part_brand10">
+                            </div>
+                            <div class="b11">
+                                <img src="img/part_brand11.png" alt="part_brand11">
+                            </div>
+                            <div class="b12">
+                                <img src="img/part_brand12.png" alt="part_brand12">
+                            </div>
+                        </div>
+                </div>
+                </div>
+
+           </div>
+       </div>
+
+      
+   </div>
+   </div>
+    
+    
+    
+     <div class="topbt">
+       <a href="#"><img src="img/sub1_cloud_left.png" alt=""></a>
+   </div>
+   
+   
+   
+    <script src="script/wheel.js"></script>
+    <script src="script/script.js"></script>
+       
+    <script>
+          
+    function s2cloudL1(){
+        $('.p6').animate({top:'46%'},1000).animate({top:'47%'},1000,s2cloudL1)
+    };
+    s2cloudL1();
+        
+    function s2cloudL2(){
+        $('.p3').animate({bottom:'9.5%'},1500).animate({bottom:'8%'},1500,s2cloudL2)
+        $('.p4').animate({bottom:'19.5%'},1500).animate({bottom:'18%'},1500,s2cloudL2)
+        $('.p5').animate({bottom:'20.5%'},1500).animate({bottom:'19.5%'},1500,s2cloudL2)
+    };
+    s2cloudL2();
+        
+    function s2cloudR(){
+        $('.p12').animate({top:'35%'},2000).animate({top:'33%'},2000,s2cloudR)
+    };
+    s2cloudR();
+
+        
+        
+        
+    $(window).scroll(function(){
+    
+    var sub2_scroll = $(this).scrollTop();
+   // alert(scroll)
+
+    $('.sub2_intro2').scrollTop(function(){
+    
+        
+     function whotext(){
+        if(sub2_scroll > 200){
+             $('.whotext_t').animate({top:'0px',opacity:'1'},1800)
+             $('.whotext_b').animate({top:'0px',opacity:'1'},3000)
+         }
+
+    };
+        
+    whotext();
+        
+        });
+        
+    $('.sub2_intro3').scrollTop(function(){
+
+        function whattext(){
+        if(sub2_scroll > 1000){
+             $('.whattext_t').animate({top:'0px',opacity:'1'},1800)
+             $('.whattext_b1').animate({top:'0px',opacity:'1'},2500)
+             $('.whattext_b2').animate({top:'0px',opacity:'1'},3000)
+             $('.whattext_b3').animate({top:'0px',opacity:'1'},3500)
+         }
+         
+    };
+        
+    whattext();
+
+    });
+        
+        $('.sub2_intro4').scrollTop(function(){
+
+        function whattext(){
+        if(sub2_scroll > 2000){
+             $('.parttext_t').animate({top:'0px',opacity:'1'},2000)
+             $('.parttext_t2').animate({top:'0px',opacity:'1'},2200)
+             $('.b1 img').animate({top:'0px',opacity:'1'},2500)
+             $('.b2 img').animate({top:'0px',opacity:'1'},2500)
+             $('.b3 img').animate({top:'0px',opacity:'1'},2500)
+             $('.b4 img').animate({top:'0px',opacity:'1'},2500)
+             $('.b5 img').animate({top:'0px',opacity:'1'},2500)
+             $('.b6 img').animate({top:'0px',opacity:'1'},2500)
+             $('.b7 img').animate({top:'0px',opacity:'1'},3200)
+             $('.b8 img').animate({top:'0px',opacity:'1'},3200)
+             $('.b9 img').animate({top:'0px',opacity:'1'},3200)
+             $('.b10 img').animate({top:'0px',opacity:'1'},3200)
+             $('.b11 img').animate({top:'0px',opacity:'1'},3200)
+             $('.b12 img').animate({top:'0px',opacity:'1'},3200)
+         }
+         
+    };
+        
+    whattext();
+
+    });
+        
+    });
+
+    </script>
+    
+
+   
+   
+</body>
+</html>
