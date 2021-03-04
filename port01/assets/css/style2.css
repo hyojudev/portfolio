@@ -14,6 +14,102 @@
     color: rgb(78, 78, 78);
     background-color: rgba(0, 0, 0, 0.129);
 }
+
+/* Loading */
+
+.progress {
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    /* font-family: 'Nixie One', cursive; */
+    font-family: 'Roboto Mono', monospace;
+    background-color: #F3EEE8;
+}
+
+.progress-text {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    right: 0;
+    width: 14px;
+    height: auto;
+    margin: auto;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 20px;
+    margin: auto;
+}
+
+.loader--dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background-color: black;
+    animation-name: loader;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.loader--dot:first-child {
+    background-color: #48506F;
+    animation-delay: 0.5s;
+}
+
+.loader--dot:nth-child(2) {
+    background-color: #5F3733;
+    animation-delay: 0.4s;
+}
+
+.loader--dot:nth-child(3) {
+    background-color: #F3C57E;
+    animation-delay: 0.3s;
+}
+
+.loader--dot:nth-child(4) {
+    background-color: #88B2C4;
+    animation-delay: 0.2s;
+}
+
+.loader--dot:nth-child(5) {
+    background-color: #FFD9D9;
+    animation-delay: 0.1s;
+}
+
+.loader--dot:nth-child(6) {
+    background-color: #F3EEE8;
+    animation-delay: 0s;
+}
+
+@keyframes loader {
+    15% {
+        transform: translateX(0);
+    }
+
+    45% {
+        transform: translateX(230px);
+    }
+
+    65% {
+        transform: translateX(230px);
+    }
+
+    95% {
+        transform: translateX(0);
+    }
+}
+
+
 /* header */
 #header {
     position: fixed;
@@ -1403,6 +1499,12 @@
     height: 26.6vw;
 }
 
+.footer-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 
 .footer-image span {
     display: flex;
     width: 100%;
@@ -1411,7 +1513,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
+} */
 
 .footer {
     display: flex;

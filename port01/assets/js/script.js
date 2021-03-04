@@ -1,232 +1,44 @@
 
+//로딩이후 실행
+function loading() {
+    const progress = $(".progress"),
+        progressText = progress.find(".progress-text");
 
-// 가로 스크롤 (jQuery)
+    let imgLoad = imagesLoaded("body"),
+        imgTotal = imgLoad.images.length,
+        imgLoaded = 0,
+        imgCurrent = 0,
+        progressTimer = setInterval(updateProgress, 500 / 60);
 
-$(window).scroll(function () {
+    imgLoad.on("progress", function () {
+        imgLoaded++;
+        console.log("lalala");
+    })
 
-    let scroll = $(window).scrollTop();
-    $(".scroll").text(parseInt(scroll));
+    function updateProgress() {
+        let target = (imgLoaded / imgTotal) * 100;
 
-    let scrollTop = $(window).scrollTop();
-    // let scrollLeft = $(window).scrollLeft();
-    let winWidth = $(window).width();
-    let winHeight = $(window).height();
+        imgCurrent += (target - imgCurrent) * 0.1;
+        progressText.text(Math.floor(imgCurrent) + "%");
 
-    let ani01 = $(".script--01").offset().left;
-    // let ani02 = $(".script--02").offset().left;
-    // let ani03 = $(".script--03").offset().left;
-    // let ani04 = $(".script--04").offset().left;
-    // console.log("ani01 : " + ani01)
-    // console.log("ani02 : " + ani02)
-    // console.log("ani03 : " + ani03)
-    // console.log("ani04 : " + ani04)
-    // console.log("scrollTop : " + scrollTop)
-    // console.log("scrollLeft :" + scrollLeft)
-
-
-    let aniOffset = scrollTop - $(".animations-slider").offset().top;
-    let scriptOffset = scrollTop - $(".scripts-slider").offset().top;
-    let FooterOffset = $(".page-footer").offset().top;
-
-    let scriptColorChange2 = (winWidth * 3) + $(".scripts-slider").offset().top;
-    let scriptColorChange1 = $(".scripts-slider").offset().top;
-    let aniColorChange = (winWidth * 2) + $(".animations-slider").offset().top;
-
-    // Change Scroll
-    // $(".animations-wrapper").css( "left", -offset + "px");
-    $(".animations-wrapper").css("left", -aniOffset + winWidth + "px");
-    $(".scripts-wrapper").css("right", -scriptOffset + winWidth + "px");
-
-    // Change Background-color
-    if (scrollTop > (FooterOffset - winWidth)) {
-        $(".scripts-slider").css("background-color", "#48506F").css("transition", "0.5s");
-    } else if (scrollTop > scriptColorChange2 - winWidth) {
-        $(".scripts-slider").css("background-color", "#F3C57E").css("transition", "0.5s");
-    } else if (scrollTop > scriptColorChange1 - winWidth) {
-        $(".animations-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
-        $(".scripts-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
-    } else if (scrollTop > aniColorChange) {
-        $(".animations-slider").css("background-color", "#88B2C4").css("transition", "0.5s");
-    } else {
-        $(".animations-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
+        if (imgCurrent >= 100) {
+            clearInterval(progressTimer)
+            progress.delay(1000).fadeOut(1000)
+            setTimeout(function () {
+                //2초후 등장 애니메이션
+                let tl = gsap.timeline();
+                tl.from("#header", 0.5, { opacity: 0, y: 50 })
+                tl.from(".mainText > div", 1, { opacity: 0, y: 50, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+                tl.from(".subText > div", 1, { opacity: 0, y: 50, stagger: 0.3, ease: "power1.out" }, "-=0.5")
+                tl.from(".scroll-down-wrap", 1, { opacity: 0, scale: 0, ease: "bounce.out" }, "-=0.5");
+            }, 2200);
+        }
+        if (imgCurrent > 99) {
+            imgCurrent = 100;
+        }
     }
-
-    // GSAP - 스크롤 값 애니메이션
-
-    let aniTimeline1 = gsap.timeline();
-    let aniTimeline2 = gsap.timeline();
-    let aniTimeline3 = gsap.timeline();
-    let aniTimeline4 = gsap.timeline();
-    let aniTimeline5 = gsap.timeline();
-
-    if ($(".animation--01").offset().left < winWidth) {
-        aniTimeline1
-            .to(".animation--01 .ani-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".animation--01 .ani-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--01 .ani-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--01 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--01 .animation-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        aniTimeline1
-            .to(".animation--01 .ani-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".animation--01 .ani-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--01 .ani-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--01 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--01 .animation-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-
-    if ($(".animation--02").offset().left < winWidth) {
-        aniTimeline2
-            .to(".animation--02 .ani-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".animation--02 .ani-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--02 .ani-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--02 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--02 .animation-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        aniTimeline2
-            .to(".animation--02 .ani-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".animation--02 .ani-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--02 .ani-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--02 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--02 .animation-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".animation--03").offset().left < winWidth) {
-        aniTimeline3
-            .to(".animation--03 .ani-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".animation--03 .ani-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--03 .ani-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--03 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--03 .animation-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        aniTimeline3
-            .to(".animation--03 .ani-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".animation--03 .ani-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--03 .ani-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--03 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--03 .animation-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".animation--04").offset().left < winWidth) {
-        aniTimeline4
-            .to(".animation--04 .ani-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".animation--04 .ani-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--04 .ani-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--04 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--04 .animation-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        aniTimeline4
-            .to(".animation--04 .ani-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".animation--04 .ani-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--04 .ani-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--04 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--04 .animation-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".animation--05").offset().left < winWidth) {
-        aniTimeline5
-            .to(".animation--05 .ani-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".animation--05 .ani-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--05 .ani-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--05 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--05 .animation-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        aniTimeline5
-            .to(".animation--05 .ani-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".animation--05 .ani-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--05 .ani-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--05 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".animation--05 .animation-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-
-    let scriptTimeline1 = gsap.timeline();
-    let scriptTimeline2 = gsap.timeline();
-    let scriptTimeline3 = gsap.timeline();
-    let scriptTimeline4 = gsap.timeline();
-    let scriptTimeline5 = gsap.timeline();
-
-    if ($(".script--01").offset().left > -winWidth) {
-        scriptTimeline1
-            .to(".script--01 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--01 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--01 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--01 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--01 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline1
-            .to(".script--01 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--01 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--01 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--01 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--01 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-
-    if ($(".script--02").offset().left > -winWidth) {
-        scriptTimeline2
-            .to(".script--02 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--02 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--02 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--02 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--02 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline2
-            .to(".script--02 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--02 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--02 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--02 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--02 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".script--03").offset().left > -winWidth) {
-        scriptTimeline3
-            .to(".script--03 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--03 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--03 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--03 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--03 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline3
-            .to(".script--03 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--03 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--03 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--03 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--03 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".script--04").offset().left > -winWidth) {
-        scriptTimeline4
-            .to(".script--04 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--04 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline4
-            .to(".script--04 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--04 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".script--05").offset().left > -winWidth) {
-        scriptTimeline5
-            .to(".script--05 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--05 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline5
-            .to(".script--05 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--05 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-
-    // 스크롤 값에 따른 body 배경색 변경
-    if (scroll > winHeight * 10) {
-        $("body").css("background-color", "#E5938A");
-    } else {
-        $("body").css("background-color", "#F3EEE8");
-    }
-
-});
+}
+loading();
 
 //글씨 조깨기(한번에, forEach)
 document.querySelectorAll(".profile-desc-title").forEach(elem => {
@@ -281,11 +93,11 @@ projectPathPrepare(projectCirclePath);
 // hBtn.addEventListener("click", hBtnMotion);
 
 
-const tween1 = new TimelineMax()
-    .from("#header", 0.5, { opacity: 0, y: 50 })
-    .from(".mainText > div", 1, { opacity: 0, y: 50, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
-    .from(".subText > div", 1, { opacity: 0, y: 50, stagger: 0.3, ease: "power1.out" }, "-=0.5")
-    .from(".scroll-down-wrap", 1, { opacity: 0, scale: 0, ease: "bounce.out" }, "-=0.5");
+// const tween1 = new TimelineMax()
+//     .from("#header", 0.5, { opacity: 0, y: 50 })
+//     .from(".mainText > div", 1, { opacity: 0, y: 50, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+//     .from(".subText > div", 1, { opacity: 0, y: 50, stagger: 0.3, ease: "power1.out" }, "-=0.5")
+//     .from(".scroll-down-wrap", 1, { opacity: 0, scale: 0, ease: "bounce.out" }, "-=0.5");
 
 const tween2 = new TimelineMax()
     .from("#about", 0.8, { opacity: 0, y: 100, ease: "power1.out" })
@@ -339,11 +151,11 @@ const tween11 = new TimelineMax()
     .from(".footer-bottom span", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5")
 
 
-const scene1 = new ScrollMagic.Scene({
-    // triggerElement: "#home"
-})
-    .setTween(tween1)
-    .addTo(controller);
+// const scene1 = new ScrollMagic.Scene({
+//     // triggerElement: "#home"
+// })
+//     .setTween(tween1)
+//     .addTo(controller);
 
 const scene2 = new ScrollMagic.Scene({
     triggerElement: "#about",
