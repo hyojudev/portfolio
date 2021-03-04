@@ -124,6 +124,8 @@
     padding: 0 40px;
     font-size: 2.50vw;
     line-height: 2.21vw;
+    opacity: 0;
+    transform: translate(0, 50px);
 }
 
 #header .logo,
@@ -391,6 +393,11 @@
     margin-bottom: 48px;
 }
 
+.mainText > div {
+    opacity: 0;
+    transform: translate(0, 50px);
+}
+
 .mainText-desc-group {
     display: flex;
     justify-content: center;
@@ -469,6 +476,11 @@
     line-height: 2.22vw;
 }
 
+.subText > div {
+    opacity: 0;
+    transform: translate(0, 50px);
+}
+
 .subText div:first-child {
     position: relative;
     z-index: 902;
@@ -498,6 +510,8 @@
     height: 11vw;
     /* width: 170px;
     height: 170px; */
+    opacity: 0;
+    transform: scale(0);
 }
 
 .scroll-down {
@@ -1526,6 +1540,58 @@
     background-color: #E5938A;
 }
 
+.footer-sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-sns h2 {
+    margin-bottom: 46px;
+    font-size: 10.4vw;
+    letter-spacing: -0.01em;
+    line-height: 1;
+}
+
+.footer-sns-nav {
+    width: 100%;
+    font-size: 30px;
+}
+
+.footer-sns-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    font-family: 'Nixie One', cursive;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: #48506F;
+}
+/* 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #48506F;
+    background-color: #E5938A;
+}
+
 .footer-sign {
     display: flex;
     flex-direction: column;
@@ -1542,6 +1608,7 @@
 
 .footer-sign-nav {
     width: 100%;
+    font-size: 30px;
 }
 
 .footer-sign-nav ul {
@@ -1551,26 +1618,22 @@
     align-items: center;
 }
 
-.footer-sign-nav ul li {
-    font-size: 32px;
-}
-
 .footer-bottom {
     position: absolute;
     bottom: 30px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0 40px;
-    font-size: 20px;
+    font-family: 'Nixie One', cursive;
+    font-size: 12px;
     letter-spacing: -0.01em;
     line-height: 1;
     color: #48506F;
-}
+} */
 
-.footer-sns-nav ul {
+/* .footer-sns-nav ul {
     display: flex;
     flex-direction: row;
 }
@@ -1581,7 +1644,7 @@
 
 .footer-sns-nav ul li a {
     display: flex;
-}
+} */
 
 
 /* container */

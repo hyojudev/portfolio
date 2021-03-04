@@ -1,4 +1,3 @@
-
 //로딩이후 실행
 function loading() {
     const progress = $(".progress"),
@@ -12,7 +11,6 @@ function loading() {
 
     imgLoad.on("progress", function () {
         imgLoaded++;
-        console.log("lalala");
     })
 
     function updateProgress() {
@@ -27,10 +25,10 @@ function loading() {
             setTimeout(function () {
                 //2초후 등장 애니메이션
                 let tl = gsap.timeline();
-                tl.from("#header", 0.5, { opacity: 0, y: 50 })
-                tl.from(".mainText > div", 1, { opacity: 0, y: 50, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
-                tl.from(".subText > div", 1, { opacity: 0, y: 50, stagger: 0.3, ease: "power1.out" }, "-=0.5")
-                tl.from(".scroll-down-wrap", 1, { opacity: 0, scale: 0, ease: "bounce.out" }, "-=0.5");
+                tl.to("#header", 0.5, { opacity: 1, y: 0 })
+                tl.to(".mainText > div", 1, { opacity: 1, y: 0, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+                tl.to(".subText > div", 1, { opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" }, "-=0.5")
+                tl.to(".scroll-down-wrap", 1, { opacity: 1, scale: 1, ease: "bounce.out" }, "-=0.5");
             }, 2200);
         }
         if (imgCurrent > 99) {
@@ -145,9 +143,9 @@ const tween10 = new TimelineMax()
     .from(".ftText--2", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5");
 
 const tween11 = new TimelineMax()
-    .from(".footer-sign h2", 0.7, { opacity: 0, y: 50, ease: "power4.out" })
-    .from(".footer-sign-nav ul li", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5")
-    .from(".ft-sns-btn", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5")
+    .from(".footer-sns h2", 0.7, { opacity: 0, y: 50, ease: "power4.out" })
+    .from(".footer-sns-nav ul li", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5")
+    // .from(".ft-sns-btn", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5")
     .from(".footer-bottom span", 0.7, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" }, "-=0.5")
 
 
@@ -231,139 +229,3 @@ const scene11 = new ScrollMagic.Scene({
 })
     .setTween(tween11)
     .addTo(controller);
-
-
-// mouse hover effect
-
-// const CARD = document.querySelector(".card-wrapper .card");
-// // const LINKTEXT = document.querySelector(".text-wrapper .link-text");
-
-// // const projectArray = [CARD, LINKTEXT];
-
-// function projectMouseover() {
-//     CARD.style.transform = "translateY(-30px) scale(1.01)";
-//     // LINKTEXT.style.transform = "translateY(-10px) scale(1.01)";
-// }
-// function projectMouseout() {
-//     CARD.style.transform = "translateY(0) scale(1)";
-//     // LINKTEXT.style.transform = "translateY(0) scale(1)";
-// }
-
-// function init() {
-//     CARD.addEventListener("mouseover", projectMouseover)
-//     CARD.addEventListener("mouseout", projectMouseout)
-// }
-// init();
-
-// 마우스를 올렸을 때, 각각의 요소에 클래스를 add하고 remove한다.
-
-
-
-// const CARD = document.querySelectorAll(".card-wrapper .card");
-// const LINKTEXT = document.querySelectorAll(".text-wrapper .link-text");
-
-// const PROJECT_MOUSEOVER_CARD = "project_mouseover__card";
-// const PROJECT_MOUSEOVER_TEXT = "project_mouseover__text";
-
-// // function projectMouseover() {
-// //     CARD.classList.toggle(PROJECT_MOUSEOVER_CARD);
-// //     LINKTEXT.classList.toggle(PROJECT_MOUSEOVER_TEXT);
-// // }
-// function projectMouseover() {
-//     CARD.forEach((el) => {
-//         el.classList.toggle(PROJECT_MOUSEOVER_CARD);
-//     })
-// }
-
-// function init() {
-//     CARD.addEventListener("mouseover", projectMouseover);
-//     CARD.addEventListener("mouseout", projectMouseover);
-// }
-
-// init();
-
-
-
-// 가로 스크롤 (ES6)
-
-// window.addEventListener("scroll", function () {
-//     let scroll = window.pageYOffset;
-
-//     document.querySelector('.scroll').textContent = parseInt(scroll);
-
-//     // window.pageYOffset === window.scrollY; // 항상 true
-
-//     let scrollTop = window.scrollY;
-//     let scrollLeft = window.scrollX;
-//     let winWidth = window.innerWidth;
-
-//     console.log("scrollTop : " + scrollTop);
-//     console.log("scrollLeft : " + scrollLeft);
-//     console.log("winWidth : " + winWidth);
-
-//     let ani01 = document.querySelector(".animation--01").offsetLeft;
-//     let ani02 = document.querySelector(".animation--02").offsetLeft;
-//     let ani03 = document.querySelector(".animation--03").offsetLeft;
-//     let ani04 = document.querySelector(".animation--04").offsetLeft;
-//     let ani05 = document.querySelector(".animation--05").offsetLeft;
-
-//     console.log("ani01 : " + ani01);
-//     console.log("ani02 : " + ani02);
-//     console.log("ani03 : " + ani03);
-//     console.log("ani04 : " + ani04);
-//     console.log("ani05 : " + ani05);
-//     console.log("scrollLeft :" + scrollLeft);
-
-
-
-//     const aniSlider = document.querySelector(".animations-slider");
-//     const scriptSlider = document.querySelector(".scripts-slider");
-//     const pageFooter = document.querySelector(".page-footer");
-//     const aniWrapper = document.querySelector(".animations-wrapper");
-//     const scriptWrapper = document.querySelector(".scripts-wrapper");
-
-//     let aniOffset = scrollTop - aniSlider.offsetTop;
-//     let scriptOffset = scrollTop - scriptSlider.offsetTop;
-//     let FooterOffset = pageFooter.offsetTop;
-
-//     let scriptColorChange2 = (winWidth * 3) + scriptSlider.offsetTop;
-//     let scriptColorChange1 = scriptSlider.offsetTop;
-//     let aniColorChange = (winWidth * 2) + aniSlider.offsetTop;
-
-//     console.log("aniOffset : " + aniOffset);
-
-
-//     // Change Scroll
-//     aniWrapper.style.left = -aniOffset + winWidth + "px";
-//     scriptWrapper.style.right = -scriptOffset + winWidth + "px";
-
-
-//     // Change Background-color
-//     if (scrollTop > (FooterOffset - winWidth)) {
-//         scriptSlider.style.backgroundColor = "#48506F";
-//         scriptSlider.style.transition = "0.5s";
-//     } else if (scrollTop > scriptColorChange2 - winWidth) {
-//         scriptSlider.style.backgroundColor = "#F3C57E";
-//         scriptSlider.style.transition = "0.5s";
-//     } else if (scrollTop > scriptColorChange1 - winWidth) {
-//         aniSlider.style.backgroundColor = "#F3EEE8";
-//         aniSlider.style.transition = "0.5s";
-//         scriptSlider.style.backgroundColor = "#F3EEE8";
-//         scriptSlider.style.transition = "0.5s";
-//     } else if (scrollTop > aniColorChange) {
-//         aniSlider.style.backgroundColor = "#88B2C4";
-//         aniSlider.style.transition = "0.5s";
-//     } else {
-//         aniSlider.style.backgroundColor = "#F3EEE8";
-//     }
-// })
-
-
-
-
-
-
-
-
-
-

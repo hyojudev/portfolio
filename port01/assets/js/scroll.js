@@ -225,3 +225,78 @@ $(window).scroll(function () {
     }
 
 });
+
+
+// 가로 스크롤 (ES6)
+
+// window.addEventListener("scroll", function () {
+//     let scroll = window.pageYOffset;
+
+//     document.querySelector('.scroll').textContent = parseInt(scroll);
+
+//     // window.pageYOffset === window.scrollY; // 항상 true
+
+//     let scrollTop = window.scrollY;
+//     let scrollLeft = window.scrollX;
+//     let winWidth = window.innerWidth;
+
+//     console.log("scrollTop : " + scrollTop);
+//     console.log("scrollLeft : " + scrollLeft);
+//     console.log("winWidth : " + winWidth);
+
+//     let ani01 = document.querySelector(".animation--01").offsetLeft;
+//     let ani02 = document.querySelector(".animation--02").offsetLeft;
+//     let ani03 = document.querySelector(".animation--03").offsetLeft;
+//     let ani04 = document.querySelector(".animation--04").offsetLeft;
+//     let ani05 = document.querySelector(".animation--05").offsetLeft;
+
+//     console.log("ani01 : " + ani01);
+//     console.log("ani02 : " + ani02);
+//     console.log("ani03 : " + ani03);
+//     console.log("ani04 : " + ani04);
+//     console.log("ani05 : " + ani05);
+//     console.log("scrollLeft :" + scrollLeft);
+
+
+
+//     const aniSlider = document.querySelector(".animations-slider");
+//     const scriptSlider = document.querySelector(".scripts-slider");
+//     const pageFooter = document.querySelector(".page-footer");
+//     const aniWrapper = document.querySelector(".animations-wrapper");
+//     const scriptWrapper = document.querySelector(".scripts-wrapper");
+
+//     let aniOffset = scrollTop - aniSlider.offsetTop;
+//     let scriptOffset = scrollTop - scriptSlider.offsetTop;
+//     let FooterOffset = pageFooter.offsetTop;
+
+//     let scriptColorChange2 = (winWidth * 3) + scriptSlider.offsetTop;
+//     let scriptColorChange1 = scriptSlider.offsetTop;
+//     let aniColorChange = (winWidth * 2) + aniSlider.offsetTop;
+
+//     console.log("aniOffset : " + aniOffset);
+
+
+//     // Change Scroll
+//     aniWrapper.style.left = -aniOffset + winWidth + "px";
+//     scriptWrapper.style.right = -scriptOffset + winWidth + "px";
+
+
+//     // Change Background-color
+//     if (scrollTop > (FooterOffset - winWidth)) {
+//         scriptSlider.style.backgroundColor = "#48506F";
+//         scriptSlider.style.transition = "0.5s";
+//     } else if (scrollTop > scriptColorChange2 - winWidth) {
+//         scriptSlider.style.backgroundColor = "#F3C57E";
+//         scriptSlider.style.transition = "0.5s";
+//     } else if (scrollTop > scriptColorChange1 - winWidth) {
+//         aniSlider.style.backgroundColor = "#F3EEE8";
+//         aniSlider.style.transition = "0.5s";
+//         scriptSlider.style.backgroundColor = "#F3EEE8";
+//         scriptSlider.style.transition = "0.5s";
+//     } else if (scrollTop > aniColorChange) {
+//         aniSlider.style.backgroundColor = "#88B2C4";
+//         aniSlider.style.transition = "0.5s";
+//     } else {
+//         aniSlider.style.backgroundColor = "#F3EEE8";
+//     }
+// })
