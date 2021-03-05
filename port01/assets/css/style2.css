@@ -472,8 +472,6 @@
 .subText {
     position: relative;
     z-index: 901;
-    font-size: 2.22vw;
-    line-height: 2.22vw;
 }
 
 .subText > div {
@@ -484,6 +482,8 @@
 .subText div:first-child {
     position: relative;
     z-index: 902;
+    font-size: 2.22vw;
+    line-height: 2.22vw;
 }
 
 .subText div:last-child {
@@ -806,9 +806,11 @@
 .card-bar-background .card-circle,
 .card-bar-background::after {
     display: flex;
+    min-width: 10px;
+    min-height: 10px;
     width: 0.8vw;
     height: 0.8vw;
-    border-radius: 50px;
+    border-radius: 100%;
 }
 
 .card-bar-background::before {
@@ -1481,10 +1483,6 @@
     align-items: center;
 }
 
-.footer-text:last-child {
-    bottom: 110px;
-}
-
 .footer-text .ftText {
     position: relative;
     /* z-index: 9; */
@@ -1528,6 +1526,10 @@
     background-repeat: no-repeat;
     background-position: center center;
 } */
+
+.footer-text:last-child {
+    bottom: 110px;
+}
 
 .footer {
     display: flex;
@@ -1986,13 +1988,13 @@
 .mainCont-circle-1 {
     top: 3vw;
     right: -5.2vw;
-    width: 23vw;
-    height: 23vw;
+    width: 21vmin;
+    height: 21vmin;
 }
 
 .mainCont-circle-2 {
-    width: 16vw;
-    height: 16vw;
+    width: 15vmin;
+    height: 15vmin;
 }
 
 .mainText-desc {
@@ -2010,10 +2012,9 @@
     height: 23vw;
 }
 
-.scroll-down {
-    font-size: 65px;
-    letter-spacing: 0.1em;
-    fill: #000;
+.subText div:first-child {
+    font-size: 3.5vmin;
+    line-height: 1;
 }
 
 /* profile */
@@ -2030,37 +2031,138 @@
     bottom: -26px;
 }
 
+.profile-image {
+    width: 50vw;
+    height: 50vw;
+}
+
+.profile-text-wrap {
+    width: 70vw;
+    height: 70vw;
+}
+
+
+/* profile-description */
+.profile-description {
+    height: 440px;
+}
+
+
+/* projects-headline */
+.projects-headline-wrap {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.projects-headline-text {
+    font-size: 15vw;
+    line-height: 1;
+}
+
+.projects-circle {
+    top: 7%; right: 19%;
+    width: 38vw;
+}
+
+/* projects-slider */
+.projects-slider .background {
+    height: 80vh;
+}
+
+.projects-slider .background-square {
+    height: 80vh;
+    top: 40vh;
+}
+
+.card-wrapper {
+    width: 60vw;
+    margin-bottom: 20px;
+}
+
+.cards-wrapper .card {
+    width: 60vw;
+}
+
+.cards-wrapper .card .card-bar {
+    width: 60vw;
+    min-height: 10px;
+}
+
+.card-bar-background::before,
+.card-bar-background .card-circle,
+.card-bar-background::after {
+    min-width: 5px;
+    min-height: 5px;
+}
+
+.card-bar-background::before {
+    margin-left: 8px;
+}
+
+.card-content {
+    width: 60vw;
+    height: 31.5vw;
+}
+
+.text-wrapper .numbering {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.text-wrapper .title .link-text {
+    margin-bottom: 16px;
+    font-size: 14vw;
+    line-height: 12.3vw;
+}
+
+.text-wrapper .text-desc {
+    margin-bottom: 80px;
+}
+
+.project--05 .content-wrapper {
+    height: 80vh;
+}
+
+
 /* .footer */
-.footer-sign h2 {
-    margin-bottom: 18px;
-    font-size: 80px;
+.footer-contact {
+    height: 100vh;
 }
 
-.footer-sign-nav ul li {
-    font-size: 18px;
+.footer-text .ftText {
+    font-size: 12vw;
+    line-height: 0.9;
 }
 
-.footer-bottom {
-    flex-direction: column;
-    justify-content: center;
-    font-size: 14px;
+.footer-text .smile-emoji {
+    width: 12vw;
+    height: 12vw;
+}
+
+.footer-image {
+    bottom: 8px;
+    width: 40vw;
+    height: 40vw;
+}
+
+.footer-text:last-child {
+    bottom: 21px;
+}
+
+/* .footer */
+
+.footer-sns h2 {
+    margin-bottom: 22px;
+    font-size: 24vw;
 }
 
 .footer-sns-nav {
-    width: 100%;
+    font-size: 17px;
 }
 
-.footer-sns-nav ul {
-    justify-content: space-between;
-}
-
-.footer-sns-nav ul li {
-    margin-right: 0;
-    margin-bottom: 12px;
-}
-
-.footer-sns-nav span {
-    font-size: 8px;
+.footer-bottom {
+    font-size: 9px;
 }
 
 }
