@@ -24,11 +24,11 @@ function loading() {
             progress.delay(1000).fadeOut(1000)
             setTimeout(function () {
                 //2초후 등장 애니메이션
-                let tl = gsap.timeline();
+                const tl = gsap.timeline();
                 tl.to("#header", 0.5, { opacity: 1, y: 0 })
-                tl.to(".mainText > div", 1, { opacity: 1, y: 0, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
-                tl.to(".subText > div", 1, { opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" }, "-=0.5")
-                tl.to(".scroll-down-wrap", 1, { opacity: 1, scale: 1, ease: "bounce.out" }, "-=0.5");
+                    .to(".mainText > div", 1, { opacity: 1, y: 0, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+                    .to(".subText > div", 1, { opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" }, "-=0.5")
+                    .to(".scroll-down-wrap", 1, { opacity: 1, scale: 1, ease: "bounce.out" }, "-=0.5");
             }, 2200);
         }
         if (imgCurrent > 99) {
@@ -37,6 +37,59 @@ function loading() {
     }
 }
 loading();
+
+
+const hBtn = document.querySelector(".hBtn");
+
+function hBtnClickMotion(e) {
+    e.preventDefault();
+    hBtn.classList.toggle("hBtn-checked");
+    document.querySelector(".hBtn-top").classList.toggle("hBtn-top-toggle");
+    document.querySelector(".hBtn-bot").classList.toggle("hBtn-bot-toggle");
+
+    document.querySelector(".menu").classList.toggle("menu-visible");
+    document.querySelector(".menu > div").classList.toggle("menu-div-toggle");
+    document.querySelector(".menu > div > div").classList.toggle("menu-div-div-toggle");
+
+
+    const hBtnTween = gsap.timeline();
+    hBtnTween.to(".main-menu > li", 1, { opacity: 1, x: 0, stagger: 0.1 })
+        .to(".sign-menu li", 1, { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+    // hBtnTween.to(".main-menu > li", 1, { opacity: 1, y: 0, stagger: 0.1 })
+    //     .to(".sign-menu li", 1, { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+
+};
+
+hBtn.addEventListener("click", hBtnClickMotion);
+
+
+
+
+
+
+// 메뉴 이동
+
+// 버튼을 클릭 했을 때, menu박스가 닫히고 해당 주소로 이동한다.
+// const menuBtn = document.querySelectorAll(".main-menu li");
+// const menuToggler = document.querySelector(".toggler");
+
+// let menu_href = window.location.href;
+// let menu_id = menu_href.substring(menu_href.lastIndexOf("#" + 1));
+// console.log(menu_id)
+
+
+
+
+// menuToggler.checked = true;
+
+// function meinBtnClick(elem) {
+//     elem.forEach(elem => {
+//         menuToggler.checked = false;
+
+//     })
+// }
+
+// menuBtn.addEventListener("click", meinBtnClick);
 
 //글씨 조깨기(한번에, forEach)
 document.querySelectorAll(".profile-desc-title").forEach(elem => {

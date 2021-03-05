@@ -1,25 +1,13 @@
 // 가로 스크롤 (jQuery)
-
-$(window).scroll(function () {
+$(window).scroll(function (e) {
+    e.preventDefault();
 
     let scroll = $(window).scrollTop();
     $(".scroll").text(parseInt(scroll));
 
     let scrollTop = $(window).scrollTop();
-    // let scrollLeft = $(window).scrollLeft();
     let winWidth = $(window).width();
     let winHeight = $(window).height();
-
-    let ani01 = $(".script--01").offset().left;
-    // let ani02 = $(".script--02").offset().left;
-    // let ani03 = $(".script--03").offset().left;
-    // let ani04 = $(".script--04").offset().left;
-    // console.log("ani01 : " + ani01)
-    // console.log("ani02 : " + ani02)
-    // console.log("ani03 : " + ani03)
-    // console.log("ani04 : " + ani04)
-    // console.log("scrollTop : " + scrollTop)
-    // console.log("scrollLeft :" + scrollLeft)
 
 
     let aniOffset = scrollTop - $(".animations-slider").offset().top;
@@ -30,23 +18,31 @@ $(window).scroll(function () {
     let scriptColorChange1 = $(".scripts-slider").offset().top;
     let aniColorChange = (winWidth * 2) + $(".animations-slider").offset().top;
 
-    // Change Scroll
-    // $(".animations-wrapper").css( "left", -offset + "px");
-    $(".animations-wrapper").css("left", -aniOffset + winWidth + "px");
-    $(".scripts-wrapper").css("right", -scriptOffset + winWidth + "px");
 
-    // Change Background-color
-    if (scrollTop > (FooterOffset - winWidth)) {
-        $(".scripts-slider").css("background-color", "#48506F").css("transition", "0.5s");
-    } else if (scrollTop > scriptColorChange2 - winWidth) {
-        $(".scripts-slider").css("background-color", "#F3C57E").css("transition", "0.5s");
-    } else if (scrollTop > scriptColorChange1 - winWidth) {
-        $(".animations-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
-        $(".scripts-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
-    } else if (scrollTop > aniColorChange) {
-        $(".animations-slider").css("background-color", "#88B2C4").css("transition", "0.5s");
-    } else {
-        $(".animations-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
+    if (winWidth <= 768) {
+        $(".animations-wrapper").css("position", "relative").css("left", "0px");
+        $(".scripts-wrapper").css("position", "relative").css("right", "0px");
+    } else if (winWidth >= 768) {
+        // Change Scroll
+        $(".animations-wrapper").css("position", "fixed").css("left", -aniOffset + winWidth + "px");
+        $(".scripts-wrapper").css("position", "fixed").css("right", -scriptOffset + winWidth + "px");
+
+        let animationTest = $(".animations-wrapper").offset().left;
+        console.log("animationTest :" + animationTest);
+
+        // Change Background-color
+        if (scrollTop > (FooterOffset - winWidth)) {
+            $(".scripts-slider").css("background-color", "#48506F").css("transition", "0.5s");
+        } else if (scrollTop > scriptColorChange2 - winWidth) {
+            $(".scripts-slider").css("background-color", "#F3C57E").css("transition", "0.5s");
+        } else if (scrollTop > scriptColorChange1 - winWidth) {
+            $(".animations-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
+            $(".scripts-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
+        } else if (scrollTop > aniColorChange) {
+            $(".animations-slider").css("background-color", "#88B2C4").css("transition", "0.5s");
+        } else {
+            $(".animations-slider").css("background-color", "#F3EEE8").css("transition", "0.5s");
+        }
     }
 
     // GSAP - 스크롤 값 애니메이션
