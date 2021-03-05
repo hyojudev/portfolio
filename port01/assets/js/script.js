@@ -64,33 +64,6 @@ function projectPathPrepare(el) {
 }
 projectPathPrepare(projectCirclePath);
 
-// .hBtn을 click했을 때, 함수를 실행
-// hBtnMotion 함수 : y축으로 왔다 갔다 하기
-
-// const hBtn = document.querySelector(".hBtn");
-
-
-// function hBtnMotion() {
-
-//     TweenLite.set('.main-menu', { xPercent: -50, yPercent: -50 })
-//     TweenLite.set('.main-menu li', { x: -110 });
-
-//     let hBtnTween = new TimelineMax()
-//         .from(".main-menu li", 0.4, { opacity: 0, y: 40, delay: 0.5, stagger: 0.4, ease: "Sine.easeOut" })
-//         .reverse();
-
-//     hBtnTween.reversed(!hBtnTween.reversed());
-// }
-
-// // const hBtnTweenScene = new ScrollMagic.Scene({
-// //     // triggerElement: "#home"
-// // })
-// //     .setTween(hBtnTween)
-// //     .addTo(controller);
-
-// hBtn.addEventListener("click", hBtnMotion);
-
-
 // const tween1 = new TimelineMax()
 //     .from("#header", 0.5, { opacity: 0, y: 50 })
 //     .from(".mainText > div", 1, { opacity: 0, y: 50, delay: 0.5, stagger: 0.1, ease: "power1.out" }, "-=0.5")
