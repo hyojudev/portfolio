@@ -32,7 +32,7 @@
     <div class="scroll"></div>
 
     <!-- Loading -->
-    <!-- <div class='progress'>
+    <div class='progress'>
         <div class="progress-text">0%</div>
         <div class='loader'>
             <div class='loader--dot'></div>
@@ -42,7 +42,7 @@
             <div class='loader--dot'></div>
             <div class='loader--dot'></div>
         </div>
-    </div> -->
+    </div>
 
     <!-- header -->
     <header id="header">
@@ -61,24 +61,24 @@
                 <div>
                     <div>
                         <ul class="main-menu">
-                            <li><a href="#home">home</a></li>
-                            <li><a href="#about">about</a></li>
-                            <li><a href="#projects">projects</a></li>
-                            <li><a href="#contact">contact</a></li>
+                            <li class="nav-link"><a href="#home">home</a></li>
+                            <li class="nav-link"><a href="#about">about</a></li>
+                            <li class="nav-link"><a href="#projects">projects</a></li>
+                            <li class="nav-link"><a href="#contact">contact</a></li>
                         </ul>
                         <ul class="sign-menu">
                             <?php if (isset($_SESSION['memberID'])) { ?>
-                            <li class="youNickName">
+                            <li class="youNickName nav-sing-link">
                                 <?= $_SESSION[
                                 'youNickName'
                             ] ?> 님
                             </li>
-                            <li><a href="../sign/logOut.php">logOut</a></li>
+                            <li class="nav-sing-link"><a href="../sign/logOut.php">logOut</a></li>
                             <?php } else { ?>
-                            <li><a href="../sign/logIn.php">logIn</a></li>
-                            <li><a href="../sign/signUp.php">signUp</a></li>
+                            <li class="nav-sing-link"><a href="../sign/logIn.php">logIn</a></li>
+                            <li class="nav-sing-link"><a href="../sign/signUp.php">signUp</a></li>
                             <?php } ?>
-                            <li><a href="../board/board.php">board</a></li>
+                            <li class="nav-sing-link"><a href="../board/board.php">board</a></li>
                         </ul>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
 
     <main>
         <!-- mainCont -->
-        <section id="home" class="mainCont">
+        <section id="home" class="mainCont section">
             <div class="mainText">
                 <div>welcome to</div>
                 <div class="mainCont-circle-1">
@@ -186,7 +186,7 @@
         <!-- //mainCont -->
 
         <!-- profile -->
-        <section id="about" class="profile">
+        <section id="about" class="profile section">
             <div class="profile-main-rect">
                 <p>Let me introduce myself!</p>
             </div>
@@ -249,7 +249,7 @@
         <!-- //profile-text -->
 
         <!-- projects-headline -->
-        <section id="projects" class="projects-headline">
+        <section id="projects" class="projects-headline section">
             <div class="projects-headline-wrap">
                 <h1>
                     <!-- Let me<br />
@@ -742,7 +742,7 @@
                         <div class="background-round"></div>
                         <div class="script-content">
                             <div class="script-text-wrapper">
-                                <span class="script-numbering">1&#47;5</span>
+                                <span class="script-numbering">1&#47;3</span>
                                 <h4 class="script-title">
                                     To-do List
                                     <br />
@@ -784,7 +784,7 @@
                         <div class="background-round"></div>
                         <div class="script-content">
                             <div class="script-text-wrapper">
-                                <span class="script-numbering">2&#47;5</span>
+                                <span class="script-numbering">2&#47;3</span>
                                 <h4 class="script-title">
                                     Painting
                                     <br />
@@ -827,7 +827,7 @@
                         <div class="background-round"></div>
                         <div class="script-content">
                             <div class="script-text-wrapper">
-                                <span class="script-numbering">3&#47;5</span>
+                                <span class="script-numbering">3&#47;3</span>
                                 <h4 class="script-title">
                                     PARALLAX
                                     <br />
@@ -864,7 +864,7 @@
                 <!-- //script--03 -->
 
                 <!-- script--04 -->
-                <div class="script-slide script--04">
+                <!-- <div class="script-slide script--04">
                     <div class="content-wrapper">
                         <div class="background-round"></div>
                         <div class="script-content">
@@ -904,11 +904,11 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- //script--04 -->
 
                 <!-- script--05 -->
-                <div class="script-slide script--05">
+                <!-- <div class="script-slide script--05">
                     <div class="content-wrapper">
                         <div class="background-round"></div>
                         <div class="script-content">
@@ -948,7 +948,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- //script--05 -->
 
             </div>
@@ -956,7 +956,7 @@
         <!-- //scripts-slider -->
 
         <!-- page-footer -->
-        <footer id="contact" class="page-footer">
+        <footer id="contact" class="page-footer section">
             <div class="footer-contact">
                 <div class="footer-text-wrap">
                     <div class="footer-text">
@@ -990,8 +990,8 @@
                     <div class="footer-sns-nav">
                         <ul>
                             <li><a href="https://github.com/hyojudev" target="_blank">Github</a></li>
-                            <li><a href="#" target="_blank">Gitbook</a></li>
-                            <li><a href="#" target="_blank">Gmail</a></li>
+                            <li><a href="https://hyojudev.gitbook.io/study/" target="_blank">Gitbook</a></li>
+                            <li><a href="mailto:hyojudev@gmail.com" target="_blank">Gmail</a></li>
                         </ul>
                     </div>
                 </div>

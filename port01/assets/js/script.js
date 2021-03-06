@@ -38,58 +38,71 @@ function loading() {
 }
 loading();
 
+const navSlider = () => {
+    const hBtn = document.querySelector(".hBtn");
+    const navLink = document.querySelectorAll(".nav-link");
+    const navSignLink = document.querySelectorAll(".nav-sing-link");
 
-const hBtn = document.querySelector(".hBtn");
+    function hBtnShowToggle() {
+        hBtn.classList.toggle("hBtn-checked");
+        document.querySelector(".hBtn-top").classList.toggle("hBtn-top-toggle");
+        document.querySelector(".hBtn-bot").classList.toggle("hBtn-bot-toggle");
 
-function hBtnClickMotion(e) {
-    e.preventDefault();
-    hBtn.classList.toggle("hBtn-checked");
-    document.querySelector(".hBtn-top").classList.toggle("hBtn-top-toggle");
-    document.querySelector(".hBtn-bot").classList.toggle("hBtn-bot-toggle");
+        document.querySelector(".menu").classList.toggle("menu-visible");
+        document.querySelector(".menu > div").classList.toggle("menu-div-toggle");
+        document.querySelector(".menu > div > div").classList.toggle("menu-div-div-toggle");
+    }
 
-    document.querySelector(".menu").classList.toggle("menu-visible");
-    document.querySelector(".menu > div").classList.toggle("menu-div-toggle");
-    document.querySelector(".menu > div > div").classList.toggle("menu-div-div-toggle");
+    function navLinkToggle() {
+        // Animate Links
+        navLink.forEach((link, index) => {
 
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 4 + 0.4}s`;
+            }
 
-    const hBtnTween = gsap.timeline();
-    hBtnTween.to(".main-menu > li", 1, { opacity: 1, x: 0, stagger: 0.1 })
-        .to(".sign-menu li", 1, { opacity: 1, x: 0, stagger: 0.1, ease: "power1.out" }, "-=0.5")
-    // hBtnTween.to(".main-menu > li", 1, { opacity: 1, y: 0, stagger: 0.1 })
-    //     .to(".sign-menu li", 1, { opacity: 1, y: 0, stagger: 0.1, ease: "power1.out" }, "-=0.5")
+        });
+    }
+    function navSignLinkToggle() {
+        // Animate Links
+        navSignLink.forEach((link, index) => {
 
-};
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                setTimeout(() => {
+                    link.style.animation = `navSignLinkFade 0.4s ease-in-out forwards ${index / 5 + 0.5}s`;
+                }, 1000);
+            }
 
-hBtn.addEventListener("click", hBtnClickMotion);
+        });
+    }
 
+    function hBtnClickMotion(e) {
+        e.preventDefault();
+        hBtnShowToggle();
+        navLinkToggle();
+        navSignLinkToggle();
+    };
 
+    // toggle on item click if open
+    navLink.forEach(item => {
+        item.addEventListener('click', () => {
+            if (hBtn.classList.contains("hBtn-checked")) {
+                navLinkToggle();
+                navSignLinkToggle();
+                hBtnShowToggle();
+            }
+        });
+    });
 
+    hBtn.addEventListener("click", hBtnClickMotion);
 
+}
+navSlider();
 
-
-// 메뉴 이동
-
-// 버튼을 클릭 했을 때, menu박스가 닫히고 해당 주소로 이동한다.
-// const menuBtn = document.querySelectorAll(".main-menu li");
-// const menuToggler = document.querySelector(".toggler");
-
-// let menu_href = window.location.href;
-// let menu_id = menu_href.substring(menu_href.lastIndexOf("#" + 1));
-// console.log(menu_id)
-
-
-
-
-// menuToggler.checked = true;
-
-// function meinBtnClick(elem) {
-//     elem.forEach(elem => {
-//         menuToggler.checked = false;
-
-//     })
-// }
-
-// menuBtn.addEventListener("click", meinBtnClick);
 
 //글씨 조깨기(한번에, forEach)
 document.querySelectorAll(".profile-desc-title").forEach(elem => {

@@ -28,7 +28,6 @@ $(window).scroll(function (e) {
         $(".scripts-wrapper").css("position", "fixed").css("right", -scriptOffset + winWidth + "px");
 
         let animationTest = $(".animations-wrapper").offset().left;
-        console.log("animationTest :" + animationTest);
 
         // Change Background-color
         if (scrollTop > (FooterOffset - winWidth)) {
@@ -182,36 +181,36 @@ $(window).scroll(function (e) {
             .to(".script--03 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
             .to(".script--03 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
     }
-    if ($(".script--04").offset().left > -winWidth) {
-        scriptTimeline4
-            .to(".script--04 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--04 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline4
-            .to(".script--04 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--04 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--04 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
-    if ($(".script--05").offset().left > -winWidth) {
-        scriptTimeline5
-            .to(".script--05 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
-            .to(".script--05 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
-    } else {
-        scriptTimeline5
-            .to(".script--05 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
-            .to(".script--05 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-            .to(".script--05 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
-    }
+    // if ($(".script--04").offset().left > -winWidth) {
+    //     scriptTimeline4
+    //         .to(".script--04 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
+    //         .to(".script--04 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--04 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--04 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--04 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    // } else {
+    //     scriptTimeline4
+    //         .to(".script--04 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
+    //         .to(".script--04 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--04 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--04 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--04 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    // }
+    // if ($(".script--05").offset().left > -winWidth) {
+    //     scriptTimeline5
+    //         .to(".script--05 .script-numbering", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" })
+    //         .to(".script--05 .script-title", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--05 .script-text-desc", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--05 .codeView-btn", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--05 .script-card", 0.5, { opacity: 1, y: 0, ease: "power1.easeOut" }, "-=0.2")
+    // } else {
+    //     scriptTimeline5
+    //         .to(".script--05 .script-numbering", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" })
+    //         .to(".script--05 .script-title", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--05 .script-text-desc", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--05 .codeView-btn", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    //         .to(".script--05 .script-card", 0.5, { opacity: 0, y: 50, ease: "power1.easeOut" }, "-=0.2")
+    // }
 
     // 스크롤 값에 따른 body 배경색 변경
     if (scroll > winHeight * 10) {
