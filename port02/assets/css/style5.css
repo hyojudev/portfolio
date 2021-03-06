@@ -681,9 +681,12 @@ header {
 .footer {
     position: relative;
     z-index: 800;
+    background-color: #88B2C4;
 }
 
 .footer__wrap {
+    position: relative;
+    z-index: 810;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -691,13 +694,15 @@ header {
 }
 
 .footer__contact {
+    position: relative;
+    z-index: 830;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%; height: 220vh;
     border-radius: 50vw 50vw 0 0;
-    background-color: #88B2C4;
+    /* background-color: #88B2C4; */
 }
 
 .footer__contact-icon {
@@ -730,6 +735,8 @@ header {
 } */
 
 .footer__contact-btn {
+    position: relative;
+    z-index: 820;
     width: 46vw; height: 7vw;
     min-height: 50px;
     margin-top: 60px;
@@ -738,10 +745,51 @@ header {
     font-size: 2.2vw;
     color: #F3EEE8;
     background-color: #88B2C4;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.footer__contact-btn::after {
+    content: "";
+    position: absolute;
+    top: 300%; left: 50%;
+    z-index: -1;
+    width: 150%;
+    padding-top: 150%;
+    transform: translate(-50%, 20%);
+    border-radius: 100vw;
+    background-color: #fff;
+    transition: 1s ease;
+}
+
+.footer__contact-btn:hover::after {
+    transform: translate(-50%, -100%);
+}
+
+.footer__contact-btn:hover {
+    color: #88B2C4;
+}
+
+.cont-btn__smile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    opacity: 0;
+    width: 6vw;
+    height: 6vw;
+    background-image: url("../img/icon-smile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(-45deg);
+    pointer-events: none;
 }
 
 .footer__socials {
     position: relative;
+    z-index: 830;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -749,12 +797,7 @@ header {
     width: 100%; height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
-    background-color: #88B2C4;
-}
-
-#footer__canvas {
-    position: absolute;
-    bottom: 0; left: 0;
+    /* background-color: #88B2C4; */
 }
 
 .footer__social {
@@ -804,7 +847,7 @@ header {
     content: '5';
 }
 
-.social__btn > a {
+/* .social__btn > a {
     padding: 17px 42px;
     border: 1px solid #F3EEE8;
     border-radius: 50vw;
@@ -813,6 +856,50 @@ header {
     letter-spacing: -0.01em;
     color: #F3EEE8;
     background-color: #88B2C4;
+} */
+
+.social__btn > a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 42px;
+    border: 1px solid #F3EEE8;
+    border-radius: 50vw;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #F3EEE8;
+    background-color: #88B2C4;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .8s ease;
+}
+
+.social__btn > a::after {
+    content: "";
+    position: absolute;
+    top: 300%; left: 50%;
+    z-index:-1;
+    width: 150%;
+    padding-top: 150%;
+    transform: translate(-50%, 20%);
+    border-radius: 999px;
+    background-color: #000;
+    transition: .8s ease;
+}
+
+.social__btn > a:hover::after {
+    transform: translate(-50%, -100%);
+}
+.social__btn > a:hover {
+    color: #fff;
+}
+
+#footer__canvas {
+    position: absolute;
+    bottom: 0; left: 0;
+    z-index: 820;
 }
 
 /* ----------------

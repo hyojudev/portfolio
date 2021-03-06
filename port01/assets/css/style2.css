@@ -1096,7 +1096,7 @@
     background-color: transparent;
     overflow: hidden;
     cursor: pointer;
-    transition: .8s ease;;
+    transition: .8s ease;
 }
 
 .codeView-btn::after {
