@@ -27,39 +27,39 @@
     <!-- header -->
     <header id="header">
         <div class="logo">hyoju</div>
-        <div class="menu_wrap">
+        <div class="menu-wrap">
             <div class="hamburger">
-                <div class="ham_bar1"></div>
-                <div class="ham_bar2"></div>
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
             </div>
             <nav class="navigation">
-                <div class="menu_radial">
-                    <div class="menu">
-                        <ul class="main_menu">
-                            <li class="main_menu_link">
-                                <a href="#home">home</a>
+                <div class="nav-radial">
+                    <div class="nav-menu-wrap">
+                        <ul class="main-menu">
+                            <li class="main-menu__link">
+                                <a href="#home" class="main-split">home</a>
                             </li>
-                            <li class="main_menu_link">
-                                <a href="#about">about</a>
+                            <li class="main-menu__link">
+                                <a href="#about" class="main-split">about</a>
                             </li>
-                            <li class="main_menu_link">
-                                <a href="#project">project</a>
+                            <li class="main-menu__link">
+                                <a href="#project" class="main-split">project</a>
                             </li>
-                            <li class="main_menu_link">
-                                <a href="#contact">contact</a>
+                            <li class="main-menu__link">
+                                <a href="#contact" class="main-split">contact</a>
                             </li>
                         </ul>
-                        <ul class="sign_menu">
-                            <li class="sign_menu_link">
+                        <ul class="sign-menu">
+                            <li class="sign-menu__link">
                                 <a href="#">logOut</a>
                             </li>
-                            <li class="sign_menu_link">
+                            <li class="sign-menu__link">
                                 <a href="#">logIn</a>
                             </li>
-                            <li class="sign_menu_link">
+                            <li class="sign-menu__link">
                                 <a href="#">signUp</a>
                             </li>
-                            <li class="sign_menu_link">
+                            <li class="sign-menu__link">
                                 <a href="#">board</a>
                             </li>
                         </ul>
@@ -71,7 +71,66 @@
     </header>
     <!-- //header -->
 
+    <!-- main -->
+    <main>
+        <!-- home -->
+        <section id="home" class="home">
+            <div class="home-title">
+                <div>welcome to</div>
+                <div class="home-title__circle">
+                    <svg viewBox="0 0 177 173" width="177" height="173" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M172.106 65.165C159.742 19.02 112.311-8.365 66.166 4l-.259-.966c46.678-12.507 94.658 15.194 107.165 61.872 12.508 46.678-15.193 94.658-61.872 107.165l-.259-.966c46.145-12.364 73.53-59.795 61.165-105.94zM66.295 4.483C20.417 16.776-6.81 63.933 5.483 109.811l-1.931.518C-9.028 63.384 18.832 15.13 65.777 2.551l.518 1.932z"
+                            fill="#000" stroke-width="2" />
+                    </svg>
+                </div>
+                <div>portfolio</div>
+                <div class="home-title__desc-wrap">
+                    <div class="home-title__of">
+                        <div class="home-title__of-circle">
+                            <svg viewBox="0 0 154 154" width="154" height="154" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M77 153c41.974 0 76-34.026 76-76S118.974 1 77 1 1 35.026 1 77s34.026 76 76 76zm0 1c42.526 0 77-34.474 77-77S119.526 0 77 0 0 34.474 0 77s34.474 77 77 77z"
+                                    fill="#000" stroke-width="3" />
+                            </svg>
+                        </div>
+                        <div>of</div>
+                    </div>
+                    <div class="home-title__desc">
+                        It’s nice to meet you. I’m front-end<br />
+                        developer from south korea.
+                    </div>
+                </div>
+                <div>hyo ju</div>
+            </div>
+            <div class="home__subText">
+                <div>Front-end Developer</div>
+                <div>Art</div>
+            </div>
+            <svg class="home__scroll" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 500 500">
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="home__scroll-path">
+                        <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <text class="home__scroll__text" dy="0" textLength="50">
+                    <textPath xlink:href="#home__scroll-path">scroll down scroll down scroll down</textPath>
+                </text>
+            </svg>
+        </section>
+        <!-- //home -->
+    </main>
+    <!-- //main -->
+
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
     <script src="../assets/js/scroll.js"></script>
     <script src="../assets/js/script.js"></script>
     <!-- //script -->
