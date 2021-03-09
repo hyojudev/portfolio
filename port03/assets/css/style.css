@@ -39,6 +39,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .logo,
@@ -238,6 +240,11 @@
     margin-bottom: 48px;
 }
 
+.home-title > div {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 .home-title__circle {
     position: absolute;
     top: 13%;
@@ -315,6 +322,11 @@
     z-index: 110;
 }
 
+.home__subText > div {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 .home__subText div:first-child {
     position: relative;
     z-index: 111;
@@ -336,6 +348,7 @@
     bottom: 5%;
     width: 11vw;
     height: 11vw;
+    transform: scale(0);
 }
 
 .home__scroll__text {
@@ -364,6 +377,8 @@
     width: 100%;
     height: 100vh;
     background-color: #e3dacd;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .about-view__rect {
@@ -411,15 +426,15 @@
     height: 26vw;
     border: 3px solid #fff;
     border-radius: 50%;
-    /* opacity: 0;
-    transform: scale(0); */
+    opacity: 0;
+    transform: scale(0);
 }
 
 .about-view__circle {
     position: absolute;
     width: 37vw;
     height: 37vw;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .about-view__circle .about-view__circle-text {
@@ -446,15 +461,15 @@
     font-size: 11.67vw;
     line-height: 0.81;
     letter-spacing: -0.02em;
-    color: #88b2c4;
+    color: var(--sub-color);
 }
 
-/* .about-title span {
+.about-title span {
     display: inline-block;
+    min-width: 2vw;
     opacity: 0;
     transform: translateY(40px);
-    min-width: 2vw;
-} */
+}
 
 .about-desc-wrap {
     position: relative;
@@ -469,12 +484,14 @@
     font-size: 6vw;
     line-height: 1.1;
     letter-spacing: -0.01em;
+    opacity: 0;
+    transform: translateY(40px);
 }
 
 .about-desc-en {
     font-family: 'Italiana', serif;
     font-weight: normal;
-    color: #88b2c4;
+    color: var(--sub-color);
 }
 
 .about-desc-sign {
@@ -485,7 +502,7 @@
     font-family: 'Roboto Mono', monospace;
     font-size: 9vw;
     font-weight: normal;
-    color: #88b2c4;
+    color: var(--sub-color);
 }
 
 .about-desc:nth-child(3) .about-desc-sign {
@@ -715,7 +732,7 @@
 }
 
 .project--02 .project-bg {
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .project--02 .project-card-img {
@@ -747,7 +764,7 @@
 }
 
 .project--05 .project-bg {
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .project--05 .project-card-img {
@@ -761,14 +778,13 @@
     display: flex;
     align-items: center;
     height: 800vw;
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .animation-slider {
     top: 0;
     left: 0;
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
     width: 600vw;
     height: 100vh;
@@ -784,7 +800,7 @@
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .animation-headline-title {
@@ -797,7 +813,7 @@
     width: 75vw;
     height: 35vw;
     border-radius: 50%;
-    background-color: #88b2c4;
+    background-color: var(--sub-color);
 }
 
 .animation-headline-title h2 {
@@ -805,7 +821,7 @@
     letter-spacing: -0.03em;
     line-height: 10.3vw;
     text-align: center;
-    color: #f3eee8;
+    color: var(--main-color);
 }
 
 .animation-slide {
@@ -1014,7 +1030,7 @@
     display: flex;
     align-items: center;
     height: 600vw;
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .script-slider {
@@ -1026,7 +1042,7 @@
     width: 400vw;
     height: 100vh;
     overflow: hidden;
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .script-headline,
@@ -1042,7 +1058,7 @@
 
 .script-headline {
     order: 6;
-    background-color: #f3eee8;
+    background-color: var(--main-color);
 }
 
 .script-headline-title {
@@ -1700,7 +1716,7 @@
     }
     .script--02 {
         order: 2;
-        background-color: #f3eee8;
+        background-color: var(--main-color);
     }
     .script--03 {
         order: 3;
@@ -1708,7 +1724,7 @@
     }
     /* .script--04 {
         order: 4;
-        background-color: #f3eee8;
+        background-color: var(--main-color);
     }
     .script--05 {
         order: 5;
