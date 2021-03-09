@@ -1008,12 +1008,16 @@
     background-color: #eee;
 }
 
+.codeView-btn-mobile {
+    display: none;
+}
+/* 
 .codeView-btn-mobile,
 .codeView-btn-mobile::after,
 .codeView-btn-mobile:hover::after,
 .codeView-btn-mobile:hover {
     display: none;
-}
+} */
 
 /* <= 768px (Mobile) */
 @media screen and (max-width: 768px) {
@@ -1311,7 +1315,6 @@
     }
 
     .codeView-btn-mobile::after {
-        display: block;
         content: '';
         position: absolute;
         top: 300%;
@@ -1326,11 +1329,9 @@
     }
 
     .codeView-btn-mobile:hover::after {
-        display: block;
         transform: translate(-50%, -100%);
     }
     .codeView-btn-mobile:hover {
-        display: block;
         color: #fff;
     }
 }
