@@ -442,11 +442,11 @@
 
 .about-title {
     position: relative;
+    margin-bottom: 15px;
     font-size: 11.67vw;
     line-height: 0.81;
     letter-spacing: -0.02em;
     color: #88b2c4;
-    /* overflow: hidden; */
 }
 
 /* .about-title span {
@@ -663,9 +663,6 @@
 .project-card-img {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
 }
 
 .project-text-wrap {
@@ -1056,7 +1053,7 @@
         height: 100vh;
         padding-top: 0;
         padding-bottom: 0;
-        font-size: 15.5vw;
+        font-size: 15vw;
         line-height: 0.9;
     }
 
@@ -1121,7 +1118,7 @@
     }
 
     .about-resume {
-        height: 260px;
+        height: 320px;
     }
 
     /* project */
@@ -1130,25 +1127,18 @@
         margin-bottom: 150px;
     }
 
-    .project-headline__wrap {
-        font-size: 15vw;
-        line-height: 1;
-    }
-
     .project-headline-text {
-        position: relative;
-        font-size: 12vw;
+        font-size: 15vw;
         line-height: 0.9;
-        letter-spacing: -0.03em;
-        text-align: center;
     }
 
     .project-circle {
         top: 7%;
-        right: 25%;
-        width: 32vw;
+        right: 20%;
+        width: 36vw;
     }
 
+    /* project-slide */
     .project-bg {
         height: 60vh;
     }
@@ -1158,39 +1148,34 @@
         top: 30vh;
     }
 
-    .card-wrapper {
-        width: 60vw;
-        margin-bottom: 20px;
+    .project-card-wrap {
+        width: 64vw;
+        margin-bottom: 12px;
     }
 
     .project-card {
-        width: 60vw;
+        width: 64vw;
     }
 
     .project-card__bar {
-        width: 60vw;
-        min-height: 10px;
+        width: 64vw;
+        min-height: 13px;
     }
 
     .project-card__bar-bg::before,
     .project-card__circle,
     .project-card__bar-bg::after {
-        min-width: 5px;
-        min-height: 5px;
+        min-width: 6px;
+        min-height: 6px;
     }
 
     .project-card__bar-bg::before {
         margin-left: 8px;
     }
 
-    .project-card-wrap {
-        width: 60vw;
-        margin-bottom: 12px;
-    }
-
     .project-card-content {
-        width: 60vw;
-        height: 31.5vw;
+        width: 64vw;
+        height: 36vw;
     }
 
     .project-numbering {
@@ -1201,7 +1186,7 @@
 
     .project-text-link {
         margin-bottom: 11px;
-        font-size: 14vw;
+        font-size: 12vw;
         line-height: 0.8;
     }
 
@@ -1268,7 +1253,7 @@
 
     .animation-title {
         margin-bottom: 26px;
-        font-size: 42px;
+        font-size: 12vw;
         line-height: 0.8;
     }
 
@@ -1288,8 +1273,8 @@
     }
 
     .animation-card__bar {
-        width: calc(100vw - 80px);
-        min-height: 16px;
+        width: 64vw;
+        min-height: 13px;
     }
 
     .animation-card__bar::before,
@@ -1305,8 +1290,8 @@
     }
 
     .animation-card-content {
-        width: calc(100vw - 80px);
-        height: 46vw;
+        width: 64vw;
+        height: 36vw;
     }
 
     .codeView-btn-mobile {
@@ -1317,7 +1302,7 @@
         width: 148px;
         height: 40px;
         border-radius: 20px;
-        border: 0.3px solid #000;
+        border: 0.5px solid #000;
         font-size: 18px;
         background-color: transparent;
         overflow: hidden;
