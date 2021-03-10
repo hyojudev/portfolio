@@ -60,5 +60,6 @@ window.addEventListener("scroll", function () {
         } else {
             page__ani.style.backgroundColor = "#F3EEE8";
         }
+
     }
 });

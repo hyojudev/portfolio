@@ -225,8 +225,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 180px;
-    padding-bottom: 286px;
+    height: 180vh;
+    padding-bottom: 200px;
+    /* padding-top: 180px;
+    padding-bottom: 286px; */
     font-size: 10vw;
     line-height: 0.8;
     letter-spacing: -0.01em;
@@ -359,8 +361,8 @@
 
 /* about */
 .page__about {
-    position: relative;
-    z-index: 200;
+    /* position: relative;
+    z-index: 200; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -435,6 +437,7 @@
     width: 37vw;
     height: 37vw;
     opacity: 0;
+    transform: scale(0);
 }
 
 .about-view__circle .about-view__circle-text {
@@ -444,7 +447,7 @@
 }
 
 .about-resume {
-    position: relative;
+    /* position: relative; */
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -545,7 +548,7 @@
 
 /* project */
 .page__project {
-    position: relative;
+    /* position: relative; */
     width: 100%;
 }
 
@@ -562,6 +565,8 @@
     line-height: 0.9;
     letter-spacing: -0.03em;
     text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
 }
 
 .project-circle {
@@ -570,12 +575,13 @@
     right: 26%;
     width: 30vw;
     height: auto;
+    pointer-events: none;
 }
 
-.project-slider {
+/* .project-slider {
     position: relative;
     z-index: 500;
-}
+} */
 
 .project-slide-wrap {
     position: relative;
@@ -607,6 +613,8 @@
 .project-card-link {
     display: flex;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .project-card-wrap {
@@ -687,6 +695,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .project-numbering {
@@ -721,6 +731,15 @@
     letter-spacing: -0.02em;
     line-height: 1.25;
     text-align: center;
+}
+
+.project--01,
+.project--02,
+.project--03,
+.project--04,
+.project--05 {
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .project--01 .project-bg {
@@ -889,6 +908,8 @@
     align-items: center;
     width: 50vw;
     height: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .animation-numbering {
@@ -969,6 +990,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .animation-card__bar {
@@ -1125,20 +1148,6 @@
 .script--03 .script-bg-round {
     background-color: #f3c57e;
 }
-/* .script--04 {
-    order: 2;
-    background-color: #f3c57e;
-}
-.script--04 .script-bg-round {
-    background-color: var(--main-color);
-}
-.script--05 {
-    order: 1;
-    background-color: var(--main-color);
-}
-.script--05 .script-bg-round {
-    background-color: #f3c57e;
-} */
 
 .script-content {
     display: flex;
@@ -1152,6 +1161,8 @@
     order: 2;
     width: 50vw;
     height: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .script-numbering {
@@ -1196,6 +1207,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .script-card__bar {
@@ -1249,8 +1262,8 @@
 
 /* footer */
 .page__footer {
-    position: relative;
-    z-index: 200;
+    /* position: relative;
+    z-index: 200; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1294,6 +1307,12 @@
     color: #bb657e;
 }
 
+.ftText--1,
+.ftText--2 {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 .footer-smile {
     position: absolute;
     width: 10vw;
@@ -1301,6 +1320,8 @@
     bottom: -2vh;
     right: 0;
     z-index: 208;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .footer-image {
@@ -1308,6 +1329,8 @@
     bottom: 50px;
     width: 26.6vw;
     height: 26.6vw;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .footer-image img {
@@ -1321,6 +1344,7 @@
 }
 
 .footer-social {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1343,6 +1367,8 @@
     font-size: 10.4vw;
     letter-spacing: -0.01em;
     line-height: 1;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .footer-sns-nav {
@@ -1357,12 +1383,16 @@
     align-items: center;
 }
 
+.footer-sns-nav ul li {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
 .footer-bottom {
     position: absolute;
     bottom: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     padding: 0 40px;
     font-family: 'Nixie One', cursive;
@@ -1370,6 +1400,8 @@
     letter-spacing: -0.01em;
     line-height: 1;
     color: #48506f;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 /* <= 768px (Mobile) */
