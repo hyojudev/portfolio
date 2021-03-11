@@ -3,11 +3,22 @@
 const hBtn = document.querySelector(".hamburger");
 const mainNavLink = document.querySelectorAll(".main-menu__link");
 const signNavLink = document.querySelectorAll(".sign-menu__link");
+var href = mainNavLink.getAttribute('href');
+
+console.log(href);
+
+mainNavLink.addEventListener("click", navLinkMove)
 
 function navToggle() {
     document.querySelector(".navigation").classList.toggle("nav-toggle");
     document.querySelector(".nav-radial").classList.toggle("menu-radial-toggle");
     document.querySelector(".nav-menu-wrap").classList.toggle("nav-menu-toggle");
+
+    if (document.querySelector(".navigation").classList.contains("nav-toggle")) {
+        hBtn.classList.add("hBtnToggle");
+    } else {
+        hBtn.classList.remove("hBtnToggle");
+    }
 }
 
 function mainLinkToggle() {
@@ -42,7 +53,8 @@ function hBtnClick() {
 
 hBtn.addEventListener("click", hBtnClick);
 
-// GSAP
+
+// parallax | pageLoad animation | text split animation
 
 pageLoad();
 parallax();

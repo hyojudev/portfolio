@@ -87,14 +87,27 @@
 }
 
 .hamburger:hover .ham__bar1 {
-    top: 0;
     margin-bottom: 0;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
 }
 
 .hamburger:hover .ham__bar2 {
-    top: 0;
+    transform: rotate(270deg);
+}
+
+.hamburger.hBtnToggle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.hamburger.hBtnToggle .ham__bar1 {
+    margin-bottom: 0;
     transform: rotate(180deg);
+}
+
+.hamburger.hBtnToggle .ham__bar2 {
+    transform: rotate(270deg);
 }
 
 .navigation {
