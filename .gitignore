@@ -1,22 +1,5 @@
-port01/connect/
+**/*.php
 
-port01/board/
-
-port01/connect/create/
-
-port01/connect/sample/
-
-port01/connect/sign/
-
-port02/board/
-
-port02/create/
-
-port02/sample/
-
-port02/sign/
-
-port03/connect/
 
 
 
