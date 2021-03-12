@@ -460,14 +460,12 @@
 }
 
 .about-resume {
-    /* position: relative; */
-    z-index: 200;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 920px;
+    height: 130vh;
     background-color: #fff;
 }
 
@@ -568,8 +566,8 @@
 .project-headline {
     position: relative;
     z-index: 600;
-    margin-top: 246px;
-    margin-bottom: 308px;
+    padding-top: 246px;
+    padding-bottom: 308px;
 }
 
 .project-headline-text {
@@ -590,11 +588,6 @@
     height: auto;
     pointer-events: none;
 }
-
-/* .project-slider {
-    position: relative;
-    z-index: 500;
-} */
 
 .project-slide-wrap {
     position: relative;
@@ -1423,6 +1416,7 @@
     #header {
         height: 90px;
     }
+
     .logo {
         position: relative;
         z-index: 9100;
@@ -1520,7 +1514,7 @@
     }
 
     .about-resume {
-        height: 320px;
+        max-height: 50vh;
     }
 
     /* project */
@@ -1542,12 +1536,12 @@
 
     /* project-slide */
     .project-bg {
-        height: 60vh;
+        height: 100vh;
     }
 
     .project-bg-square {
-        height: 60vh;
-        top: 30vh;
+        height: 100vh;
+        top: 50vh;
     }
 
     .project-card-wrap {
@@ -1644,6 +1638,8 @@
     .animation-text-wrap {
         width: 100%;
         height: fit-content;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .animation-numbering {
@@ -1684,6 +1680,11 @@
         min-width: 6px;
         min-height: 6px;
         border-radius: 100%;
+    }
+
+    .animation-card {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .animation-card__bar::before {

@@ -3,11 +3,6 @@
 const hBtn = document.querySelector(".hamburger");
 const mainNavLink = document.querySelectorAll(".main-menu__link");
 const signNavLink = document.querySelectorAll(".sign-menu__link");
-var href = mainNavLink.getAttribute('href');
-
-console.log(href);
-
-mainNavLink.addEventListener("click", navLinkMove)
 
 function navToggle() {
     document.querySelector(".navigation").classList.toggle("nav-toggle");
@@ -53,6 +48,16 @@ function hBtnClick() {
 
 hBtn.addEventListener("click", hBtnClick);
 
+function navLinkToggle() {
+    navToggle();
+    mainLinkToggle();
+    signLinkToggle();
+}
+
+mainNavLink.forEach(link => {
+    link.addEventListener("click", navLinkToggle)
+})
+
 
 // parallax | pageLoad animation | text split animation
 
@@ -64,9 +69,9 @@ window.onload = pageLoad;
 
 function pageLoad() {
     gsap.to("#header", { duration: .8, opacity: 1, y: 0 })
-    gsap.to(".home-title > div", { duration: 1, opacity: 1, y: 0, stagger: 0.04, ease: "power1.out" }, "-=.01")
+    gsap.to(".home-title > div", { duration: 1, opacity: 1, y: 0, stagger: 0.04, ease: "power1.out" })
     gsap.to(".home__subText > div", { duration: 1, opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" })
-    gsap.to(".home__scroll", { duration: .5, scale: 1, ease: "bounce.out" }, "+=1")
+    gsap.to(".home__scroll", { duration: .5, scale: 1, delay: .8, ease: "bounce.out" })
 }
 
 function about_split() {
@@ -205,7 +210,6 @@ function parallax() {
             gsap.to(".ftText--1", { duration: .5, y: 0, opacity: 1, stagger: 0.1, ease: "power1.out" })
             gsap.to(".footer-smile", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
             gsap.to(".footer-image", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
-            gsap.to(".footer-image", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
             gsap.to(".ftText--2", { duration: .5, y: 0, opacity: 1, stagger: 0.04, ease: "power1.out" })
         }
 
@@ -214,6 +218,7 @@ function parallax() {
             gsap.to(".footer-sns-nav ul li", { duration: .5, y: 0, opacity: 1, stagger: 0.1, ease: "power1.out" })
             gsap.to(".footer-bottom", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
         }
+
 
     })
 }
