@@ -1,3 +1,43 @@
+// 로딩이후 실행
+function loading() {
+    const progress = $(".progress"),
+        progressText = progress.find(".progress-text");
+
+    let imgLoad = imagesLoaded("body"),
+        imgTotal = imgLoad.images.length,
+        imgLoaded = 0,
+        imgCurrent = 0,
+        progressTimer = setInterval(updateProgress, 500 / 60);
+
+    imgLoad.on("progress", function () {
+        imgLoaded++;
+    })
+
+    function updateProgress() {
+        let target = (imgLoaded / imgTotal) * 100;
+
+        imgCurrent += (target - imgCurrent) * 0.1;
+        progressText.text(Math.floor(imgCurrent) + "%");
+
+        if (imgCurrent >= 100) {
+            clearInterval(progressTimer)
+            progress.delay(1300).fadeOut(1000)
+            setTimeout(function () {
+                //2초후 등장 애니메이션
+                gsap.to("#header", { duration: .8, opacity: 1, y: 0 })
+                gsap.to(".home-title > div", { duration: 1, opacity: 1, y: 0, stagger: 0.04, ease: "power1.out" })
+                gsap.to(".home__subText > div", { duration: 1, opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" })
+                gsap.to(".home__scroll", { duration: .5, scale: 1, delay: .8, ease: "bounce.out" })
+            }, 2200);
+        }
+        if (imgCurrent > 99) {
+            imgCurrent = 100;
+        }
+    }
+}
+loading();
+
+
 
 // 메뉴 버튼 모션
 const hBtn = document.querySelector(".hamburger");
@@ -61,18 +101,18 @@ mainNavLink.forEach(link => {
 
 // parallax | pageLoad animation | text split animation
 
-pageLoad();
+// pageLoad();
 parallax();
 about_split();
 
-window.onload = pageLoad;
+// window.onload = pageLoad;
 
-function pageLoad() {
-    gsap.to("#header", { duration: .8, opacity: 1, y: 0 })
-    gsap.to(".home-title > div", { duration: 1, opacity: 1, y: 0, stagger: 0.04, ease: "power1.out" })
-    gsap.to(".home__subText > div", { duration: 1, opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" })
-    gsap.to(".home__scroll", { duration: .5, scale: 1, delay: .8, ease: "bounce.out" })
-}
+// function pageLoad() {
+//     gsap.to("#header", { duration: .8, opacity: 1, y: 0 })
+//     gsap.to(".home-title > div", { duration: 1, opacity: 1, y: 0, stagger: 0.04, ease: "power1.out" })
+//     gsap.to(".home__subText > div", { duration: 1, opacity: 1, y: 0, stagger: 0.3, ease: "power1.out" })
+//     gsap.to(".home__scroll", { duration: .5, scale: 1, delay: .8, ease: "bounce.out" })
+// }
 
 function about_split() {
     document.querySelectorAll(".about-split").forEach(elem => {
@@ -207,10 +247,10 @@ function parallax() {
         }
 
         if (pageYOffset > document.querySelector(".footer-contact").offsetTop) {
-            gsap.to(".ftText--1", { duration: .5, y: 0, opacity: 1, stagger: 0.1, ease: "power1.out" })
-            gsap.to(".footer-smile", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
-            gsap.to(".footer-image", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
-            gsap.to(".ftText--2", { duration: .5, y: 0, opacity: 1, stagger: 0.04, ease: "power1.out" })
+            gsap.to(".ftText--1", { duration: .7, y: 0, opacity: 1, stagger: 0.05, ease: "power1.out" })
+            gsap.to(".footer-smile", { duration: .7, y: 0, opacity: 1, ease: "power1.out" })
+            gsap.to(".footer-image", { duration: .7, y: 0, opacity: 1, ease: "power1.out" })
+            gsap.to(".ftText--2", { duration: .7, y: 0, opacity: 1, stagger: 0.05, ease: "power1.out" })
         }
 
         if (pageYOffset > document.querySelector(".footer-social").offsetTop) {

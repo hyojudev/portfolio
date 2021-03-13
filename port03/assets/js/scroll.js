@@ -4,7 +4,7 @@
 window.addEventListener("scroll", function () {
     let scroll = window.pageYOffset;
 
-    document.querySelector('.scroll').textContent = parseInt(scroll);
+    // document.querySelector('.scroll').textContent = parseInt(scroll);
 
     let scrollTop = window.scrollY;
     let scrollLeft = window.scrollX;
