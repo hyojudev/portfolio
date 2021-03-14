@@ -33,18 +33,17 @@
 
     <!-- header -->
     <header>
-        <!-- <input type="checkbox" class="toggler" /> -->
-        <div class="hbtn header__stagger">
-            <span></span>
+        <div class="other-project-btn header__stagger">
+            <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
-        <ul class="main-menu header__stagger">
+        <nav class="main-menu header__stagger">
             <li class="main-menu__link menu-active"><a href="../pages/index3.html">home</a></li>
             <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
             <li class="main-menu__link"><a href="../pages/projects.html">projects</a></li>
             <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
             <li class="main-menu__link"><a href="../board/board.php">board</a></li>
             <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
-        </ul>
+        </nav>
         <ul class="sign-menu header__stagger">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
             <li><a href="#">
@@ -56,15 +55,18 @@
             <li><a href="../sign/signUp.php">SIGNUP</a></li>
             <?php } ?>
         </ul>
+        <div class="mobile-menu">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+        </div>
     </header>
     <!-- //header -->
 
     <main>
         <!-- main-Content -->
         <section class="main-content">
-            <!-- <div class="main-title">
-                Welcome <br /> My world
-            </div> -->
             <div class="main-title">
                 <div class="main-title__first">
                     <div class="main-title__text">Welcome</div>

@@ -33,18 +33,17 @@
 
     <!-- header -->
     <header>
-        <!-- <input type="checkbox" class="toggler" /> -->
-        <div class="hbtn">
-            <span></span>
+        <div class="other-project-btn">
+            <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
-        <ul class="main-menu">
+        <nav class="main-menu">
             <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
             <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
             <li class="main-menu__link menu-active"><a href="../pages/projects.html">projects</a></li>
             <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
             <li class="main-menu__link"><a href="../board/board.php">board</a></li>
             <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
-        </ul>
+        </nav>
         <ul class="sign-menu">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
             <li><a href="#">
@@ -56,6 +55,12 @@
             <li><a href="../sign/signUp.php">SIGNUP</a></li>
             <?php } ?>
         </ul>
+        <div class="mobile-menu">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+        </div>
     </header>
     <!-- //header -->
 
@@ -63,27 +68,25 @@
     <section class="projects__page">
         <div class="projects__main">
             <div class="projects__main-title">
-                <h1>
-                    I'll show <br />
-                    You some <br />
-                    Interesting <br />
-                    Works** <br />
-                </h1>
+                <div class="projects__main-title__wrap">
+                    <div class="projects__main-title__text">I'll show</div>
+                    <div class="projects__main-title__text">You some</div>
+                    <div class="projects__main-title__text">Interesting</div>
+                    <div class="projects__main-title__text">Works&#42;&#42;</div>
+                </div>
                 <div class="pt__main-circle__wrap">
-                    <div class="pt__main-circle pt__main-circle__1"></div>
+                    <!-- <div class="pt__main-circle pt__main-circle__1"></div>
                     <div class="pt__main-circle pt__main-circle__2"></div>
                     <div class="pt__main-circle pt__main-circle__3"></div>
-                    <div class="pt__main-circle pt__main-circle__4"></div>
+                    <div class="pt__main-circle pt__main-circle__4"></div> -->
                 </div>
             </div>
             <div class="main-subTitle color__main bg-color__sub">
-                <h4>
-                    &#47; <br />
-                    I can handle <br />
-                    languages ​​like <br />
-                    jQuery, Javascript, <br />
-                    React, vue. <br />
-                </h4>
+                <div class="main-subTitle__text">&#47;</div>
+                <div class="main-subTitle__text">I can handle</div>
+                <div class="main-subTitle__text">languages ​​like</div>
+                <div class="main-subTitle__text">jQuery, Javascript,</div>
+                <div class="main-subTitle__text">React, vue.</div>
                 <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
             </div>
         </div>
@@ -97,21 +100,23 @@
                     <div class="pt__bg pt__bg-square"></div>
                     <div class="pt__content">
                         <div class="pt__card__wrap">
-                            <a href="#" class="pt__card">
+                            <a href="https://hyojudev.github.io/portfolio/port00__aff/index.html" target="_blank"
+                                class="pt__card">
                                 <div class="pt__card__bar">
                                     <div class="pt__card__bar-bg">
                                         <span class="pt__card__circle"></span>
                                     </div>
                                 </div>
-
                                 <div class="pt__card__content">
-                                    <div class="pt__card__content-image"></div>
+                                    <img class="pt__card__content-image" src="../assets/img/project-img__01.png"
+                                        alt="Project AFF Image">
                                 </div>
                             </a>
                         </div>
                         <div class="pt__text__wrap">
                             <span class="pt__numbering">1&#47;5</span>
-                            <a href="#" class="pt__text__title">
+                            <a href="https://hyojudev.github.io/portfolio/port00__aff/index.html" target="_blank"
+                                class="pt__text__title">
                                 <h4 class="pt__link-text">AFF</h4>
                             </a>
                             <h5 class="pt__caption">All of the fruits</h5>
@@ -132,21 +137,23 @@
                     <div class="pt__bg pt__bg-square"></div>
                     <div class="pt__content">
                         <div class="pt__card__wrap">
-                            <a href="#" class="pt__card">
+                            <a href="https://hyojudev.github.io/portfolio/port00__reiss/index.html" target="_blank"
+                                class="pt__card">
                                 <div class="pt__card__bar">
                                     <div class="pt__card__bar-bg">
                                         <span class="pt__card__circle"></span>
                                     </div>
                                 </div>
-
                                 <div class="pt__card__content">
-                                    <div class="pt__card__content-image"></div>
+                                    <img class="pt__card__content-image" src="../assets/img/project-img__02.png"
+                                        alt="Project REISS Image">
                                 </div>
                             </a>
                         </div>
                         <div class="pt__text__wrap">
                             <span class="pt__numbering">2&#47;5</span>
-                            <a href="#" class="pt__text__title">
+                            <a href="https://hyojudev.github.io/portfolio/port00__reiss/index.html" target="_blank"
+                                class="pt__text__title">
                                 <h4 class="pt__link-text">REISS</h4>
                             </a>
                             <h5 class="pt__caption">2018 REISS Collection</h5>
@@ -167,21 +174,23 @@
                     <div class="pt__bg pt__bg-square"></div>
                     <div class="pt__content">
                         <div class="pt__card__wrap">
-                            <a href="#" class="pt__card">
+                            <a href="https://hyojudev.github.io/portfolio/port00__dogParty/index.html" target="_blank"
+                                class="pt__card">
                                 <div class="pt__card__bar">
                                     <div class="pt__card__bar-bg">
                                         <span class="pt__card__circle"></span>
                                     </div>
                                 </div>
-
                                 <div class="pt__card__content">
-                                    <div class="pt__card__content-image"></div>
+                                    <img class="pt__card__content-image" src="../assets/img/project-img__03.png"
+                                        alt="Project Dog Party Image">
                                 </div>
                             </a>
                         </div>
                         <div class="pt__text__wrap">
                             <span class="pt__numbering">3&#47;5</span>
-                            <a href="#" class="pt__text__title">
+                            <a href="https://hyojudev.github.io/portfolio/port00__dogParty/index.html" target="_blank"
+                                class="pt__text__title">
                                 <h4 class="pt__link-text">
                                     DOG
                                     <br />
@@ -206,21 +215,22 @@
                     <div class="pt__bg pt__bg-square"></div>
                     <div class="pt__content">
                         <div class="pt__card__wrap">
-                            <a href="#" class="pt__card">
+                            <a href="https://hyojudev.github.io/portfolio/port00__responsibleWeb/index.html"
+                                class="pt__card">
                                 <div class="pt__card__bar">
                                     <div class="pt__card__bar-bg">
                                         <span class="pt__card__circle"></span>
                                     </div>
                                 </div>
-
                                 <div class="pt__card__content">
-                                    <div class="pt__card__content-image"></div>
+                                    <img class="pt__card__content-image" src="../assets/img/project-img__04.png"
+                                        alt="Project Responsive Image">
                                 </div>
                             </a>
                         </div>
                         <div class="pt__text__wrap">
                             <span class="pt__numbering">4&#47;5</span>
-                            <a href="#" class="pt__text__title">
+                            <a target="_blank" class="pt__text__title">
                                 <h4 class="pt__link-text">
                                     Responsive
                                     <br />
@@ -245,21 +255,21 @@
                     <div class="pt__bg pt__bg-square"></div>
                     <div class="pt__content">
                         <div class="pt__card__wrap">
-                            <a href="#" class="pt__card">
+                            <a href="http://dgauaid.com/" target="_blank" class="pt__card">
                                 <div class="pt__card__bar">
                                     <div class="pt__card__bar-bg">
                                         <span class="pt__card__circle"></span>
                                     </div>
                                 </div>
-
                                 <div class="pt__card__content">
-                                    <div class="pt__card__content-image"></div>
+                                    <img class="pt__card__content-image" src="../assets/img/project-img__05.png"
+                                        alt="Project RESILIENCE Image">
                                 </div>
                             </a>
                         </div>
                         <div class="pt__text__wrap">
                             <span class="pt__numbering">5&#47;5</span>
-                            <a href="#" class="pt__text__title">
+                            <a href="http://dgauaid.com/" target="_blank" class="pt__text__title">
                                 <h4 class="pt__link-text">RESILIENCE</h4>
                             </a>
                             <h5 class="pt__caption">Daegu Arts University</h5>
@@ -279,30 +289,31 @@
     </section>
     <!-- //projects__page -->
 
+
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer bg-color__white">
         <div class="footer__wrap">
             <div class="footer__contact">
                 <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
                 <h1 class="footer__contact-title">
-                    If you like my <br />
-                    portfolio please <br />
-                    contact me! <br />
+                    <div class="footer__contact-title__text">If you like my</div>
+                    <div class="footer__contact-title__text">portfolio please</div>
+                    <div class="footer__contact-title__text">contact me!</div>
                 </h1>
-                <button type="submit" class="footer__contact-btn">
-                    hyojudev@gamil.com
+                <button type="button" class="footer__contact-btn smile-motion">
+                    hyojudev@gmail.com
                 </button>
             </div>
             <div class="footer__socials">
                 <ul class="footer__social">
                     <li class="social__btn social__btn__1">
-                        <a href="#">github</a>
+                        <a href="https://github.com/hyojudev">github</a>
                     </li>
                     <li class="social__btn social__btn__2">
-                        <a href="#">gitbook</a>
+                        <a href="https://hyojudev.gitbook.io/study/">gitbook</a>
                     </li>
                     <li class="social__btn social__btn__3">
-                        <a href="#">codepen</a>
+                        <a href="https://codepen.io/hyojudev/pen/RworLpQ">codepen</a>
                     </li>
                 </ul>
                 <ul class="footer__social">
@@ -310,10 +321,11 @@
                         <a href="#">instagram</a>
                     </li>
                     <li class="social__btn social__btn__5">
-                        <a href="#">gmail</a>
+                        <a href="mailto:hyojudev@gmail.com">gmail</a>
                     </li>
                 </ul>
             </div>
+            <canvas id="footer__canvas"></canvas>
         </div>
     </footer>
     <!-- //footer -->

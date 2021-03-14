@@ -33,21 +33,19 @@
 </head>
 
 <body>
-
     <!-- header -->
     <header>
-        <!-- <input type="checkbox" class="toggler" /> -->
-        <div class="hbtn">
-            <span></span>
+        <div class="other-project-btn">
+            <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
-        <ul class="main-menu">
+        <nav class="main-menu">
             <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
             <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
             <li class="main-menu__link"><a href="../pages/projects.html">projects</a></li>
             <li class="main-menu__link menu-active"><a href="../pages/script.html">script</a></li>
             <li class="main-menu__link"><a href="../board/board.php">board</a></li>
             <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
-        </ul>
+        </nav>
         <ul class="sign-menu">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
             <li><a href="#">
@@ -59,6 +57,12 @@
             <li><a href="../sign/signUp.php">SIGNUP</a></li>
             <?php } ?>
         </ul>
+        <div class="mobile-menu">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+        </div>
     </header>
     <!-- //header -->
 
@@ -68,11 +72,11 @@
         <!-- script__main -->
         <div class="script__main">
             <div class="script__main-title">
-                <h1>
-                    Anima <br />
-                    -tion <br />
-                    Script <br />
-                </h1>
+                <div class="script__main-title__wrap">
+                    <div class="script__main-title__text">Anima</div>
+                    <div class="script__main-title__text">&#45;tion</div>
+                    <div class="script__main-title__text">Script</div>
+                </div>
                 <div class="script__main-circle__wrap">
                     <div class="script__circle script__circle__1"></div>
                     <div class="script__circle script__circle__2"></div>
@@ -89,11 +93,9 @@
 
         <!-- script__subTitle -->
         <div class="main-subTitle color__main bg-color__sub">
-            <h4>
-                &#47; <br />
-                Joyful <br />
-                Animation <br />
-            </h4>
+            <div class="main-subTitle__text">&#47;</div>
+            <div class="main-subTitle__text">Joyful</div>
+            <div class="main-subTitle__text">Animation</div>
             <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
         </div>
         <!-- //script__subTitle -->
@@ -150,11 +152,9 @@
 
         <!-- script__subTitle -->
         <div class="main-subTitle color__main bg-color__sub">
-            <h4>
-                &#47; <br />
-                Joyful <br />
-                Animation <br />
-            </h4>
+            <div class="main-subTitle__text">&#47;</div>
+            <div class="main-subTitle__text">Joyful</div>
+            <div class="main-subTitle__text">Animation</div>
             <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
         </div>
         <!-- //script__subTitle -->
@@ -168,7 +168,7 @@
                     <div class="st__bg st__bg-square"></div>
                     <div class="st__content">
                         <div class="st__text__wrap">
-                            <span class="st__numbering bg-color__sub">1&#47;4</span>
+                            <span class="st__numbering bg-color__sub">1&#47;3</span>
                             <div class="st__text__title">
                                 <h4 class="st__link-text">
                                     TO DO <br />
@@ -176,8 +176,9 @@
                                 </h4>
                             </div>
                             <p class="st__text-desc">
-                                Vanilla Javascript를 사용한 To do list입니다. <br />
-                                할 일 목록을 추가 및 제거할 수 있습니다.
+                                순수 100% Vanilla JavaScript로 만든 크롬 앱 서비스입니다.
+                                현재 시간을 가져오는 시계를 구현했으며, 할 일 목록을 생성하고 완료된 것은 삭제할 수 있습니다.
+                                또한, 지역기반으로 API를 가져와 날씨를 보여주며, 랜덤 배경 사진 기능을 구현했습니다.
                             </p>
                         </div>
                         <div class="st__card__wrap">
@@ -189,9 +190,9 @@
                                 </div>
 
                                 <div class="st__card__content">
-                                    <iframe class="st__card__content-image bg-color__sub"
+                                    <iframe class="st__card__content-image"
                                         src="https://hyojudev.github.io/study__script/vanillaJS__momentum02/"
-                                        title="Momentum" scrolling="no" frameborder="0"></iframe>
+                                        title="Momentum" scrolling="yes" frameborder="0"></iframe>
                                 </div>
                             </div>
                             <a class="codeView__btn bg-color__sub" target="_blank" href="#">
@@ -209,7 +210,7 @@
                     <div class="st__bg st__bg-square"></div>
                     <div class="st__content">
                         <div class="st__text__wrap">
-                            <span class="st__numbering bg-color__white">2&#47;4</span>
+                            <span class="st__numbering bg-color__white">2&#47;3</span>
                             <div class="st__text__title">
                                 <h4 class="st__link-text">
                                     CANVAS <br />
@@ -217,8 +218,11 @@
                                 </h4>
                             </div>
                             <p class="st__text-desc">
-                                Vanilla Javascript를 사용한 To do list입니다. <br />
-                                할 일 목록을 추가 및 제거할 수 있습니다.
+                                순수 100% Vanilla JavaScript로 만든 그림판입니다. HTML의 &lt;canvas&gt;기능을 사용했습니다. 캔버스 안에서
+                                클릭 &amp; 드래그를 하게되면 path가 그려지고, ragne를 이용해서 브러쉬의 크기를 조절할 수 있습니다. &quot;fill&quot; 버튼을 클릭
+                                한 후에 컬러
+                                팔레트에서
+                                컬러를 가져와 캔버스를 클릭하면 배경색이 채워지며, 캔버스에서 그린 그림을 &quot;png&quot;파일 저장도 가능합니다.
                             </p>
                         </div>
                         <div class="st__card__wrap">
@@ -230,9 +234,9 @@
                                 </div>
 
                                 <div class="st__card__content">
-                                    <iframe class="st__card__content-image bg-color__white"
-                                        src="../effect/animation-dot.html" title="Animation Dot" scrolling="no"
-                                        frameborder="0"></iframe>
+                                    <iframe class="st__card__content-image"
+                                        src="https://hyojudev.github.io/study__script/vanillaJS__paintingBoard02/index.html"
+                                        title="Animation Dot" scrolling="yes" frameborder="0"></iframe>
                                 </div>
                             </div>
                             <a class="codeView__btn bg-color__white" target="_blank" href="#">
@@ -250,7 +254,7 @@
                     <div class="st__bg st__bg-square"></div>
                     <div class="st__content">
                         <div class="st__text__wrap">
-                            <span class="st__numbering bg-color__yellow">3&#47;4</span>
+                            <span class="st__numbering bg-color__yellow">3&#47;3</span>
                             <div class="st__text__title">
                                 <h4 class="st__link-text">
                                     SKETCH<br />
@@ -258,8 +262,8 @@
                                 </h4>
                             </div>
                             <p class="st__text-desc">
-                                Vanilla Javascript를 사용한 To do list입니다. <br />
-                                할 일 목록을 추가 및 제거할 수 있습니다.
+                                순수 JavaScript를 사용한 패럴랙스 스크롤링 효과입니다. 윈도우에 스크롤이 될 때, 해당 섹션의 offsetTop값이 pageYOffset 값
+                                보다 작아지면 classList&#46;add, classlist&#46;remove로 요소를 추가, 삭제하는 스크립트입니다.
                             </p>
                         </div>
                         <div class="st__card__wrap">
@@ -271,9 +275,9 @@
                                 </div>
 
                                 <div class="st__card__content">
-                                    <iframe class="st__card__content-image bg-color__yellow"
-                                        src="../effect/animation-dot.html" title="Animation Dot" scrolling="no"
-                                        frameborder="0"></iframe>
+                                    <iframe class="st__card__content-image"
+                                        src="https://hyojudev.github.io/study__script/javascript__parallaxEffect01/parallax01-javascript.html"
+                                        title="Animation Dot" scrolling="yes" frameborder="0"></iframe>
                                 </div>
                             </div>
                             <a class="codeView__btn bg-color__yellow" target="_blank" href="#">
@@ -285,7 +289,7 @@
             </div>
             <!-- //script__03 -->
             <!-- script__04 -->
-            <div class="script__slide script__04">
+            <!-- <div class="script__slide script__04">
                 <div class="st__content__wrap">
                     <div class="st__bg st__bg-round"></div>
                     <div class="st__bg st__bg-square"></div>
@@ -323,7 +327,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- //script__04 -->
 
         </div>
@@ -338,24 +342,24 @@
             <div class="footer__contact">
                 <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
                 <h1 class="footer__contact-title">
-                    If you like my <br />
-                    portfolio please <br />
-                    contact me! <br />
+                    <div class="footer__contact-title__text">If you like my</div>
+                    <div class="footer__contact-title__text">portfolio please</div>
+                    <div class="footer__contact-title__text">contact me!</div>
                 </h1>
-                <button type="submit" class="footer__contact-btn">
-                    hyojudev@gamil.com
+                <button type="button" class="footer__contact-btn smile-motion">
+                    hyojudev@gmail.com
                 </button>
             </div>
             <div class="footer__socials">
                 <ul class="footer__social">
                     <li class="social__btn social__btn__1">
-                        <a href="#">github</a>
+                        <a href="https://github.com/hyojudev">github</a>
                     </li>
                     <li class="social__btn social__btn__2">
-                        <a href="#">gitbook</a>
+                        <a href="https://hyojudev.gitbook.io/study/">gitbook</a>
                     </li>
                     <li class="social__btn social__btn__3">
-                        <a href="#">codepen</a>
+                        <a href="https://codepen.io/hyojudev/pen/RworLpQ">codepen</a>
                     </li>
                 </ul>
                 <ul class="footer__social">
@@ -363,10 +367,11 @@
                         <a href="#">instagram</a>
                     </li>
                     <li class="social__btn social__btn__5">
-                        <a href="#">gmail</a>
+                        <a href="mailto:hyojudev@gmail.com">gmail</a>
                     </li>
                 </ul>
             </div>
+            <canvas id="footer__canvas"></canvas>
         </div>
     </footer>
     <!-- //footer -->

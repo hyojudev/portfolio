@@ -33,18 +33,17 @@
 
     <!-- header -->
     <header>
-        <!-- <input type="checkbox" class="toggler" /> -->
-        <div class="hbtn">
-            <span></span>
+        <div class="other-project-btn">
+            <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
-        <ul class="main-menu">
+        <nav class="main-menu">
             <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
             <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
             <li class="main-menu__link"><a href="../pages/projects.html">projects</a></li>
             <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
             <li class="main-menu__link"><a href="../board/board.php">board</a></li>
             <li class="main-menu__link menu-active"><a href="../pages/contact3.html">contact</a></li>
-        </ul>
+        </nav>
         <ul class="sign-menu">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
             <li><a href="#">
@@ -56,6 +55,12 @@
             <li><a href="../sign/signUp.php">SIGNUP</a></li>
             <?php } ?>
         </ul>
+        <div class="mobile-menu">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+        </div>
     </header>
     <!-- //header -->
 
@@ -136,25 +141,25 @@
 
             <div class="universe">
                 <div class="sun"></div>
-                <div class="orbit-mercury">
+                <div class="orbit-mercury universe-stagger">
                     <div class="mercury"></div>
                 </div>
-                <div class="orbit-venus">
+                <div class="orbit-venus universe-stagger">
                     <div class="venus"></div>
                 </div>
-                <div class="orbit-earth">
+                <div class="orbit-earth universe-stagger">
                     <div class="earth"></div>
                 </div>
-                <div class="orbit-mars">
+                <div class="orbit-mars universe-stagger">
                     <div class="mars"></div>
                 </div>
-                <div class="orbit-jupiter">
+                <div class="orbit-jupiter universe-stagger">
                     <div class="jupiter"></div>
                 </div>
-                <div class="orbit-saturn">
+                <div class="orbit-saturn universe-stagger">
                     <div class="saturn"></div>
                 </div>
-                <div class="orbit-uranus">
+                <div class="orbit-uranus universe-stagger">
                     <div class="uranus"></div>
                 </div>
                 <!-- <div class="orbit-neptune">
@@ -162,14 +167,11 @@
                 </div> -->
             </div>
 
-
             <div class="main-subTitle">
-                <h4>
-                    &#47; <br />
-                    It’s nice to meet you. <br />
-                    I’m front-end developer <br />
-                    from south korea.
-                </h4>
+                <div class="main-subTitle__text">&#47;</div>
+                <div class="main-subTitle__text">It’s nice to meet you.</div>
+                <div class="main-subTitle__text">I’m front-end developer</div>
+                <div class="main-subTitle__text">from south korea.</div>
                 <img class="main-icon-smile" src="../assets/img/icon-smile.svg" alt="icon-smile">
             </div>
         </div>
@@ -180,29 +182,29 @@
     <!-- //contact__page -->
 
     <!-- footer -->
-    <footer class="footer bg-color__main">
+    <footer class="footer bg-color__white">
         <div class="footer__wrap">
             <div class="footer__contact">
                 <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
                 <h1 class="footer__contact-title">
-                    If you like my <br />
-                    portfolio please <br />
-                    contact me! <br />
+                    <div class="footer__contact-title__text">If you like my</div>
+                    <div class="footer__contact-title__text">portfolio please</div>
+                    <div class="footer__contact-title__text">contact me!</div>
                 </h1>
-                <button type="submit" class="footer__contact-btn">
-                    hyojudev@gamil.com
+                <button type="button" class="footer__contact-btn smile-motion">
+                    hyojudev@gmail.com
                 </button>
             </div>
             <div class="footer__socials">
                 <ul class="footer__social">
                     <li class="social__btn social__btn__1">
-                        <a href="#">github</a>
+                        <a href="https://github.com/hyojudev">github</a>
                     </li>
                     <li class="social__btn social__btn__2">
-                        <a href="#">gitbook</a>
+                        <a href="https://hyojudev.gitbook.io/study/">gitbook</a>
                     </li>
                     <li class="social__btn social__btn__3">
-                        <a href="#">codepen</a>
+                        <a href="https://codepen.io/hyojudev/pen/RworLpQ">codepen</a>
                     </li>
                 </ul>
                 <ul class="footer__social">
@@ -210,10 +212,11 @@
                         <a href="#">instagram</a>
                     </li>
                     <li class="social__btn social__btn__5">
-                        <a href="#">gmail</a>
+                        <a href="mailto:hyojudev@gmail.com">gmail</a>
                     </li>
                 </ul>
             </div>
+            <canvas id="footer__canvas"></canvas>
         </div>
     </footer>
     <!-- //footer -->

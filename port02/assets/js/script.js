@@ -1,96 +1,96 @@
+/*------------------------------
+    Menu Active
+-------------------------------*/
+
+// const sections = document.querySelectorAll('section');
+
+// onscroll = function () {
+//     const scrollPosition = document.documentElement.scrollTop;
+
+//     sections.forEach((section) => {
+//         if (
+//             scrollPosition >= section.offsetTop - section.offsetHeight * 0.25 &&
+//             scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25
+//         ) {
+//             const currentId = section.attributes.id.value;
+//             removeAllActiveClasses();
+//             addActiveClass(currentId);
+//         }
+//     });
+// };
+
+// const removeAllActiveClasses = function () {
+//     document.querySelectorAll('.main-menu li a').forEach((el) => {
+//         el.classList.remove('menu-active');
+//     });
+// };
+
+// const addActiveClass = function (id) {
+//     const hrefSelector = `nav ul li a[href="#${id}"]`;
+//     document.querySelector(hrefSelector).classList.add('menu-active');
+// }
 
 
-// /*------------------------------
-// Smooth Scroll
-// --------------------------------
-// SupahScroll
-// ------------------------------*/
-// class SupahScroll {
-//     constructor(options) {
-//         this.opt = options || {};
-//         this.el = this.opt.el ? this.opt.el : '.supah-scroll';
-//         this.speed = this.opt.speed ? this.opt.speed : 0.1;
-//         this.init();
-//     }
+// --- Hamburger Menu Animation ---- //
 
-//     init() {
-//         this.scrollY = 0;
-//         this.supahScroll = document.querySelectorAll(this.el)[0];
-//         this.supahScroll.classList.add('supah-scroll');
-//         this.events();
-//         this.update();
-//         this.animate();
-//     }
+// Stop Animations During Window Resizing
+// let resizeTimer;
+// window.addEventListener("resize", () => {
+//     document.body.classList.add("resize-animation-stopper");
+//     clearTimeout(resizeTimer);
+//     resizeTimer = setTimeout(() => {
+//         document.body.classList.remove("resize-animation-stopper");
+//     }, 400);
+// });
 
-//     update() {
-//         if (this.supahScroll === null) return;
-//         document.body.style.height = `${this.supahScroll.getBoundingClientRect().height}px`;
-//     }
+// const navSlider = () => {
 
-//     pause() {
-//         document.body.style.overflow = 'hidden';
-//         cancelAnimationFrame(this.raf);
-//     }
+//     const hamburgerBtn = document.querySelector('.hamburger');
+//     const nav = document.querySelector('.main-menu');
+//     const navLinks = document.querySelectorAll('.main-menu__link');
 
-//     play() {
-//         document.body.style.overflow = 'inherit';
-//         this.raf = requestAnimationFrame(this.animate.bind(this));
-//     }
+//     let hamBtnOpen = false;
 
-//     destroy() {
-//         this.supahScroll.classList.remove('supah-scroll');
-//         this.supahScroll.style.transform = 'none';
-//         document.body.style.overflow = 'inherit';
-//         window.removeEventListener('resize', this.update);
-//         cancelAnimationFrame(this.raf);
-//         delete this.supahScroll;
-//     }
+//     // main toggle
+//     hamburgerBtn.addEventListener('click', () => {
+//         toggle();
+//     });
 
-//     animate() {
-//         this.scrollY += (window.scrollY - this.scrollY) * this.speed;
-//         this.supahScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`;
-//         this.raf = requestAnimationFrame(this.animate.bind(this));
-//     }
+//     // toggle on item click if open
+//     navLinks.forEach(item => {
+//         item.addEventListener('click', () => {
+//             if (hamburgerBtn.classList.contains('open')) {
+//                 toggle();
+//             }
+//         });
+//     });
 
-//     scrollTo(y) {
-//         window.scrollTo(0, y);
-//     }
+//     function toggle() {
+//         // Toggle Nav
+//         nav.classList.toggle('nav-active');
 
-//     staticScrollTo(y) {
-//         cancelAnimationFrame(this.raf);
-//         this.scrollY = y;
-//         window.scrollTo(0, y);
-//         this.supahScroll.style.transform = `translate3d(0,${-y}px,0)`;
-//         this.play();
-//     }
+//         // Animate Links
+//         navLinks.forEach((link, index) => {
 
-//     events() {
-//         window.addEventListener('load', this.update.bind(this));
-//         window.addEventListener('resize', this.update.bind(this));
+//             if (link.style.animation) {
+//                 link.style.animation = '';
+//             } else {
+//                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+//             }
+
+//         });
+
+//         if (!hamBtnOpen) {
+//             hamburgerBtn.classList.add('open');
+//             hamBtnOpen = true;
+//         } else {
+//             hamburgerBtn.classList.remove('open');
+//             hamBtnOpen = false;
+//         }
 //     }
 // }
 
-// /*------------------------------
-//     Initialize
-//     ------------------------------*/
-// const supahscroll = new SupahScroll({
-//     el: 'main',
-//     speed: 0.1
-// });
-
-
-/*------------------------------
-    header menu-active
-    ------------------------------*/
-// $(document).on('click', '.main-menu__link', function(){
-//     $(this).addClass('menu-active').siblings().removeClass('menu-active');
-// });
-
-// $(document).ready(function () {
-//     $('.main-menu .main-menu__link').on("click", function () {
-//         $(this).addClass("menu-active");
-//     });
-// });
+// navSlider();
 
 
 /*------------------------------
@@ -197,20 +197,6 @@ $(function () {
         }
     });
 
-    /* 인디케이터 클릭 이벤트 */
-
-    // 인디케이터의 자식요소(li)를 클릭하면
-    // indicator.children().click(function () {
-
-    //     // 클릭한 해당 요소가 active 클래스를 가지고 있지 않은 경우
-    //     // active 상태가 아닌 인디케이터를 선택했을 때
-    //     if (!$(this).hasClass("indicator__active")) {
-
-    //         // 선택한 요소의 인덱스 번호를 가져와 goToSlide에 대입시킨다.
-    //         goToSlide($(this).index());
-    //     }
-    // });
-
     /* 오토플레이 실행 함수 */
     function startTimer() {
         // timer 변수에 반복실행 시켜주는 setInterval 함수를 적용
@@ -252,7 +238,21 @@ $(function () {
 
 });
 
+/*----------------------
+    Text Split
+------------------------*/
 
+profile_split();
+
+function profile_split() {
+    document.querySelectorAll(".profile-split").forEach(elem => {
+        let splitText = elem.innerText;
+        let splitWrap = splitText.split("").join("</span><span aria-hidden:'true'>");
+        splitWrap = "<span aria-hidden:'true'>" + splitWrap + "</span>";
+        elem.innerHTML = splitWrap;
+        elem.setAttribute("aria-label", splitText);
+    });
+}
 
 /*----------------------
     GSAP - Timeline
@@ -260,238 +260,246 @@ $(function () {
 
 let tl = new TimelineMax(),
     tl2 = new TimelineMax(),
-    tl3 = new TimelineMax({ onUpdate: updatePercentage }),
-    tl4 = new TimelineMax({ onUpdate: updatePercentage2 }),
-    tl5 = new TimelineMax({ onUpdate: updatePercentage3 }),
-    tl6 = new TimelineMax({ onUpdate: updatePercentage4 }),
-    tl7 = new TimelineMax({ onUpdate: updatePercentage5 });
+    tl3 = new TimelineMax(),
+    tl4 = new TimelineMax(),
+    tl5 = new TimelineMax(),
+    tl6 = new TimelineMax(),
+    tl7 = new TimelineMax(),
+    tl8 = new TimelineMax(),
+    tl9 = new TimelineMax(),
+    tl10 = new TimelineMax(),
+    tl11 = new TimelineMax(),
+    tl12 = new TimelineMax(),
+    tl13 = new TimelineMax(),
+    tl14 = new TimelineMax(),
+    tl15 = new TimelineMax(),
+    tl16 = new TimelineMax(),
+    tl17 = new TimelineMax(),
+    tl18 = new TimelineMax(),
+    tl19 = new TimelineMax()
+// tl3 = new TimelineMax({ onUpdate: updatePercentage }),
+// tl4 = new TimelineMax({ onUpdate: updatePercentage2 }),
+// tl5 = new TimelineMax({ onUpdate: updatePercentage3 }),
+// tl6 = new TimelineMax({ onUpdate: updatePercentage4 }),
+// tl7 = new TimelineMax({ onUpdate: updatePercentage5 });
 
 const controller = new ScrollMagic.Controller();
 
 /*--- index__page ---*/
-tl.from(".main__star", 1, { opacity: 0, scale: 0, ease: "bounce.out" });
-tl.to(".main__star", .4, { scale: 1 });
-tl.from(".main__planet", .1, { opacity: 0, scale: 0, delay: 0.1, stagger: 0.2 });
-tl.to(".main__planet", .5, { scale: 1, ease: "power4.out" });
-tl.to(".main-title__text-bg1", 0.2, { scaleX: 1, delay: 0.8 })
-    .to(".main-title__text-bg2", 0.2, { scaleX: 1 })
+tl.from(".main__star", .8, { opacity: 0, scale: 0, ease: Elastic.easeOut });
+tl.from(".main__planet", .07, { opacity: 0, scale: 0, stagger: 0.09, ease: Circ.easeOut });
+tl.to(".main-title__text-bg1", .2, { scaleX: 1, delay: .5 })
+    .to(".main-title__text-bg2", .2, { scaleX: 1 })
     .to(".main-title__text", 0.1, { opacity: 1 }, "-=0.1")
     .to(".main-title__text-bg1", 0.2, { scaleX: 0 })
     .to(".main-title__text-bg2", 0.2, { scaleX: 0 });
 tl.from(".header__stagger", 1, { opacity: 0, x: 10, y: 50, delay: 0.4, stagger: 0.2, ease: "elastic.out(1.2, 0.5)" });
 
 /*--- about__page ---*/
-tl2.from(".about__main-title__text", 1, { opacity: 0, y: 50, delay: 0.5, stagger: 0.5, ease: "power4.out" });
-tl2.from(".header__stagger2", 1, { opacity: 0, x: 10, y: 50, stagger: 0.2, ease: "elastic.out(1.2, 0.5)" });
-tl2.from(".main-bubble", .5, { scale: 0, ease: "power4.out" })
+tl2.to(".about__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
+tl2.from(".main-bubble", .5, { opacity: 0, stagger: .05, ease: "power1.out" })
 
-tl3.from(".main-subTitle__text", .5, { opacity: 0, y: 50, stagger: 0.3, ease: "power1.out" });
-tl3.from(".main-icon-smile", .1, { opacity: 0, scale: 0, y: 50, ease: "power1.out" });
+tl3.from(".main-subTitle__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" });
+tl3.from(".main-icon-smile", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3");
 
-tl4.from(".profile-photo__img", .8, { opacity: 0, scale: 0, ease: "elastic.out(1.2, 0.5)" });
-tl4.from(".profile-photo__text", 1, { opacity: 0, scale: 0, delay: 0.1, ease: "elastic.out(1.2, 0.5)" });
+tl4.from(".profile-photo__img", .8, { opacity: 0, scale: 0, ease: Bounce.easeOut });
+tl4.from(".profile-photo__text", .8, { opacity: 0, scale: 0, ease: Bounce.easeOut });
 
-tl5.from(".profile-intro__wrap > div", 1, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" });
-tl5.from(".icon-circle__path", 1, { opacity: 0 });
+tl5.from(".profile-title span", .4, { y: 50, opacity: 0, stagger: .04 })
+tl5.from(".profile-intro", .8, { y: 50, opacity: 0, stagger: .04 })
+
+tl6.from(".footer__contact", .5, { opacity: 0, y: 50, ease: "powe1.out" });
+tl6.from(".footer__contact-icon", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
+tl6.from(".footer__contact-title__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" }, "-=.2");
+tl6.from(".footer__contact-btn", .3, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
+
+tl7.from(".social__btn", 1, { opacity: 0, y: 50, stagger: 0.06, ease: "power4.out" });
+
+/*--- projects__page ---*/
+tl8.to(".projects__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
+
+tl9.from(".project__01 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl9.from(".project__01 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl9.from(".project__01 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl10.from(".project__02 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl10.from(".project__02 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl10.from(".project__02 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl11.from(".project__03 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl11.from(".project__03 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl11.from(".project__03 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl12.from(".project__04 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl12.from(".project__04 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl12.from(".project__04 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl13.from(".project__05 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl13.from(".project__05 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl13.from(".project__05 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+/*--- script__page ---*/
+tl14.to(".script__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
+
+tl15.from(".script__animation", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl15.from(".script__animation__title", .5, { opacity: 0, ease: "power1.out" })
+tl15.from(".script__animation__slider", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl16.from(".script__01 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl16.from(".script__01 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl16.from(".script__01 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl17.from(".script__02 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl17.from(".script__02 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl17.from(".script__02 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+tl18.from(".script__03 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+tl18.from(".script__03 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+tl18.from(".script__03 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+
+/*--- contact__page ---*/
+tl19.from(".sun", .8, { opacity: 0, scale: 0, stagger: .1, ease: Elastic.easeOut });
+tl19.from(".universe-stagger", 1, { opacity: 0, stagger: .05, ease: Power1.easeOut });
+tl19.from(".universe-stagger div", .7, { opacity: 0, scale: 0, stagger: .1, ease: Elastic.easeOut }, "-=.3");
 
 
-tl6.from(".footer__contact", 1, { opacity: 0, y: 80, ease: "power4.out" });
-tl6.from(".footer__contact-icon", .5, { opacity: 0, y: 50, ease: "power4.out" });
-tl6.from(".footer__contact-title__text", 1, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" });
-tl6.from(".footer__contact-btn", .8, { opacity: 0, y: 50, ease: "power4.out" });
-
-tl7.from(".social__btn", 1, { opacity: 0, y: 50, stagger: 0.2, ease: "power4.out" });
-
-const scene1 = new ScrollMagic.Scene({
+const scene3 = new ScrollMagic.Scene({
     triggerElement: ".main-subTitle",
+    reverse: false
 })
     .setTween(tl3)
     .addTo(controller);
 
-const scene2 = new ScrollMagic.Scene({
+const scene4 = new ScrollMagic.Scene({
     triggerElement: ".about__profile-photo",
+    reverse: false
 })
     .setTween(tl4)
     .addTo(controller);
 
-const scene3 = new ScrollMagic.Scene({
+const scene5 = new ScrollMagic.Scene({
     triggerElement: ".about__profile-introduction",
+    reverse: false
 })
     .setTween(tl5)
     .addTo(controller);
 
-const scene4 = new ScrollMagic.Scene({
+const scene6 = new ScrollMagic.Scene({
     triggerElement: ".footer",
+    reverse: false
 })
     .setTween(tl6)
     .addTo(controller);
 
-
-const scene5 = new ScrollMagic.Scene({
+const scene7 = new ScrollMagic.Scene({
     triggerElement: ".footer__socials",
+    reverse: false
 })
     .setTween(tl7)
     .addTo(controller);
 
+const scene9 = new ScrollMagic.Scene({
+    triggerElement: ".project__01",
+    reverse: false
+})
+    .setTween(tl9)
+    .addTo(controller);
+
+const scene10 = new ScrollMagic.Scene({
+    triggerElement: ".project__02",
+    reverse: false
+})
+    .setTween(tl10)
+    .addTo(controller);
+
+const scene11 = new ScrollMagic.Scene({
+    triggerElement: ".project__03",
+    reverse: false
+})
+    .setTween(tl11)
+    .addTo(controller);
+
+const scene12 = new ScrollMagic.Scene({
+    triggerElement: ".project__04",
+    reverse: false
+})
+    .setTween(tl12)
+    .addTo(controller);
+
+const scene13 = new ScrollMagic.Scene({
+    triggerElement: ".project__05",
+    reverse: false
+})
+    .setTween(tl13)
+    .addTo(controller);
+
+const scene14 = new ScrollMagic.Scene({
+    triggerElement: ".script__main",
+    reverse: false
+})
+    .setTween(tl14)
+    .addTo(controller);
+
+const scene15 = new ScrollMagic.Scene({
+    triggerElement: ".script__animation",
+    reverse: false
+})
+    .setTween(tl15)
+    .addTo(controller);
+
+const scene16 = new ScrollMagic.Scene({
+    triggerElement: ".script__01",
+    reverse: false
+})
+    .setTween(tl16)
+    .addTo(controller);
+
+const scene17 = new ScrollMagic.Scene({
+    triggerElement: ".script__02",
+    reverse: false
+})
+    .setTween(tl17)
+    .addTo(controller);
+
+const scene18 = new ScrollMagic.Scene({
+    triggerElement: ".script__03",
+    reverse: false
+})
+    .setTween(tl18)
+    .addTo(controller);
 
 
-function updatePercentage() {
-    //percent.innerHTML = (tl.progress() *100 ).toFixed();
-    tl3.progress();
-    // console.log(tl3.progress());
-}
 
-function updatePercentage2() {
-    tl4.progress();
-}
+// function updatePercentage() {
+//     //percent.innerHTML = (tl.progress() *100 ).toFixed();
+//     tl3.progress();
+//     // console.log(tl3.progress());
+// }
 
-function updatePercentage3() {
-    tl5.progress();
-}
+// function updatePercentage2() {
+//     tl4.progress();
+// }
 
-function updatePercentage4() {
-    tl6.progress();
-}
+// function updatePercentage3() {
+//     tl5.progress();
+// }
 
-function updatePercentage5() {
-    tl7.progress();
-}
+// function updatePercentage4() {
+//     tl6.progress();
+// }
 
+// function updatePercentage5() {
+//     tl7.progress();
+// }
 
+// function updatePercentage5() {
+//     tl9.progress();
+// }
 
+// const hbtn = document.querySelector(".hbtn span");
 
-/*----------------------
-    Footer Bubble
-------------------------*/
+// hbtn.addEventListener("mouseenter", function () {
+//     hbtn.style.width = 150 + "px";
+//     hbtn.style.borderRadius = 200 + "px";
 
-var width = document.body.clientWidth;
-var height = document.body.clientHeight;
-var canvas = document.getElementById('footer__canvas');
-var ctx = canvas.getContext('2d');
-var fps = 60;
-var frameTime = 1000 / fps;
-var objArr = [];
-var instanceNum = 0;
-var lastTimeRender = +new Date();
-var lastTimePushObj = +new Date();
-// var imgSmile = new ImageSmile();
-
-var showHeight = 100 + 'vh';
-
-var getRandomInt = function (min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-};
-
-var motionObj = function (x, y) {
-    // this.r = getRandomInt(3, 12);
-    this.r = 50;
-    this.g = getRandomInt(5, 10) / -1000 / fps;
-    this.t = 0;
-    this.k = getRandomInt(1, 5) / 1000;
-    this.x = x;
-    this.px = x;
-    this.ax = 0;
-    this.vx = 0.5;
-    // this.hsl = getRandomInt(60, 120) + ', 45%, 80%';
-    this.alpha = getRandomInt(40, 90);
-    this.y = y;
-};
-
-motionObj.prototype.move = function () {
-    this.t += frameTime;
-    this.ax = (this.px - this.x) * this.k;
-    this.vx += this.ax;
-    this.x += this.vx;
-    this.y = 1 / 2 * this.g * this.t * this.t + height + this.r * 3;
-};
-
-motionObj.prototype.fadeAway = function () {
-    if (this.t < 2600) return;
-    // 2400
-    this.alpha -= 1;
-    // this.showHeight = 100 + 'vh';
-};
-
-motionObj.prototype.render = function () {
-    ctx.beginPath();
-    // ctx.shadowBlur = this.r * 3;
-    // ctx.shadowColor = 'rgb(255, 255, 255)';
-    ctx.fillStyle = 'rgb(136, 178, 196)';
-    ctx.strokeStyle = 'rgb(255, 255, 255)';
-    // ctx.fillStyle = 'hsla(' + this.hsl + ', ' + (this.alpha / 100) + ')';
-    ctx.arc(this.x, this.y, this.r, 0, 360 * Math.PI / 180, false);
-    ctx.fill();
-    ctx.stroke();
-    ctx.closePath();
-};
-
-// motionObj.prototype.render2 = function () {
-//     ctx.drawImage(ImageSmile, 0, 0);
-// };
-
-// imgSmile.src = "../assets/img/icon-smile.svg";
-
-motionObj.prototype.isLast = function () {
-    if (this.alpha < 0) {
-        return true;
-    } else {
-        return false;
-    }
-};
-
-var render = function () {
-    ctx.clearRect(0, 0, width, height);
-    instanceNum = 0;
-    for (var i = 0; i < objArr.length; i++) {
-        if (objArr[i]) {
-            instanceNum++;
-            objArr[i].move();
-            objArr[i].fadeAway();
-            objArr[i].render();
-            if (objArr[i].isLast()) {
-                delete objArr[i];
-            }
-        }
-    }
-};
-
-var renderloop = function () {
-    var now = +new Date();
-    requestAnimationFrame(renderloop);
-    if (now - lastTimeRender > frameTime) {
-        render();
-        lastTimeRender = +new Date();
-    }
-
-    if (now - lastTimePushObj > 500 && instanceNum < 200) {
-        for (var i = 0; i < 1; i++) {
-            objArr.push(new motionObj(Math.random() * width, 0));
-        }
-        lastTimePushObj = +new Date();
-    }
-};
-renderloop();
-
-var canvasResize = function () {
-    ctx.clearRect(0, 0, width, height);
-    width = document.body.clientWidth;
-    height = document.body.clientHeight;
-    canvas.width = width;
-    canvas.height = height;
-};
-canvasResize();
-
-var debounce = function (object, eventType, callback) {
-    var timer;
-
-    object.addEventListener(eventType, function () {
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-            callback();
-        }, 500);
-    }, false);
-};
-
-debounce(window, 'resize', function () {
-    canvasResize();
-});
+// }, 1500)

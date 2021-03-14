@@ -1,3 +1,29 @@
+
+/*----------------------------
+    Projects Bubble Cirlce
+-----------------------------*/
+
+document.addEventListener('mousemove', function (e) {
+    let ptMainWrap = document.querySelector('.pt__main-circle__wrap');
+    let bubble = document.createElement('span');
+    bubble.className = 'project-bubble';
+    let x = e.offsetX;
+    let y = e.offsetY;
+    bubble.style.left = x + "px";
+    bubble.style.top = y + "px";
+    let size = Math.random() * 110;
+    bubble.style.width = 30 + size + "px";
+    bubble.style.height = 30 + size + "px";
+    ptMainWrap.appendChild(bubble);
+    setTimeout(function () {
+        bubble.remove();
+    }, 1800);
+});
+
+/*----------------------------
+    Footer Button Smile
+-----------------------------*/
+
 const footerCont = document.querySelector(".footer__contact");
 const winWidth = window.innerWidth;
 const winHeight = window.innerHeight;
@@ -44,4 +70,142 @@ footerContBtn.forEach((btn) => {
         const y = e.clientY + window.scrollY;
         createParticles(x, y, 7);
     });
+});
+
+
+/*----------------------------
+    Footer Canvas Bubble
+-----------------------------*/
+
+var width = document.body.clientWidth;
+var height = document.body.clientHeight;
+var canvas = document.getElementById('footer__canvas');
+var ctx = canvas.getContext('2d');
+var fps = 60;
+var frameTime = 1000 / fps;
+var objArr = [];
+var instanceNum = 0;
+var lastTimeRender = +new Date();
+var lastTimePushObj = +new Date();
+// var imgSmile = new ImageSmile();
+
+var showHeight = 100 + 'vh';
+
+var getRandomInt = function (min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+};
+
+var motionObj = function (x, y) {
+    // this.r = getRandomInt(3, 12);
+    this.r = 50;
+    this.g = getRandomInt(5, 10) / -1000 / fps;
+    this.t = 0;
+    this.k = getRandomInt(1, 5) / 1000;
+    this.x = x;
+    this.px = x;
+    this.ax = 0;
+    this.vx = 0.5;
+    // this.hsl = getRandomInt(60, 120) + ', 45%, 80%';
+    this.alpha = getRandomInt(40, 90);
+    this.y = y;
+};
+
+motionObj.prototype.move = function () {
+    this.t += frameTime;
+    this.ax = (this.px - this.x) * this.k;
+    this.vx += this.ax;
+    this.x += this.vx;
+    this.y = 1 / 2 * this.g * this.t * this.t + height + this.r * 3;
+};
+
+motionObj.prototype.fadeAway = function () {
+    if (this.t < 2600) return;
+    // 2400
+    this.alpha -= 1;
+    // this.showHeight = 100 + 'vh';
+};
+
+motionObj.prototype.render = function () {
+    ctx.beginPath();
+    // ctx.shadowBlur = this.r * 3;
+    // ctx.shadowColor = 'rgb(255, 255, 255)';
+    ctx.fillStyle = 'rgb(136, 178, 196)';
+    ctx.strokeStyle = 'rgb(255, 255, 255)';
+    // ctx.fillStyle = 'hsla(' + this.hsl + ', ' + (this.alpha / 100) + ')';
+    ctx.arc(this.x, this.y, this.r, 0, 360 * Math.PI / 180, false);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+};
+
+// motionObj.prototype.render2 = function () {
+//     ctx.drawImage(ImageSmile, 0, 0);
+// };
+
+// imgSmile.src = "../assets/img/icon-smile.svg";
+
+motionObj.prototype.isLast = function () {
+    if (this.alpha < 0) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+var render = function () {
+    ctx.clearRect(0, 0, width, height);
+    instanceNum = 0;
+    for (var i = 0; i < objArr.length; i++) {
+        if (objArr[i]) {
+            instanceNum++;
+            objArr[i].move();
+            objArr[i].fadeAway();
+            objArr[i].render();
+            if (objArr[i].isLast()) {
+                delete objArr[i];
+            }
+        }
+    }
+};
+
+var renderloop = function () {
+    var now = +new Date();
+    requestAnimationFrame(renderloop);
+    if (now - lastTimeRender > frameTime) {
+        render();
+        lastTimeRender = +new Date();
+    }
+
+    if (now - lastTimePushObj > 500 && instanceNum < 200) {
+        for (var i = 0; i < 1; i++) {
+            objArr.push(new motionObj(Math.random() * width, 0));
+        }
+        lastTimePushObj = +new Date();
+    }
+};
+renderloop();
+
+var canvasResize = function () {
+    ctx.clearRect(0, 0, width, height);
+    width = document.body.clientWidth;
+    // height = document.body.clientHeight;
+    height = document.querySelector(".footer").clientHeight;
+    canvas.width = width;
+    canvas.height = height;
+};
+canvasResize();
+
+var debounce = function (object, eventType, callback) {
+    var timer;
+
+    object.addEventListener(eventType, function () {
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            callback();
+        }, 500);
+    }, false);
+};
+
+debounce(window, 'resize', function () {
+    canvasResize();
 });

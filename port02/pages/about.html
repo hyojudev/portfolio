@@ -33,19 +33,18 @@
 
     <!-- header -->
     <header>
-        <!-- <input type="checkbox" class="toggler" /> -->
-        <div class="hbtn header__stagger2">
-            <span></span>
+        <div class="other-project-btn">
+            <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
-        <ul class="main-menu header__stagger2">
+        <nav class="main-menu">
             <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
             <li class="main-menu__link menu-active"><a href="../pages/about.html">about</a></li>
             <li class="main-menu__link"><a href="../pages/projects.html">projects</a></li>
             <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
             <li class="main-menu__link"><a href="../board/board.php">board</a></li>
             <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
-        </ul>
-        <ul class="sign-menu header__stagger2">
+        </nav>
+        <ul class="sign-menu">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
             <li><a href="#">
                     <?= $_SESSION['youNickName'] ?>님👻
@@ -56,6 +55,12 @@
             <li><a href="../sign/signUp.php">SIGNUP</a></li>
             <?php } ?>
         </ul>
+        <div class="mobile-menu">
+            <div class="hamburger">
+                <div class="ham__bar1"></div>
+                <div class="ham__bar2"></div>
+            </div>
+        </div>
     </header>
     <!-- //header -->
 
@@ -116,7 +121,7 @@
 
         <!-- about__profile-introduction -->
         <div class="about__profile-introduction">
-            <h3>I can make it better</h3>
+            <h3 class="profile-title profile-split">I can make it better</h3>
             <div class="profile-intro__wrap">
                 <div class="profile-intro intro__1">
                     논리적으로 사고하고 표현하는 프론트
@@ -181,27 +186,27 @@
                     <div class="footer__contact-title__text">contact me!</div>
                 </h1>
                 <button type="button" class="footer__contact-btn smile-motion">
-                    hyojudev@gamil.com
+                    hyojudev@gmail.com
                 </button>
             </div>
             <div class="footer__socials">
                 <ul class="footer__social">
                     <li class="social__btn social__btn__1">
-                        <a href="#">github</a>
+                        <a href="https://github.com/hyojudev" target="_blank">github</a>
                     </li>
                     <li class="social__btn social__btn__2">
-                        <a href="#">gitbook</a>
+                        <a href="https://hyojudev.gitbook.io/study/" target="_blank">gitbook</a>
                     </li>
                     <li class="social__btn social__btn__3">
-                        <a href="#">codepen</a>
+                        <a href="https://codepen.io/hyojudev/pen/RworLpQ" target="_blank">codepen</a>
                     </li>
                 </ul>
                 <ul class="footer__social">
                     <li class="social__btn social__btn__4">
-                        <a href="#">instagram</a>
+                        <a href="#" target="_blank">instagram</a>
                     </li>
                     <li class="social__btn social__btn__5">
-                        <a href="#">gmail</a>
+                        <a href="mailto:hyojudev@gmail.com" target="_blank">gmail</a>
                     </li>
                 </ul>
             </div>
