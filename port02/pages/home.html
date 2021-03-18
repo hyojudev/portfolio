@@ -25,24 +25,48 @@
 
     <!-- CSS Style -->
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style5.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
 <body>
+    <!-- loading -->
+    <div class="loading is-animation">
+        <span>p</span>
+        <span>e</span>
+        <span>l</span>
+        <span>a</span>
+        <span>s</span>
+        <span>e</span>
+        <span></span>
+        <span>w</span>
+        <span>a</span>
+        <span>i</span>
+        <span>t</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    </div>
+    <!-- //loading -->
 
     <!-- header -->
     <header>
         <div class="other-project-btn header__stagger">
             <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
+        <div class="nav-bg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav class="main-menu header__stagger">
-            <li class="main-menu__link menu-active"><a href="../pages/index3.html">home</a></li>
-            <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
-            <li class="main-menu__link"><a href="../pages/projects.html">projects</a></li>
-            <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
-            <li class="main-menu__link"><a href="../board/board.php">board</a></li>
-            <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
+            <li class="main-menu__link menu-active page__link"><a href="../pages/home.html">home</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/about.html">about</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/projects.html">projects</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/script.html">script</a></li>
+            <li class="main-menu__link page__link-php"><a href="../board/board.php">board</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/contact.html">contact</a></li>
         </nav>
         <ul class="sign-menu header__stagger">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
@@ -97,14 +121,11 @@
     ?> -->
 
     <!-- Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/home.js"></script>
+    <script src="../assets/js/menu.js"></script>
+
 </body>
 
 </html>

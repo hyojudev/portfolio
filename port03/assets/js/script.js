@@ -157,6 +157,12 @@ function parallax() {
                 .add(TweenMax.to(projectCirclePath, 1, { stroke: "#88B2C4", ease: Linear.easeNone }), 0);
         }
 
+        if (pageYOffset > document.querySelector(".project--00").offsetTop) {
+            gsap.to(".project--00", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
+            gsap.to(".project--00 .project-card-link", { duration: 1, y: 0, opacity: 1, ease: "power1.out" })
+            gsap.to(".project--00 .project-text-wrap", { duration: 1, y: 0, opacity: 1, ease: "power1.out" })
+        }
+
         if (pageYOffset > document.querySelector(".project--01").offsetTop) {
             gsap.to(".project--01", { duration: .5, y: 0, opacity: 1, ease: "power1.out" })
             gsap.to(".project--01 .project-card-link", { duration: 1, y: 0, opacity: 1, ease: "power1.out" })

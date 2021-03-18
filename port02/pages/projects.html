@@ -25,7 +25,7 @@
 
     <!-- CSS Style -->
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style5.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
@@ -36,13 +36,19 @@
         <div class="other-project-btn">
             <a target="_blank" href="http://hyojudev.dothome.co.kr/port03/pages/index.html"></a>
         </div>
+        <div class="nav-bg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <nav class="main-menu">
-            <li class="main-menu__link"><a href="../pages/index3.html">home</a></li>
-            <li class="main-menu__link"><a href="../pages/about.html">about</a></li>
-            <li class="main-menu__link menu-active"><a href="../pages/projects.html">projects</a></li>
-            <li class="main-menu__link"><a href="../pages/script.html">script</a></li>
-            <li class="main-menu__link"><a href="../board/board.php">board</a></li>
-            <li class="main-menu__link"><a href="../pages/contact3.html">contact</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/home.html">home</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/about.html">about</a></li>
+            <li class="main-menu__link page__link menu-active"><a href="../pages/projects.html">projects</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/script.html">script</a></li>
+            <li class="main-menu__link page__link-php"><a href="../board/board.php">board</a></li>
+            <li class="main-menu__link page__link"><a href="../pages/contact.html">contact</a></li>
         </nav>
         <ul class="sign-menu">
             <?php if ( isset($_SESSION['memberID']) ) { ?>
@@ -74,12 +80,7 @@
                     <div class="projects__main-title__text">Interesting</div>
                     <div class="projects__main-title__text">Works&#42;&#42;</div>
                 </div>
-                <div class="pt__main-circle__wrap">
-                    <!-- <div class="pt__main-circle pt__main-circle__1"></div>
-                    <div class="pt__main-circle pt__main-circle__2"></div>
-                    <div class="pt__main-circle pt__main-circle__3"></div>
-                    <div class="pt__main-circle pt__main-circle__4"></div> -->
-                </div>
+                <div class="pt__main-circle__wrap"></div>
             </div>
             <div class="main-subTitle color__main bg-color__sub">
                 <div class="main-subTitle__text">&#47;</div>
@@ -291,7 +292,7 @@
 
 
     <!-- footer -->
-    <footer class="footer bg-color__white">
+    <footer class="footer bg-color__main">
         <div class="footer__wrap">
             <div class="footer__contact">
                 <img class="footer__contact-icon" src="../assets/img/icon-smile.svg" alt="icon-smile">
@@ -331,15 +332,14 @@
     <!-- //footer -->
 
     <!-- Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
-    <script src="../assets/js/script.js"></script>
-    <script src="../assets/js/bubble.js"></script>
+    <script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/projects.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 
 </html>

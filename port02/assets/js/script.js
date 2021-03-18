@@ -1,99 +1,4 @@
 /*------------------------------
-    Menu Active
--------------------------------*/
-
-// const sections = document.querySelectorAll('section');
-
-// onscroll = function () {
-//     const scrollPosition = document.documentElement.scrollTop;
-
-//     sections.forEach((section) => {
-//         if (
-//             scrollPosition >= section.offsetTop - section.offsetHeight * 0.25 &&
-//             scrollPosition < section.offsetTop + section.offsetHeight - section.offsetHeight * 0.25
-//         ) {
-//             const currentId = section.attributes.id.value;
-//             removeAllActiveClasses();
-//             addActiveClass(currentId);
-//         }
-//     });
-// };
-
-// const removeAllActiveClasses = function () {
-//     document.querySelectorAll('.main-menu li a').forEach((el) => {
-//         el.classList.remove('menu-active');
-//     });
-// };
-
-// const addActiveClass = function (id) {
-//     const hrefSelector = `nav ul li a[href="#${id}"]`;
-//     document.querySelector(hrefSelector).classList.add('menu-active');
-// }
-
-
-// --- Hamburger Menu Animation ---- //
-
-// Stop Animations During Window Resizing
-// let resizeTimer;
-// window.addEventListener("resize", () => {
-//     document.body.classList.add("resize-animation-stopper");
-//     clearTimeout(resizeTimer);
-//     resizeTimer = setTimeout(() => {
-//         document.body.classList.remove("resize-animation-stopper");
-//     }, 400);
-// });
-
-// const navSlider = () => {
-
-//     const hamburgerBtn = document.querySelector('.hamburger');
-//     const nav = document.querySelector('.main-menu');
-//     const navLinks = document.querySelectorAll('.main-menu__link');
-
-//     let hamBtnOpen = false;
-
-//     // main toggle
-//     hamburgerBtn.addEventListener('click', () => {
-//         toggle();
-//     });
-
-//     // toggle on item click if open
-//     navLinks.forEach(item => {
-//         item.addEventListener('click', () => {
-//             if (hamburgerBtn.classList.contains('open')) {
-//                 toggle();
-//             }
-//         });
-//     });
-
-//     function toggle() {
-//         // Toggle Nav
-//         nav.classList.toggle('nav-active');
-
-//         // Animate Links
-//         navLinks.forEach((link, index) => {
-
-//             if (link.style.animation) {
-//                 link.style.animation = '';
-//             } else {
-//                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-//             }
-
-//         });
-
-//         if (!hamBtnOpen) {
-//             hamburgerBtn.classList.add('open');
-//             hamBtnOpen = true;
-//         } else {
-//             hamburgerBtn.classList.remove('open');
-//             hamBtnOpen = false;
-//         }
-//     }
-// }
-
-// navSlider();
-
-
-/*------------------------------
     script__animation__slider
 -------------------------------*/
 
@@ -239,267 +144,92 @@ $(function () {
 });
 
 /*----------------------
-    Text Split
-------------------------*/
-
-profile_split();
-
-function profile_split() {
-    document.querySelectorAll(".profile-split").forEach(elem => {
-        let splitText = elem.innerText;
-        let splitWrap = splitText.split("").join("</span><span aria-hidden:'true'>");
-        splitWrap = "<span aria-hidden:'true'>" + splitWrap + "</span>";
-        elem.innerHTML = splitWrap;
-        elem.setAttribute("aria-label", splitText);
-    });
-}
-
-/*----------------------
     GSAP - Timeline
 ------------------------*/
 
-let tl = new TimelineMax(),
-    tl2 = new TimelineMax(),
-    tl3 = new TimelineMax(),
-    tl4 = new TimelineMax(),
-    tl5 = new TimelineMax(),
-    tl6 = new TimelineMax(),
-    tl7 = new TimelineMax(),
-    tl8 = new TimelineMax(),
-    tl9 = new TimelineMax(),
-    tl10 = new TimelineMax(),
-    tl11 = new TimelineMax(),
-    tl12 = new TimelineMax(),
-    tl13 = new TimelineMax(),
-    tl14 = new TimelineMax(),
-    tl15 = new TimelineMax(),
-    tl16 = new TimelineMax(),
-    tl17 = new TimelineMax(),
-    tl18 = new TimelineMax(),
-    tl19 = new TimelineMax()
-// tl3 = new TimelineMax({ onUpdate: updatePercentage }),
-// tl4 = new TimelineMax({ onUpdate: updatePercentage2 }),
-// tl5 = new TimelineMax({ onUpdate: updatePercentage3 }),
-// tl6 = new TimelineMax({ onUpdate: updatePercentage4 }),
-// tl7 = new TimelineMax({ onUpdate: updatePercentage5 });
+let script_tl1 = new TimelineMax(),
+    script_tl2 = new TimelineMax(),
+    script_tl3 = new TimelineMax(),
+    script_tl4 = new TimelineMax(),
+    script_tl5 = new TimelineMax(),
+    script_tl6 = new TimelineMax(),
+    script_tl7 = new TimelineMax();
 
-const controller = new ScrollMagic.Controller();
+script_tl1.to(".script__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
 
-/*--- index__page ---*/
-tl.from(".main__star", .8, { opacity: 0, scale: 0, ease: Elastic.easeOut });
-tl.from(".main__planet", .07, { opacity: 0, scale: 0, stagger: 0.09, ease: Circ.easeOut });
-tl.to(".main-title__text-bg1", .2, { scaleX: 1, delay: .5 })
-    .to(".main-title__text-bg2", .2, { scaleX: 1 })
-    .to(".main-title__text", 0.1, { opacity: 1 }, "-=0.1")
-    .to(".main-title__text-bg1", 0.2, { scaleX: 0 })
-    .to(".main-title__text-bg2", 0.2, { scaleX: 0 });
-tl.from(".header__stagger", 1, { opacity: 0, x: 10, y: 50, delay: 0.4, stagger: 0.2, ease: "elastic.out(1.2, 0.5)" });
+script_tl2.from(".main-subTitle__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" });
+script_tl2.from(".main-icon-smile", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3");
 
-/*--- about__page ---*/
-tl2.to(".about__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
-tl2.from(".main-bubble", .5, { opacity: 0, stagger: .05, ease: "power1.out" })
+script_tl3.from(".script__animation", .5, { opacity: 0, y: 50, ease: "power1.out" })
+script_tl3.from(".script__animation__title", .5, { opacity: 0, ease: "power1.out" })
+script_tl3.from(".script__animation__slider", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
 
-tl3.from(".main-subTitle__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" });
-tl3.from(".main-icon-smile", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3");
+script_tl4.from(".script__01 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+script_tl4.from(".script__01 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+script_tl4.from(".script__01 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
 
-tl4.from(".profile-photo__img", .8, { opacity: 0, scale: 0, ease: Bounce.easeOut });
-tl4.from(".profile-photo__text", .8, { opacity: 0, scale: 0, ease: Bounce.easeOut });
+script_tl5.from(".script__02 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+script_tl5.from(".script__02 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+script_tl5.from(".script__02 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
 
-tl5.from(".profile-title span", .4, { y: 50, opacity: 0, stagger: .04 })
-tl5.from(".profile-intro", .8, { y: 50, opacity: 0, stagger: .04 })
+script_tl6.from(".script__03 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+script_tl6.from(".script__03 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+script_tl6.from(".script__03 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
 
-tl6.from(".footer__contact", .5, { opacity: 0, y: 50, ease: "powe1.out" });
-tl6.from(".footer__contact-icon", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
-tl6.from(".footer__contact-title__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" }, "-=.2");
-tl6.from(".footer__contact-btn", .3, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
+script_tl7.from(".script__04 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
+script_tl7.from(".script__04 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
+script_tl7.from(".script__04 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
 
-tl7.from(".social__btn", 1, { opacity: 0, y: 50, stagger: 0.06, ease: "power4.out" });
+const script_controller = new ScrollMagic.Controller();
 
-/*--- projects__page ---*/
-tl8.to(".projects__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
-
-tl9.from(".project__01 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl9.from(".project__01 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl9.from(".project__01 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl10.from(".project__02 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl10.from(".project__02 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl10.from(".project__02 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl11.from(".project__03 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl11.from(".project__03 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl11.from(".project__03 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl12.from(".project__04 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl12.from(".project__04 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl12.from(".project__04 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl13.from(".project__05 .pt__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl13.from(".project__05 .pt__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl13.from(".project__05 .pt__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-/*--- script__page ---*/
-tl14.to(".script__main-title__text", .8, { opacity: 1, y: 0, stagger: .06, ease: "power1.out" });
-
-tl15.from(".script__animation", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl15.from(".script__animation__title", .5, { opacity: 0, ease: "power1.out" })
-tl15.from(".script__animation__slider", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl16.from(".script__01 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl16.from(".script__01 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl16.from(".script__01 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl17.from(".script__02 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl17.from(".script__02 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl17.from(".script__02 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-tl18.from(".script__03 .st__content__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" })
-tl18.from(".script__03 .st__text__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-tl18.from(".script__03 .st__card__wrap", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.3")
-
-/*--- contact__page ---*/
-tl19.from(".sun", .8, { opacity: 0, scale: 0, stagger: .1, ease: Elastic.easeOut });
-tl19.from(".universe-stagger", 1, { opacity: 0, stagger: .05, ease: Power1.easeOut });
-tl19.from(".universe-stagger div", .7, { opacity: 0, scale: 0, stagger: .1, ease: Elastic.easeOut }, "-=.3");
-
-
-const scene3 = new ScrollMagic.Scene({
-    triggerElement: ".main-subTitle",
-    reverse: false
-})
-    .setTween(tl3)
-    .addTo(controller);
-
-const scene4 = new ScrollMagic.Scene({
-    triggerElement: ".about__profile-photo",
-    reverse: false
-})
-    .setTween(tl4)
-    .addTo(controller);
-
-const scene5 = new ScrollMagic.Scene({
-    triggerElement: ".about__profile-introduction",
-    reverse: false
-})
-    .setTween(tl5)
-    .addTo(controller);
-
-const scene6 = new ScrollMagic.Scene({
-    triggerElement: ".footer",
-    reverse: false
-})
-    .setTween(tl6)
-    .addTo(controller);
-
-const scene7 = new ScrollMagic.Scene({
-    triggerElement: ".footer__socials",
-    reverse: false
-})
-    .setTween(tl7)
-    .addTo(controller);
-
-const scene9 = new ScrollMagic.Scene({
-    triggerElement: ".project__01",
-    reverse: false
-})
-    .setTween(tl9)
-    .addTo(controller);
-
-const scene10 = new ScrollMagic.Scene({
-    triggerElement: ".project__02",
-    reverse: false
-})
-    .setTween(tl10)
-    .addTo(controller);
-
-const scene11 = new ScrollMagic.Scene({
-    triggerElement: ".project__03",
-    reverse: false
-})
-    .setTween(tl11)
-    .addTo(controller);
-
-const scene12 = new ScrollMagic.Scene({
-    triggerElement: ".project__04",
-    reverse: false
-})
-    .setTween(tl12)
-    .addTo(controller);
-
-const scene13 = new ScrollMagic.Scene({
-    triggerElement: ".project__05",
-    reverse: false
-})
-    .setTween(tl13)
-    .addTo(controller);
-
-const scene14 = new ScrollMagic.Scene({
+const script_scene1 = new ScrollMagic.Scene({
     triggerElement: ".script__main",
     reverse: false
 })
-    .setTween(tl14)
-    .addTo(controller);
+    .setTween(script_tl1)
+    .addTo(script_controller);
 
-const scene15 = new ScrollMagic.Scene({
+const script_scene2 = new ScrollMagic.Scene({
+    triggerElement: ".main-subTitle",
+    reverse: false
+})
+    .setTween(script_tl2)
+    .addTo(script_controller);
+
+
+const script_scene3 = new ScrollMagic.Scene({
     triggerElement: ".script__animation",
     reverse: false
 })
-    .setTween(tl15)
-    .addTo(controller);
+    .setTween(script_tl3)
+    .addTo(script_controller);
 
-const scene16 = new ScrollMagic.Scene({
+const script_scene4 = new ScrollMagic.Scene({
     triggerElement: ".script__01",
     reverse: false
 })
-    .setTween(tl16)
-    .addTo(controller);
+    .setTween(script_tl4)
+    .addTo(script_controller);
 
-const scene17 = new ScrollMagic.Scene({
+const script_scene5 = new ScrollMagic.Scene({
     triggerElement: ".script__02",
     reverse: false
 })
-    .setTween(tl17)
-    .addTo(controller);
+    .setTween(script_tl5)
+    .addTo(script_controller);
 
-const scene18 = new ScrollMagic.Scene({
+const script_scene6 = new ScrollMagic.Scene({
     triggerElement: ".script__03",
     reverse: false
 })
-    .setTween(tl18)
-    .addTo(controller);
+    .setTween(script_tl6)
+    .addTo(script_controller);
+
+const script_scene7 = new ScrollMagic.Scene({
+    triggerElement: ".script__04",
+    reverse: false
+})
+    .setTween(script_tl7)
+    .addTo(script_controller);
 
 
-
-// function updatePercentage() {
-//     //percent.innerHTML = (tl.progress() *100 ).toFixed();
-//     tl3.progress();
-//     // console.log(tl3.progress());
-// }
-
-// function updatePercentage2() {
-//     tl4.progress();
-// }
-
-// function updatePercentage3() {
-//     tl5.progress();
-// }
-
-// function updatePercentage4() {
-//     tl6.progress();
-// }
-
-// function updatePercentage5() {
-//     tl7.progress();
-// }
-
-// function updatePercentage5() {
-//     tl9.progress();
-// }
-
-// const hbtn = document.querySelector(".hbtn span");
-
-// hbtn.addEventListener("mouseenter", function () {
-//     hbtn.style.width = 150 + "px";
-//     hbtn.style.borderRadius = 200 + "px";
-
-// }, 1500)

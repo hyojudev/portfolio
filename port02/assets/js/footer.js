@@ -1,24 +1,33 @@
+/*----------------------
+    GSAP - Timeline
+------------------------*/
 
-/*----------------------------
-    Projects Bubble Cirlce
------------------------------*/
+let foot_tl1 = new TimelineMax(),
+    foot_tl2 = new TimelineMax();
 
-document.addEventListener('mousemove', function (e) {
-    let ptMainWrap = document.querySelector('.pt__main-circle__wrap');
-    let bubble = document.createElement('span');
-    bubble.className = 'project-bubble';
-    let x = e.offsetX;
-    let y = e.offsetY;
-    bubble.style.left = x + "px";
-    bubble.style.top = y + "px";
-    let size = Math.random() * 110;
-    bubble.style.width = 30 + size + "px";
-    bubble.style.height = 30 + size + "px";
-    ptMainWrap.appendChild(bubble);
-    setTimeout(function () {
-        bubble.remove();
-    }, 1800);
-});
+foot_tl1.from(".footer", .5, { opacity: 0, y: 50, ease: "powe1.out" });
+foot_tl1.from(".footer__contact-icon", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
+foot_tl1.from(".footer__contact-title__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" }, "-=.2");
+foot_tl1.from(".footer__contact-btn", .3, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
+
+foot_tl2.from(".social__btn", 1, { opacity: 0, y: 50, stagger: 0.06, ease: "power4.out" });
+
+const foot_controller = new ScrollMagic.Controller();
+
+const scene6 = new ScrollMagic.Scene({
+    triggerElement: ".footer",
+    reverse: false
+})
+    .setTween(foot_tl1)
+    .addTo(foot_controller);
+
+const scene7 = new ScrollMagic.Scene({
+    triggerElement: ".footer__socials",
+    reverse: false
+})
+    .setTween(foot_tl2)
+    .addTo(foot_controller);
+
 
 /*----------------------------
     Footer Button Smile
@@ -138,11 +147,6 @@ motionObj.prototype.render = function () {
     ctx.closePath();
 };
 
-// motionObj.prototype.render2 = function () {
-//     ctx.drawImage(ImageSmile, 0, 0);
-// };
-
-// imgSmile.src = "../assets/img/icon-smile.svg";
 
 motionObj.prototype.isLast = function () {
     if (this.alpha < 0) {

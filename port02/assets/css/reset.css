@@ -45,7 +45,7 @@ textarea,
 th,
 ul {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 body {
     padding: 0;
@@ -54,17 +54,17 @@ body {
     font-size: 14px;
     line-height: 1.53;
     color: #000;
-    background-color: #F3EEE8;
+    background-color: #f3eee8;
     word-break: keep-all;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
     -webkit-appearance: button;
-    cursor: pointer
+    cursor: pointer;
 }
 input,
 textarea,
@@ -72,13 +72,13 @@ select,
 button,
 a {
     font-family: inherit;
-    font-size: 100%
+    font-size: 100%;
 }
 input,
 textarea,
 button,
 select {
-    -webkit-appearance: none; 
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     -webkit-border-radius: 0;
@@ -98,7 +98,7 @@ a,
 a:hover,
 a:focus {
     color: inherit;
-    text-decoration: none
+    text-decoration: none;
 }
 h1,
 h2,
@@ -109,8 +109,8 @@ h6 {
     margin-bottom: 15px;
     font-weight: normal;
 }
-[tabindex="-1"]:focus {
-    outline: 0
+[tabindex='-1']:focus {
+    outline: 0;
 }
 ul {
     padding: 0;
@@ -127,7 +127,8 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-img, fieldset {
+img,
+fieldset {
     border: 0 none;
 }
 .mt25vh {
@@ -137,16 +138,15 @@ img, fieldset {
 /* Screen Only */
 .sr-only {
     position: absolute;
-    width: 1px; 
+    width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0,);
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
 }
-
 
 /* Scrollbar Custom */
 /* 스크롤바의 width */
@@ -172,28 +172,30 @@ body::-webkit-scrollbar-button {
 }
 
 /*---------------
-    Supahscroll
------------------*/
-.supah-scroll {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    will-change: transform;
-    overflow: hidden;
-}
-
-/*---------------
     color
 ---------------*/
-.color__main   { color: #F3EEE8; }
-.color__sub    { color: #88B2C4; }
-.color__yellow { color: #FFD171; }
-.color__white  { color: #fff; }
+.color__main {
+    color: #f3eee8;
+}
+.color__sub {
+    color: #88b2c4;
+}
+.color__yellow {
+    color: #ffd171;
+}
+.color__white {
+    color: #fff;
+}
 
-.bg-color__main   { background-color: #F3EEE8; }
-.bg-color__sub    { background-color: #88B2C4; }
-.bg-color__yellow { background-color: #FFD171; }
-.bg-color__white  { background-color: #fff; }
+.bg-color__main {
+    background-color: #f3eee8;
+}
+.bg-color__sub {
+    background-color: #88b2c4;
+}
+.bg-color__yellow {
+    background-color: #ffd171;
+}
+.bg-color__white {
+    background-color: #fff;
+}
