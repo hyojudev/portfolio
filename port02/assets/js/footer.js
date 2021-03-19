@@ -5,7 +5,7 @@
 let foot_tl1 = new TimelineMax(),
     foot_tl2 = new TimelineMax();
 
-foot_tl1.from(".footer", .5, { opacity: 0, y: 50, ease: "powe1.out" });
+foot_tl1.from(".footer__wrap", .5, { opacity: 0, y: 50, ease: "powe1.out" });
 foot_tl1.from(".footer__contact-icon", .5, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");
 foot_tl1.from(".footer__contact-title__text", .5, { opacity: 0, y: 50, stagger: 0.05, ease: "power1.out" }, "-=.2");
 foot_tl1.from(".footer__contact-btn", .3, { opacity: 0, y: 50, ease: "power1.out" }, "-=.2");

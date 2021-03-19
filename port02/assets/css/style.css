@@ -776,6 +776,11 @@ header {
     line-height: 0;
 }
 
+.intro__5 .profile-intro__icon-smile svg {
+    width: 100%;
+    height: 100%;
+}
+
 .intro__6 .profile-intro__sign {
     right: 1vw;
     font-size: 6vw;
@@ -1959,6 +1964,7 @@ header {
 /* contact__universe */
 .universe {
     position: relative;
+    z-index: 900;
     width: 100%;
     height: 100vh;
     transform-style: preserve-3d;
